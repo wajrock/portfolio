@@ -1,0 +1,44 @@
+.selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.text img {
+  height: 1.3rem;
+}
+
+.other {
+  position: absolute;
+  bottom: -150%;
+  left: 0;
+  display: none;
+}
+
+.selector:hover + .other,
+.other:hover {
+  display: flex;
+}
+
+.chevron-select {
+  height: 0.5rem;
+}/*# sourceMappingURL=languages.css.map */
