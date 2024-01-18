@@ -1,3 +1,34 @@
 {
-    "welcome_message": "Salut le monde !"
+    "home-link":"Acceuil",
+    "about-link":"A propos",
+    "academic-link":"Formation",
+    "skills-link":"Compétences",
+    "projects-link":"Projets",
+    "contact-link":"Contact",
+    "main-subtitle":"Hey, moi c'est Thibaud",
+    "main-title": "Etudiant Ingénieur",
+    "download-cv-button": "Voir mon CV",
+    "reach-me-button": "Me contacter",
+
+    "about-title-card": "Etudiant Ingénieur",
+    "about-content-card": "J'ai 20 ans et je suis actuellement en troisième année d'enseignement supérieur. J'ai décidé de fusionner mes deux plus grandes passions : le design et la programmation, et d'en faire ma carrière.<br><br>Je suis constamment à la recherche des meilleures conceptions à créer, et je travaille sans relâche pour améliorer mes créations.<br><br>J'ai une soif insatiable de connaissance, toujours désireux d'explorer les dernières fonctionnalités et langages de programmation.",
+
+    "academic-subtitle": "Parcourez Mes",
+    "academic-title": "Formations & Distinctions",
+
+    "academic-first-card-title":"Concours de plaidoiries",
+    "academic-first-card-text":"Vainqueur du Concours de Plaidoyer pour les Droits de l'Homme organisé par la Ligue des Droits de l'Homme, plaidant en faveur des droits des migrants. Je m'engage à prioriser l'humanité tant dans mes interactions que dans mes projets.",
+    "academic-first-card-link":"Lire un article à ce sujet +",
+
+    "academic-second-card-title":"Diplôme Baccalauréat",
+    "academic-second-card-text":"Diplômé avec mention d'un baccalauréat scientifique, cette éducation a enraciné en moi une passion pour la résolution de problèmes et la discipline qu'elle implique.",
+    "academic-second-card-link":"Voir la formation +",
+
+    "academic-third-card-date": "Depuis 2022",
+    "academic-third-card-title":"Ecole d'Ingénieurs",
+    "academic-third-card-text":"Actuellement étudiant dans une école d'ingénieurs avec une spécialisation en systèmes d'information. Ce programme m'a enseigné les fondamentaux de la programmation ainsi que les méthodologies de création et de gestion de projets.",
+    "academic-third-card-link":"Voir la formation +",
+
+    "skills-subtitle-section": "Explorer Mes",
+    "skills-title-section": "Compétences"
 }

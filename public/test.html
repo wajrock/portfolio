@@ -11,6 +11,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <script src="../src/js/languages.js" type="module"></script>
+    <script src="../src/js/animations.js" type="module"></script>
+    <script src="../src/js/theme.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
     <title>Thibaud Wajrock</title>
   </head>
 
@@ -18,24 +21,21 @@
     <header class="navigation" id="navigationBar">
       <nav class="navigation__navbar" id="navBar">
           <div class="navlist">
-            <a href="#" class="navigation-text active">Home</a>
-            <a href="#about" class="navigation-text">About</a>
-            <a href="#academic" class="navigation-text">Academic</a>
-            <a href="#skills" class="navigation-text">Skills</a>
-            <a href="#projects" class="navigation-text">Projects</a>
-            <a href="#contact" class="navigation-text">Contact</a>
+            <a data-lng="home-link" href="#" class="navigation-text active">Home</a>
+            <a data-lng="about-link" href="#about" class="navigation-text">About</a>
+            <a data-lng="academic-link" href="#academic" class="navigation-text">Academic</a>
+            <a data-lng="skills-link" href="#skills" class="navigation-text">Skills</a>
+            <a data-lng="projects-link" href="#projects" class="navigation-text">Projects</a>
+            <a data-lng="contact-link" href="#contact" class="navigation-text">Contact</a>
           </div>
           
       </nav>
-
-     
-
       <section class="navigation__buttons">
-        <svg id="darkThemeIcon" onclick="changeTheme('dark')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
-        <svg id="lightThemeIcon" xmlns="http://www.w3.org/2000/svg" onclick="changeTheme('light')" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15m0 2q-2.075 0-3.537-1.463T7 12q0-2.075 1.463-3.537T12 7q2.075 0 3.538 1.463T17 12q0 2.075-1.463 3.538T12 17M2 13q-.425 0-.712-.288T1 12q0-.425.288-.712T2 11h2q.425 0 .713.288T5 12q0 .425-.288.713T4 13zm18 0q-.425 0-.712-.288T19 12q0-.425.288-.712T20 11h2q.425 0 .713.288T23 12q0 .425-.288.713T22 13zm-8-8q-.425 0-.712-.288T11 4V2q0-.425.288-.712T12 1q.425 0 .713.288T13 2v2q0 .425-.288.713T12 5m0 18q-.425 0-.712-.288T11 22v-2q0-.425.288-.712T12 19q.425 0 .713.288T13 20v2q0 .425-.288.713T12 23M5.65 7.05L4.575 6q-.3-.275-.288-.7t.288-.725q.3-.3.725-.3t.7.3L7.05 5.65q.275.3.275.7t-.275.7q-.275.3-.687.288T5.65 7.05M18 19.425l-1.05-1.075q-.275-.3-.275-.712t.275-.688q.275-.3.688-.287t.712.287L19.425 18q.3.275.288.7t-.288.725q-.3.3-.725.3t-.7-.3M16.95 7.05q-.3-.275-.288-.687t.288-.713L18 4.575q.275-.3.7-.288t.725.288q.3.3.3.725t-.3.7L18.35 7.05q-.3.275-.7.275t-.7-.275M4.575 19.425q-.3-.3-.3-.725t.3-.7l1.075-1.05q.3-.275.712-.275t.688.275q.3.275.288.688t-.288.712L6 19.425q-.275.3-.7.288t-.725-.288M12 12"/></svg>
+        <svg id="darkThemeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
+        <svg id="lightThemeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path  d="M12 15q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15m0 2q-2.075 0-3.537-1.463T7 12q0-2.075 1.463-3.537T12 7q2.075 0 3.538 1.463T17 12q0 2.075-1.463 3.538T12 17M2 13q-.425 0-.712-.288T1 12q0-.425.288-.712T2 11h2q.425 0 .713.288T5 12q0 .425-.288.713T4 13zm18 0q-.425 0-.712-.288T19 12q0-.425.288-.712T20 11h2q.425 0 .713.288T23 12q0 .425-.288.713T22 13zm-8-8q-.425 0-.712-.288T11 4V2q0-.425.288-.712T12 1q.425 0 .713.288T13 2v2q0 .425-.288.713T12 5m0 18q-.425 0-.712-.288T11 22v-2q0-.425.288-.712T12 19q.425 0 .713.288T13 20v2q0 .425-.288.713T12 23M5.65 7.05L4.575 6q-.3-.275-.288-.7t.288-.725q.3-.3.725-.3t.7.3L7.05 5.65q.275.3.275.7t-.275.7q-.275.3-.687.288T5.65 7.05M18 19.425l-1.05-1.075q-.275-.3-.275-.712t.275-.688q.275-.3.688-.287t.712.287L19.425 18q.3.275.288.7t-.288.725q-.3.3-.725.3t-.7-.3M16.95 7.05q-.3-.275-.288-.687t.288-.713L18 4.575q.275-.3.7-.288t.725.288q.3.3.3.725t-.3.7L18.35 7.05q-.3.275-.7.275t-.7-.275M4.575 19.425q-.3-.3-.3-.725t.3-.7l1.075-1.05q.3-.275.712-.275t.688.275q.3.275.288.688t-.288.712L6 19.425q-.275.3-.7.288t-.725-.288M12 12"/></svg>
         <div class="flags">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36"><path fill="#B22334" d="M35.445 7C34.752 5.809 33.477 5 32 5H18v2zM0 25h36v2H0zm18-8h18v2H18zm0-4h18v2H18zM0 21h36v2H0zm4 10h28c1.477 0 2.752-.809 3.445-2H.555c.693 1.191 1.968 2 3.445 2M18 9h18v2H18z"/><path fill="#EEE" d="M.068 27.679c.017.093.036.186.059.277c.026.101.058.198.092.296c.089.259.197.509.333.743L.555 29h34.89l.002-.004a4.22 4.22 0 0 0 .332-.741a3.75 3.75 0 0 0 .152-.576c.041-.22.069-.446.069-.679H0c0 .233.028.458.068.679M0 23h36v2H0zm0-4v2h36v-2H18zm18-4h18v2H18zm0-4h18v2H18zM.555 7l-.003.005zM.128 8.044c.025-.102.06-.199.092-.297a3.78 3.78 0 0 0-.092.297M18 9h18c0-.233-.028-.459-.069-.68a3.606 3.606 0 0 0-.153-.576A4.21 4.21 0 0 0 35.445 7H18z"/><path fill="#3C3B6E" d="M18 5H4a4 4 0 0 0-4 4v10h18z"/><path fill="#FFF" d="m2.001 7.726l.618.449l-.236.725L3 8.452l.618.448l-.236-.725L4 7.726h-.764L3 7l-.235.726zm2 2l.618.449l-.236.725l.617-.448l.618.448l-.236-.725L6 9.726h-.764L5 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 9l-.235.726zm-8 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L5 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 13l-.235.726zm-6-6l.618.449l-.236.725L7 8.452l.618.448l-.236-.725L8 7.726h-.764L7 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 7l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 11l-.235.726zM6.383 12.9L7 12.452l.618.448l-.236-.725l.618-.449h-.764L7 11l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 11l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 11l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 15l-.235.726zM6.383 16.9L7 16.452l.618.448l-.236-.725l.618-.449h-.764L7 15l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 15l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 15l-.235.726z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" style="opacity: .3" width="24" height="24" viewBox="0 0 36 36"><path fill="#ED2939" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4z"/><path fill="#002495" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5z"/><path fill="#EEE" d="M12 5h12v26H12z"/></svg>
+        <svg class="flags_item" id="us-flag" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36"><path fill="#B22334" d="M35.445 7C34.752 5.809 33.477 5 32 5H18v2zM0 25h36v2H0zm18-8h18v2H18zm0-4h18v2H18zM0 21h36v2H0zm4 10h28c1.477 0 2.752-.809 3.445-2H.555c.693 1.191 1.968 2 3.445 2M18 9h18v2H18z"/><path fill="#EEE" d="M.068 27.679c.017.093.036.186.059.277c.026.101.058.198.092.296c.089.259.197.509.333.743L.555 29h34.89l.002-.004a4.22 4.22 0 0 0 .332-.741a3.75 3.75 0 0 0 .152-.576c.041-.22.069-.446.069-.679H0c0 .233.028.458.068.679M0 23h36v2H0zm0-4v2h36v-2H18zm18-4h18v2H18zm0-4h18v2H18zM.555 7l-.003.005zM.128 8.044c.025-.102.06-.199.092-.297a3.78 3.78 0 0 0-.092.297M18 9h18c0-.233-.028-.459-.069-.68a3.606 3.606 0 0 0-.153-.576A4.21 4.21 0 0 0 35.445 7H18z"/><path fill="#3C3B6E" d="M18 5H4a4 4 0 0 0-4 4v10h18z"/><path fill="#FFF" d="m2.001 7.726l.618.449l-.236.725L3 8.452l.618.448l-.236-.725L4 7.726h-.764L3 7l-.235.726zm2 2l.618.449l-.236.725l.617-.448l.618.448l-.236-.725L6 9.726h-.764L5 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 9l-.235.726zm-8 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L5 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 13l-.235.726zm-6-6l.618.449l-.236.725L7 8.452l.618.448l-.236-.725L8 7.726h-.764L7 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 7l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 11l-.235.726zM6.383 12.9L7 12.452l.618.448l-.236-.725l.618-.449h-.764L7 11l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 11l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 11l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 15l-.235.726zM6.383 16.9L7 16.452l.618.448l-.236-.725l.618-.449h-.764L7 15l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 15l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 15l-.235.726z"/></svg>
+        <svg class="flags_item" id="fr-flag" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36"><path fill="#ED2939" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4z"/><path fill="#002495" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5z"/><path fill="#EEE" d="M12 5h12v26H12z"/></svg>
         </div>
       </section>
 
@@ -50,12 +50,12 @@
             <h2 class="section-title" data-lng="main-title" id="main-title">Student in Engineering</h2>
         </article>
         <section class="callToActions">
-          <a href="#" class="main-button" data-lng="main-paragraph">
+          <a href="resume.pdf" target="_blank" class="main-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.95 22.375L19 19.425v2.225h-2V16h5.65v2H20.4l2.95 2.95zM13 9h5l-5-5zM6 22q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h8l6 6v6h-5v8z"/></svg>
-            <p data-lng="download-cv-button">View My CV</p>
+            <p data-lng="download-cv-button">View my CV</p>
           </a>
 
-          <a href="#" class="main-button">
+          <a href="#contact" class="main-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8"/></svg>
             <p data-lng="reach-me-button">Reach Me Out</p>
           </a>
@@ -67,14 +67,14 @@
       <main class="aboutContent">
       <div class="article aboutCard">
         <section class="heading">
-          <h4 class="basic-subtitle">Student Engineer</h4>
+          <h4 data-lng="about-title-card" class="basic-subtitle">Engineer Student</h4>
           <h3 class="basic-title">Thibaud Wajrock</h3>
         </section>
-        <section class="body-text aboutCard__text">
+        <p data-lng="about-content-card" class="body-text aboutCard__text">
           I am 20 years old and currently in my third year of higher education. I've decided to combine my two greatest passions: design and programming, and turn them into my career.<br><br>
           I'm always on the lookout for the best designs to create, and I'm constantly working to improve my creations.<br><br>
           I have an insatiable thirst for knowledge, always eager to explore the latest features and programming languages.
-        </section>
+        </p>
         <section class="aboutButtons">
           <div class="aboutButtons__item github">
             <img src="assets/icons/github.svg" alt="">
@@ -96,8 +96,8 @@
 
     <section class="section" id="academic">
       <header class="headerSection">
-        <h3 class="section-subtitle">Let’s go Through My</h3>
-        <h2 class="section-title">Academic Journey & Honours</h2>
+        <h3 class="section-subtitle" data-lng="academic-subtitle">Let’s go Through My</h3>
+        <h2 class="section-title" data-lng="academic-title">Academic Journey & Honours</h2>
       </header>
 
       <main class="contentSection academicContent">
@@ -108,12 +108,12 @@
             <div class="pointCard" id="firstCard">
               <section class="pointCard__heading">
                 <h4 class="basic-subtitle">2019</h4>
-                <h3 class="basic-title">Advocacy Laureate</h3>
+                <h3 class="basic-title" data-lng="academic-first-card-title">Advocacy Laureate</h3>
               </section>
-                <p class="body-text">
+                <p class="body-text" data-lng="academic-first-card-text">
                   Winner of the Human Rights Advocacy Competition organized by the League of Human Rights, advocating for the rights of migrants. I am dedicated to prioritizing humanity in both my interactions and projects.
                 </p>
-              <p class="button-text">Read more +</p>
+              <a href="https://www.ldh-france.org/concours-de-plaidoiries/" target="_blank" class="button-text" data-lng="academic-first-card-link">Read article about this +</a>
 
             </div>
           </div>
@@ -121,12 +121,12 @@
             <div class="pointCard" id="secondCard">
               <section class="pointCard__heading">
                 <h4 class="basic-subtitle">2021</h4>
-                <h3 class="basic-title">High-School Diploma</h3>
+                <h3 class="basic-title" data-lng="academic-second-card-title">High-School Diploma</h3>
               </section>
-                <p class="body-text">
+                <p class="body-text" data-lng="academic-second-card-text">
                   Graduated with honors from a scientific high school diploma. This education instilled in me a passion for problem-solving and the discipline it entails.
                 </p>
-              <p class="button-text">Read more +</p>
+              <a href="https://institut-saint-lo.fr/lycees/" target="_blank" class="button-text" data-lng="academic-second-card-link">More about formation +</a>
 
             </div>
             
@@ -134,13 +134,13 @@
           <div class="points" id="third">
             <div class="pointCard" id="thirdCard">
               <section class="pointCard__heading">
-                <h4 class="basic-subtitle">2022 - NOW</h4>
-                <h3 class="basic-title">Engineering Program</h3>
+                <h4 class="basic-subtitle" data-lng="academic-third-card-date">2022 - NOW</h4>
+                <h3 class="basic-title" data-lng="academic-third-card-title">Engineering Program</h3>
               </section>
-                <p class="body-text">
+                <p class="body-text" data-lng="academic-third-card-text">
                   Currently a student in engineering school with a specialization in information systems. This program has taught me the fundamentals of programming and methodologies for project creation and management.
                 </p>
-              <p class="button-text">Read more +</p>
+              <a href="https://esir.univ-rennes.fr/spe-informatique-option-systemes-dinformation-si" rel="noopener" target="_blank" class="button-text" data-lng="academic-third-card-link">More about formation +</a>
 
             </div>
             
@@ -157,8 +157,8 @@
     <section class="section" id="skills">
       <main class="skillsContent">
       <section class="headingSkills">
-        <h2 class="section-subtitle">Explore My</h2>
-        <h1 class="section-title">Skills</h1>
+        <h2 class="section-subtitle" data-lng="skills-subtitle-section">Explore My</h2>
+        <h1 class="section-title" data-lng="skills-title-section">Skills</h1>
       </section>
       <div class="parent">
         
@@ -327,208 +327,6 @@
   </body>
 
   <script>
-    function goToSection(itemNum) {
-      switch (itemNum) {
-        case 1:
-        document.getElementById('progressbar').style.width="0%";
-          break;
-
-        case 2 :
-          document.getElementById('progressbar').style.width="20%";
-          break
-          case 3 :
-          document.getElementById('progressbar').style.width="40%";
-          break
-          case 4 :
-          document.getElementById('progressbar').style.width="60%";
-          break
-          case 5 :
-          document.getElementById('progressbar').style.width="80%";
-          break
-          case 6 :
-          document.getElementById('progressbar').style.width="100%";
-          break
-      
-        default:
-          break;
-      }
-    }
-  </script>
-
-  <script>
-    let start = 1300;
-    window.scrollTo(0,0.198*document.body.scrollHeight)
-    document.addEventListener('scroll', () => {
-      const currentScroll = window.scrollY;
-      const currentHeight = (currentScroll - start)/document.getElementById('timeline').offsetHeight*100;
-      
-      if (currentScroll >= start){
-        document.getElementById('activetimeline').style.height = currentHeight+"%";
-      }
-
-      if (currentHeight >= 16){
-        document.getElementById('firstCard').style.opacity = "1";
-      } else {
-        document.getElementById('firstCard').style.opacity = "0";
-      }
-      
-      if (currentHeight >= 50){
-        document.getElementById('secondCard').style.opacity = "1";
-      } else {
-        document.getElementById('secondCard').style.opacity = "0";
-      }
-      
-      if (currentHeight >= 84){
-        document.getElementById('thirdCard').style.opacity = "1";
-      } else {
-        document.getElementById('thirdCard').style.opacity = "0";
-      }
-    })
-  </script>
-
-  <script>
-    function changeTheme(newTheme){
-    //   --background-color-light: #f1f5f9;
-    // --background-color-dark: #020307;
-
-    // --main-color: #135baf;
-
-    // --title-color-light: #1e293b;
-    // --title-color-dark: #999faa;
-
-    // --subtitle-color-light: #a2a5ae;
-    // --subtitle-color-dark: #424a62;
-
-    // --text-color-light: #525252;
-    // --text-color-dark: #acacac;
-
-    // --color-card-ligh: #f1f5f9;
-    // --color-card-dark: #03050b;
-      let root = document.querySelector(':root');
-
-      if (newTheme == "dark"){
-        document.getElementById('lightThemeIcon').style.display = "block";
-        document.getElementById('darkThemeIcon').style.display = "none";
-        document.body.style.backgroundImage = "url('/public/assets/background_dark.png')";
-        document.getElementById('contact').style.backgroundImage = "url('/public/assets/map_dark.svg')";
-        root.style.setProperty('--background-color-light', '#020307');
-        root.style.setProperty('--title-color-light', '#999faa');
-        root.style.setProperty('--subtitle-color-light', '#424a62');
-        root.style.setProperty('--text-color-light', '#acacac');
-        root.style.setProperty('--color-card-light', '#03050b');
-        root.style.setProperty('--color-timeline-light', '#0a101f');
-        root.style.setProperty('--color-navbar-light', 'rgba(3,5,11,0.45)');
-      } else {
-        document.getElementById('darkThemeIcon').style.display = "block";
-        document.getElementById('lightThemeIcon').style.display = "none";
-        document.body.style.backgroundImage = "url('/public/assets/background.png')";
-        document.getElementById('contact').style.backgroundImage = "url('/public/assets/map.svg')";
-        root.style.setProperty('--background-color-light', '#f1f5f9');
-        root.style.setProperty('--title-color-light', '#1e293b');
-        root.style.setProperty('--subtitle-color-light', '#a2a5ae');
-        root.style.setProperty('--text-color-light', '#525252');
-        root.style.setProperty('--color-card-light', '#f1f5f9');
-        root.style.setProperty('--color-timeline-light', '#e9e9e9');
-        root.style.setProperty('--color-navbar-light', 'rgba(241,245,249,0.54)');
-      }
-
-      
-    }
-  </script>
-
-
-  <script>
-    const aboutViewport = document.getElementById('about').offsetTop;
-    const contactViewport = document.getElementById('contact').offsetTop;
-    const firstLineProjects = document.getElementById('gradesApp').offsetTop;
-    const secondLineProjects = document.getElementById('metaWebsite').offsetTop;
-
-    document.addEventListener('scroll', () => {
-      const currentScroll = window.scrollY;
-
-      if (currentScroll == 0){
-        document.getElementById('navigationBar').classList.add('navigationBar__animation')
-      }
-
-      // ANIMATION TRIGGER ABOUT SECTION
-      if (currentScroll >= aboutViewport - 400 && currentScroll <= aboutViewport+500){
-        document.getElementById('about').classList.add('animationAbout');
-        document.getElementById('about').style.opacity = "1";
-      } else {
-        document.getElementById('about').classList.remove('animationAbout');
-        document.getElementById('about').style.opacity = "0";
-      }
-
-      // ANIMATION TRIGGER PROJECTS SECTION
-      if (currentScroll >= firstLineProjects - window.innerHeight*0.7){
-        document.getElementById('gradesApp').style.opacity = "1";
-        document.getElementById('keopsGame').style.opacity = "1";
-      } else {
-        document.getElementById('gradesApp').style.opacity = "0";
-        document.getElementById('keopsGame').style.opacity = "0";
-      }
-
-      if (currentScroll >= secondLineProjects - window.innerHeight*0.7){
-        document.getElementById('metaWebsite').style.opacity = "1";
-        document.getElementById('portfolioWebsite').style.opacity = "1";
-      } else {
-        document.getElementById('metaWebsite').style.opacity = "0";
-        document.getElementById('portfolioWebsite').style.opacity = "0";
-      }
-
-      // ANIMATION TRIGGER CONTACT SECTION
-      if (currentScroll >= contactViewport-200){
-        
-        document.getElementById('contact').style.opacity = '1'; // Disable transition temporarily
-      } else {
-        document.getElementById('contact').style.opacity = '0';
-      }
-    })
-  </script>
-
-
-
-  <!-- <script>
-    let isPlayed = false;
-    document.addEventListener('scroll', () => {
-      if(window.scrollY >= document.getElementById('academic').offsetTop && !isPlayed){
-        isPlayed = true;
-      timeline();
-    }
-    })
-
-    function timeline() {
-        const timelineProgress = document.getElementsByClassName('activetimeline')[0];
-        const pointsTimeline = document.getElementsByClassName('points');
-        const cardsTimeLine = document.getElementsByClassName('cardTimeline');
-
-        timelineProgress.style.width = '16%';
-        cardsTimeLine[0].style.opacity = '1';
-
-        pointsTimeline[0].style.background = '#135BAF';
-        pointsTimeline[0].style.transitionDelay = '1s';
-
-        setTimeout(() => {
-            
-          timelineProgress.style.width = '50%';
-          cardsTimeLine[1].style.opacity = '1';
-          
-          pointsTimeline[1].style.background = '#135BAF';
-          pointsTimeline[1].style.transitionDelay = '1s';
-
-            setTimeout(() => {
-              timelineProgress.style.width = '84%';
-              cardsTimeLine[2].style.opacity = '1';
-              pointsTimeline[2].style.background = '#135BAF';
-              pointsTimeline[2].style.transitionDelay = '1s';
-
-            }, 2000);
-        }, 2000);
-    }
-
     
-   
-
   </script>
-   -->
 </html>

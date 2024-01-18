@@ -1,7 +1,33 @@
 {
+    "home-link":"Home", 
+    "about-link":"About",
+    "academic-link":"Academic",
+    "skills-link":"Skills",
+    "projects-link":"Projects",
+    "contact-link":"Contact",
     "main-subtitle":"Hi, I’m Thibaud",
-    "main-title": "STUDENT IN ENGINEERING",
-    "main-paragraph": "Specialized in information systems and passionate about design,I am currently seeking an internship and aspire to become a Full Stack developer.",
-    "download-cv-button": "Download My Cv",
-    "reach-me-button": "Reach Me Out",
+    "main-title": "Student in Engineering",
+    "download-cv-button": "View my CV",
+    "reach-me-button": "Reach me out",
+
+    "about-title-card": "Engineer Student",
+    "about-content-card": "I am 20 years old and currently in my third year of higher education. I've decided to combine my two greatest passions: design and programming, and turn them into my career.<br><br>I'm always on the lookout for the best designs to create, and I'm constantly working to improve my creations.<br><br>I have an insatiable thirst for knowledge, always eager to explore the latest features and programming languages.",
+
+    "academic-subtitle": "Let’s go Through My",
+    "academic-title": "Academic Journey & Honours",
+    "academic-first-card-title":"Advocacy Laureate",
+    "academic-first-card-text":"Winner of the Human Rights Advocacy Competition organized by the League of Human Rights, advocating for the rights of migrants. I am dedicated to prioritizing humanity in both my interactions and projects.",
+    "academic-first-card-link":"Read article about this +",
+
+    "academic-second-card-title":"High-School Diploma",
+    "academic-second-card-text":"Graduated with honors from a scientific high school diploma. This education instilled in me a passion for problem-solving and the discipline it entails.",
+    "academic-second-card-link":"More about the Formation +",
+
+    "academic-third-card-date": "Since 2022",
+    "academic-third-card-title":"Engineering Program",
+    "academic-third-card-text":"Currently a student in engineering school with a specialization in information systems. This program has taught me the fundamentals of programming and methodologies for project creation and management.",
+    "academic-third-card-link":"More about the Formation +",
+
+    "skills-subtitle-section": "Explore My",
+    "skills-title-section": "Skills"
 }
