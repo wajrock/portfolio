@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choix de langue</title>
+  <style>
+    /* Styles pour la liste déroulante */
+    .custom-dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+      color: black;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Ajoutez du style pour les drapeaux si nécessaire */
+    .flag {
+      width: 20px; /* Ajustez la largeur du drapeau selon vos besoins */
+      margin-right: 5px; /* Marge à droite du drapeau */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="custom-dropdown">
+    <span onclick="toggleDropdown()" id="selectedLanguage">
+      Français
+    </span>
+    <div id="languageDropdown" class="dropdown-content">
+      <a href="#" onclick="changeLanguage('fr'); return false;">Français</a>
+      <a href="#" onclick="changeLanguage('en'); return false;">English</a>
+      <a href="#" onclick="changeLanguage('es'); return false;">Español</a>
+      <!-- Ajoutez d'autres langues si nécessaire -->
+    </div>
+  </div>
+
+  <!-- Votre contenu HTML -->
+
+  <script>
+    // Fonction pour changer la langue
+    function changeLanguage(lang) {
+      // Mettez en œuvre le changement de langue ici
+      // Par exemple, vous pouvez utiliser des cookies, localStorage, etc.
+
+      // Pour cet exemple, nous allons simplement afficher un message
+      alert("Langue changée en " + lang);
+
+      // Mettez à jour le texte de la langue sélectionnée
+      document.getElementById('selectedLanguage').innerHTML = document.querySelector(`[onclick*="changeLanguage('${lang}')"]`).innerHTML;
+      
+      // Masquez la liste déroulante après la sélection
+      document.getElementById('languageDropdown').style.display = 'none';
+    }
+
+    // Fonction pour afficher ou masquer la liste déroulante
+    function toggleDropdown() {
+      const dropdown = document.getElementById('languageDropdown');
+      dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // Fermer la liste déroulante si l'utilisateur clique en dehors d'elle
+    window.onclick = function(event) {
+      if (!event.target.matches('.custom-dropdown')) {
+        const dropdown = document.getElementById('languageDropdown');
+        if (dropdown.style.display === 'block') {
+          dropdown.style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
