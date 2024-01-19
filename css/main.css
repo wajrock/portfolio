@@ -101,6 +101,8 @@
   --font-weight-body-text: 500;
   --line-height-body-text: calc(1rem * 1.2);
   --gap-default: 2.44vw;
+  --box-shadow-card-light: 0px 0px 24px 0px rgba(0, 0, 0, 0.12);
+  --box-shadow-card-dark: rgba(0, 0, 0, 0.3) 0px 0px 55px, rgba(0, 0, 0, 0.82) 0px 0px 55px;
 }
 
 html,
@@ -108,7 +110,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: url("/assets/background.png");
+  background: url("/portfolio/assets/background.png");
   background-size: cover;
   background-position: center;
   font-size: 16px;

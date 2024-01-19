@@ -5,6 +5,9 @@
 
 .parent {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: var(--widthCircle);
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -21,6 +24,50 @@
   animation-play-state: paused;
 }
 
+.detailsSkills {
+  animation: openSkill 0.5s ease-in-out;
+  width: calc(var(--widthCircle) * 0.6);
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 999;
+  color: var(--text-color-light);
+  transition: display 5s ease-in-out;
+}
+.detailsSkills__projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.7rem;
+  cursor: pointer;
+  transition: border-radius 0.5s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+.detailsSkills__projects img {
+  height: 1.5rem;
+}
+.detailsSkills__projects p {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.detailsSkills__projects:hover {
+  border-radius: 0.5rem;
+  color: var(--background-color-light);
+  background-color: var(--title-color-light);
+}
+
+@keyframes openSkill {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .child {
   position: absolute;
   width: var(--widthItem);
@@ -321,7 +368,7 @@ a {
   color: var(--text-color-light);
 }
 .aboutButtons #linked-btn {
-  color: #0077B5;
+  color: #0077b5;
 }
 .aboutButtons #figma-btn {
   background-clip: text;
@@ -333,7 +380,7 @@ a {
   height: 100%;
   aspect-ratio: 1/1;
   background-color: green;
-  background-image: url("/assets/square_profile.png");
+  background-image: url("/portfolio/assets/square_profile.png");
   background-position: center;
   background-size: cover;
   border-radius: 0.8rem;
@@ -477,6 +524,64 @@ a {
   transform: translate(-50%, -50%);
 }
 
+.skillLevel {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+.skillLevel__progressbar {
+  height: 0.2rem;
+  width: 100%;
+  background-color: var(--color-timeline-light);
+  position: relative;
+}
+.skillLevel__progressbar-current {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 0%;
+}
+.skillLevel__progressbar-current.beginner {
+  width: 20%;
+  animation: widthTo20 1s ease-in-out;
+}
+.skillLevel__progressbar-current.intermediate {
+  width: 50%;
+  animation: widthTo50 1s ease-in-out;
+}
+.skillLevel__progressbar-current.advanced {
+  width: 80%;
+  animation: widthTo80 1s ease-in-out;
+}
+
+@keyframes widthTo20 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%;
+  }
+}
+@keyframes widthTo50 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes widthTo80 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
 #projects {
   align-items: center;
   height: auto;
@@ -536,7 +641,7 @@ a {
 }
 .itemProject:hover {
   background-color: #e4e6e9;
-  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--box-shadow-card-light);
 }
 
 .discover-project-buttons {
@@ -575,29 +680,47 @@ a {
 }
 
 #gradesApp {
-  background: linear-gradient(180deg, rgba(2, 3, 7, 0) 0%, var(--gradient-card-light-30) 30.5%, var(--gradient-card-light-60) 61.9%, var(--gradient-card-light-100) 100%), url("/assets/projects/app.png");
-  background-position: 50% 0%;
-  background-size: cover;
+  background: linear-gradient(180deg, rgba(2, 3, 7, 0) 0%, var(--gradient-card-light-30) 30.5%, var(--gradient-card-light-60) 61.9%, var(--gradient-card-light-100) 100%), url("/portfolio/assets/projects/app.png");
+  background-position: center;
+  background-size: 120%;
+  transition: background-size 0.5s ease-in-out;
+}
+#gradesApp:hover {
+  background-size: 130%;
 }
 
 #keopsGame {
-  background: linear-gradient(180deg, rgba(2, 3, 7, 0) 0%, var(--gradient-card-light-30) 30.5%, var(--gradient-card-light-60) 61.9%, var(--gradient-card-light-100) 100%), url("/assets/projects/keops.png");
+  background: linear-gradient(180deg, rgba(2, 3, 7, 0) 0%, var(--gradient-card-light-30) 30.5%, var(--gradient-card-light-60) 61.9%, var(--gradient-card-light-100) 100%), url("/portfolio/assets/projects/keops.png");
   background-position: center;
-  background-size: cover;
+  background-size: 120%;
+  transition: background-size 0.5s ease-in-out;
+}
+#keopsGame:hover {
+  background-size: 130%;
 }
 
 #metaWebsite {
-  background: linear-gradient(180deg, rgba(2, 3, 7, 0) 0%, var(--gradient-card-light-30) 30.5%, var(--gradient-card-light-60) 61.9%, var(--gradient-card-light-100) 100%), url("/assets/projects/games.png");
-  background-size: cover;
+  background: linear-gradient(180deg, rgba(2, 3, 7, 0) 0%, var(--gradient-card-light-30) 30.5%, var(--gradient-card-light-60) 61.9%, var(--gradient-card-light-100) 100%), url("/portfolio/assets/projects/games.png");
+  background-position: 50% 25%;
+  background-size: 120%;
+  transition: background-size 0.5s ease-in-out;
+}
+#metaWebsite:hover {
+  background-size: 130%;
 }
 
 #portfolioWebsite {
-  background: linear-gradient(180deg, rgba(2, 3, 7, 0) 0%, var(--gradient-card-light-30) 30.5%, var(--gradient-card-light-60) 61.9%, var(--gradient-card-light-100) 100%), url("/assets/projects/portfolio.png");
-  background-size: cover;
+  background: linear-gradient(180deg, rgba(2, 3, 7, 0) 0%, var(--gradient-card-light-30) 30.5%, var(--gradient-card-light-60) 61.9%, var(--gradient-card-light-100) 100%), url("/portfolio/assets/projects/portfolio.png");
+  background-position: center;
+  background-size: 120%;
+  transition: background-size 0.5s ease-in-out;
+}
+#portfolioWebsite:hover {
+  background-size: 130%;
 }
 
 #contact {
-  background-image: url("/assets/map.svg");
+  background-image: url("/portfolio/assets/map.svg");
   background-position: center;
   background-size: cover;
   display: flex;

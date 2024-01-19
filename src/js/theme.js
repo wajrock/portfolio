@@ -37,8 +37,8 @@ function changeTheme(newTheme){
       if (newTheme == "dark"){
         document.getElementById('lightThemeIcon').style.display = "block";
         document.getElementById('darkThemeIcon').style.display = "none";
-        document.body.style.backgroundImage = "url('/assets/background_dark.png')";
-        document.getElementById('contact').style.backgroundImage = "url('/assets/map_dark.svg')";
+        document.body.style.backgroundImage = "url('/portfolio/assets/background_dark.png')";
+        document.getElementById('contact').style.backgroundImage = "url('/portfolio/assets/map_dark.svg')";
         root.style.setProperty('--background-color-light', '#020307');
         root.style.setProperty('--opposite-background-color-light', '#f1f5f9');
         root.style.setProperty('--title-color-light', '#999faa');
@@ -50,11 +50,12 @@ function changeTheme(newTheme){
         root.style.setProperty('--gradient-card-light-30', 'rgba(2, 3, 7, 0.38)');
         root.style.setProperty('--gradient-card-light-60', 'rgba(2, 3, 7, 0.75)');
         root.style.setProperty('--gradient-card-light-100', 'rgba(2, 3, 7, 0.99)');
+        root.style.setProperty('--box-shadow-card-light', ' rgba(0, 0, 0, 0.3) 0px 0px 55px, rgba(0, 0, 0, 0.82) 0px 0px 55px');
       } else {
         document.getElementById('darkThemeIcon').style.display = "block";
         document.getElementById('lightThemeIcon').style.display = "none";
-        document.body.style.backgroundImage = "url('/assets/background.png')";
-        document.getElementById('contact').style.backgroundImage = "url('/assets/map.svg')";
+        document.body.style.backgroundImage = "url('/portfolio/assets/background.png')";
+        document.getElementById('contact').style.backgroundImage = "url('/portfolio/assets/map.svg')";
         root.style.setProperty('--background-color-light', '#f1f5f9');
         root.style.setProperty('--opposite-background-color-light', '#020307');
         root.style.setProperty('--title-color-light', '#1e293b');
@@ -66,5 +67,6 @@ function changeTheme(newTheme){
         root.style.setProperty('--gradient-card-light-30', 'rgba(241, 245, 249, 0.38)');
         root.style.setProperty('--gradient-card-light-60', 'rgba(241, 245, 249, 0.75)');
         root.style.setProperty('--gradient-card-light-100', 'rgba(241, 245, 249, 0.99)');
+        root.style.setProperty('--box-shadow-card-light', '0px 0px 24px 0px rgba(0, 0, 0, 0.12)');
       }
     }

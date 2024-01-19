@@ -14,7 +14,10 @@ window.onload = async function (){
     opacityFR = "0.3";
     opacityUS = "1";
 }
-  updateContent(langData);
+  if (localStorage.getItem('lang')){
+    updateContent(langData);
+  }
+  
 }
 
 // CHANGE LANGUAGE FONCTION
@@ -56,7 +59,7 @@ function updateContent(langData) {
 
 // GET LANGUAGE DATA FROM JSON FILE
 async function fetchData(lang) {
-  const res = await fetch(`../src/${lang}.json`);
+  const res = await fetch(`/portfolio/src/${lang}.json`);
   return res.json();
 }
 
