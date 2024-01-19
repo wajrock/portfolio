@@ -6,12 +6,28 @@ const firstLineProjects = document.getElementById("gradesApp").offsetTop;
 const secondLineProjects = document.getElementById("metaWebsite").offsetTop;
 const timelineViewPort = document.getElementById("timeline").offsetTop;
 
+const sections = document.querySelectorAll('.section');
+
 document.addEventListener("scroll", () => {
+
+  
+
+
   const currentScroll = window.scrollY;
   const currentHeightTimeline =
     ((currentScroll - timelineViewPort + window.innerHeight * 0.5) /
       document.getElementById("timeline").offsetHeight) *
     100;
+
+
+    sections.forEach(section => {
+      if (currentScroll >= section.offsetTop - window.innerHeight / 2){
+        document.getElementById(section.id+"-link").classList.add('active');
+        
+      } else {
+        document.getElementById(section.id+"-link").classList.remove('active');
+      }
+    });
 
   if (
     currentScroll >=

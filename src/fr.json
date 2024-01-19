@@ -12,6 +12,9 @@
 
     "about-title-card": "Etudiant Ingénieur",
     "about-content-card": "J'ai 20 ans et je suis actuellement en troisième année d'enseignement supérieur. J'ai décidé de fusionner mes deux plus grandes passions : le design et la programmation, et d'en faire ma carrière.<br><br>Je suis constamment à la recherche des meilleures conceptions à créer, et je travaille sans relâche pour améliorer mes créations.<br><br>J'ai une soif insatiable de connaissance, toujours désireux d'explorer les dernières fonctionnalités et langages de programmation.",
+    "github-profil": "Mon Github",
+    "linkedin-profil": "Mon LinkedIn",
+    "figma-profil": "Mon Figma",
 
     "academic-subtitle": "Parcourez Mes",
     "academic-title": "Formations & Distinctions",
@@ -30,5 +33,30 @@
     "academic-third-card-link":"Voir la formation +",
 
     "skills-subtitle-section": "Explorer Mes",
-    "skills-title-section": "Compétences"
+    "skills-title-section": "Compétences",
+
+    "projects-subtitle-section": "Découvrez Mes",
+    "projects-title-section": "Projets",
+
+    "application-projects": "Applications",
+    "websites-projects": "Sites-web",
+    "design-projects": "Design",
+    "other-projects": "Autres projects",
+
+    "title-gradesapp-project":"Application de Gestion de Notes",
+    "title-keops-project":"Jeux de quêtes Python",
+    "title-metagame-project":"Site d'articles de jeux-vidéos",
+    "subtitle-portfolio-project":"CE SITE",
+    "title-portfolio-project":"Mon portfolio",
+
+    "github-project-button": "Voir sur Github",
+    "figma-project-button": "Voir sur Figma",
+    "view-more-project-button": "Voir plus",
+
+    "contact-subtitle-section": "Plus de détails sur ma",
+    "contact-title-section": "Recherche de stage",
+
+    "contact-text": "Je recherche une opportunité de stage au sein d'une entreprise pour le mois de juin 2024 dans la région de Rennes, plus précisément dans le domaine de l'informatique. Je suis ouvert à divers domaines et motivé pour acquérir de nouvelles compétences à ajouter à mon répertoire. Si mon profil correspond à vos besoins, n'hésitez pas à me contacter.",
+    "contact-mail-button": "E-Mail",
+    "contact-phone-button": "Téléphone"
 }

@@ -28,10 +28,16 @@
   justify-content: center;
   align-items: center;
   animation: rotateInfinitelyChild 60s linear infinite;
+  transition: width 0.4s ease-in-out;
+}
+
+.child:hover {
+  transform: scale3d(1.4);
 }
 
 .child img {
   max-width: 100%;
+  mix-blend-mode: luminosity;
 }
 
 .child:nth-child(1) {

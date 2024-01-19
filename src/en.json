@@ -12,6 +12,9 @@
 
     "about-title-card": "Engineer Student",
     "about-content-card": "I am 20 years old and currently in my third year of higher education. I've decided to combine my two greatest passions: design and programming, and turn them into my career.<br><br>I'm always on the lookout for the best designs to create, and I'm constantly working to improve my creations.<br><br>I have an insatiable thirst for knowledge, always eager to explore the latest features and programming languages.",
+    "github-profil": "My Github",
+    "linkedin-profil": "My LinkedIn",
+    "figma-profil": "My Figma",
 
     "academic-subtitle": "Let’s go Through My",
     "academic-title": "Academic Journey & Honours",
@@ -29,5 +32,32 @@
     "academic-third-card-link":"More about the Formation +",
 
     "skills-subtitle-section": "Explore My",
-    "skills-title-section": "Skills"
+    "skills-title-section": "Skills",
+
+    "projects-subtitle-section": "Discover My",
+    "projects-title-section": "Projects",
+    
+    "application-projects": "Applications",
+    "websites-projects": "Websites",
+    "design-projects": "Design",
+    "other-projects": "Other projects",
+
+    "title-gradesapp-project":"A Grades Manage App",
+    "title-keops-project":"A Python Quest Game",
+    "title-metagame-project":"A Videos Games reviews's Website",
+    "subtitle-portfolio-project":"This website",
+    "title-portfolio-project":"My portfolio",
+
+    "github-project-button": "View on Github",
+    "figma-project-button": "View on Figma",
+    "view-more-project-button": "View more",
+
+    "contact-subtitle-section": "More details about my",
+    "contact-title-section": "Internship Search",
+
+    "contact-text": "I am looking for an internship opportunity in a company for the month of June 2024 in the Rennes region, specifically in the field of computer science. I am open to various domains and am motivated to acquire new skills to add to my repertoire. If my profile aligns with your needs, please do not hesitate to contact me.",
+    "contact-mail-button": "E-Mail",
+    "contact-phone-button": "Phone"
+    
+    
 }
