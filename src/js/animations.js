@@ -62,6 +62,7 @@ function opacityAcademicGrid() {
   if (currentOpacity >= 1) {
     [...document.querySelectorAll(".academicItem__picture")].forEach((e) => {
       e.style.height = "100%";
+      e.style.padding = "1vw";
     });
   } else {
     [...document.querySelectorAll(".academicItem__picture")].forEach((e) => {
