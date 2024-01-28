@@ -66,6 +66,7 @@ function opacityAcademicGrid() {
   } else {
     [...document.querySelectorAll(".academicItem__picture")].forEach((e) => {
       e.style.height = "0";
+      e.style.padding = "0";
     });
   }
 }
