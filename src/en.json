@@ -1,63 +1,49 @@
 {
-    "home-link":"Home", 
-    "about-link":"About",
-    "academic-link":"Academic",
-    "skills-link":"Skills",
-    "projects-link":"Projects",
-    "contact-link":"Contact",
-    "main-subtitle":"Hi, I’m Thibaud",
-    "main-title": "Student in Engineering",
-    "download-cv-button": "View my CV",
-    "reach-me-button": "Reach me out",
+    "about-link":"ABOUT",
+    "academic-link":"EDUCATION",
+    "skills-link":"SKILLS",
+    "projects-link":"PROJECTS",
+    "contact-link":"CONTACT",
+    "lang-link":"EN",
+    "main-title":"Hey, I'm Thibaud !<br>Student in Engineering",
+    "about-me-button": "About Me",
+    "get-cv-button": "Get my CV",
 
-    "about-title-card": "Engineer Student",
-    "about-content-card": "I am 20 years old and currently in my third year of higher education. I've decided to combine my two greatest passions: design and programming, and turn them into my career.<br><br>I'm always on the lookout for the best designs to create, and I'm constantly working to improve my creations.<br><br>I have an insatiable thirst for knowledge, always eager to explore the latest features and programming languages.",
-    "github-profil": "My Github",
-    "linkedin-profil": "My LinkedIn",
-    "figma-profil": "My Figma",
+    "about-title": "Hey, I’m Thibaud,<br />Student in Engineering !",
+    "about-text": "I am 20 years old and currently in my third year of higher education. I've decided to combine my two greatest passions: design and programming, and turn them into my career.<br><br>I'm always on the lookout for the best designs to create, and I'm constantly working to improve my creations.<br><br>I have an insatiable thirst for knowledge, always eager to explore the latest features and programming languages.",
+    "about-cta": "See my work",
 
-    "academic-subtitle": "Let’s go Through My",
-    "academic-title": "Academic Journey & Honours",
-    "academic-first-card-title":"Advocacy Laureate",
-    "academic-first-card-text":"Winner of the Human Rights Advocacy Competition organized by the League of Human Rights, advocating for the rights of migrants. I am dedicated to prioritizing humanity in both my interactions and projects.",
-    "academic-first-card-link":"Read article about this +",
+    "academic-title": "Let's go through my <span id='academicSpan'> Academic Journey </span> & <span id='honoursSpan'>Honours</span>",
+ 
+    "academic-first-card-title":"Advocacy Competition",
+    "academic-first-card-text":"Winner of the Human Rights Advocacy Contest organized by the Human Rights League, advocating for the rights of migrants. I am committed to prioritizing humanity both in my interactions and in my projects.",
 
     "academic-second-card-title":"High-School Diploma",
     "academic-second-card-text":"Graduated with honors from a scientific high school diploma. This education instilled in me a passion for problem-solving and the discipline it entails.",
-    "academic-second-card-link":"More about the Formation +",
 
     "academic-third-card-date": "Since 2022",
     "academic-third-card-title":"Engineering Program",
     "academic-third-card-text":"Currently a student in engineering school with a specialization in information systems. This program has taught me the fundamentals of programming and methodologies for project creation and management.",
-    "academic-third-card-link":"More about the Formation +",
+   
+    "skills-title": "Explore all my skills in <span id='webSpan'>web development</span>,<span id='designSpan'>design</span> and<br /><span id='oopSpan'>oriented object programmation</span>.",
 
-    "skills-subtitle-section": "Explore My",
-    "skills-title-section": "Skills",
+    "projects-title": "Discover my recents projects of <span id='websitesProjectsSpan'> websites</span>,<br><span id='webAppsProjectsSpan'>web-app</span> &<span id='videoGamesProjectsSpan'>video-games</span>.",
 
-    "projects-subtitle-section": "Discover My",
-    "projects-title-section": "Projects",
     
-    "application-projects": "Applications",
-    "websites-projects": "Websites",
-    "design-projects": "Design",
-    "other-projects": "Other projects",
+    "github-projects-button": "See more on Github",
+    "figma-projects-button": "See more on Figma",
 
-    "title-gradesapp-project":"A Grades Manage App",
-    "title-keops-project":"A Python Quest Game",
-    "title-metagame-project":"A Videos Games reviews's Website",
-    "subtitle-portfolio-project":"This website",
-    "title-portfolio-project":"My portfolio",
+    "project-1-description":"A website of video game articles.",
+    "project-2-description":"A 2D python quest game.",
+    "project-3-description":"A grade management application for students.",
+    "project-4-description":"My personnal portfolio.",
 
-    "github-project-button": "View on Github",
-    "figma-project-button": "View on Figma",
-    "view-more-project-button": "View more",
-
-    "contact-subtitle-section": "More details about my",
-    "contact-title-section": "Internship Search",
+    "contact-title-section": "Get more details about my<br><span id='websitesProjectsSpan'> internship search</span>.",
 
     "contact-text": "I am looking for an internship opportunity in a company for the month of June 2024 in the Rennes region, specifically in the field of computer science. I am open to various domains and am motivated to acquire new skills to add to my repertoire. If my profile aligns with your needs, please do not hesitate to contact me.",
-    "contact-mail-button": "E-Mail",
-    "contact-phone-button": "Phone"
+    "contact-message-button": "Send me a message",
+
+    "copyrights":"&copy; 2024 Thibaud Wajrock | All rights reserved."
     
     
 }

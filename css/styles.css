@@ -1,0 +1,887 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.welcomer {
+  width: 100%;
+  position: relative;
+  height: 250vh;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.hero__background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 6vw);
+  height: calc(100% - 6vw);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.06;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.hero__overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 6vw);
+  height: calc(100% - 6vw);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: url("/portfolio/assets/noise.png");
+  opacity: 0.8;
+  border-radius: 1rem;
+}
+
+.vertical {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* overflow: hidden; */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(90%);
+  }
+  to {
+    transform: translateY(10rem);
+  }
+}
+@keyframes scrollInv {
+  from {
+    transform: translateY(-10rem);
+  }
+  to {
+    transform: translateY(-20%);
+  }
+}
+.block_card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.left,
+.right {
+  animation: scroll 15s linear;
+  transform: translateY(10rem);
+  filter: grayscale(0%);
+}
+
+.center {
+  animation: scrollInv 15s linear;
+  transform: translateY(-20%);
+}
+
+.card {
+  width: 100%;
+  height: 73vh;
+  background-color: grey;
+  border-radius: 2rem;
+}
+
+.profileCard {
+  background: url("/portfolio/assets/profile.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.project1Card {
+  background: url("/portfolio/assets/projects/grades-app.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.project2Card {
+  background: url("/portfolio/assets/projects/keops.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.project3Card {
+  background: url("/portfolio/assets/projects/meta-game.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.project4Card {
+  background: url("/portfolio/assets/projects/portfolio.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero__header {
+  width: 100%;
+  padding: 3rem 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 2rem;
+  animation: opacity 2s ease-out;
+}
+.hero__header p {
+  transition: transform 0.3s ease-in-out;
+}
+.hero__header p:hover {
+  color: grey;
+  transform: translateY(-30%);
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hero__logo {
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+}
+
+.hero__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.itemNav {
+  color: white;
+  font-weight: 500;
+}
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1;
+  animation: pulse 1s;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 1rem;
+  animation: fadeInUp;
+  animation-duration: 1s;
+}
+.hero__buttons a {
+  background-color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: black;
+  transition: padding 0.4s ease-in-out;
+}
+.hero__buttons a:hover {
+  padding: 0.7rem 2.5rem;
+}
+.hero__buttons a:last-child {
+  background-color: transparent;
+  border: 0.1rem solid white;
+  color: white;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  padding: 3vw;
+}
+
+.aboutCard {
+  width: 100%;
+  height: 100%;
+  transform: scale3d(1, 1, 1);
+  background-color: black;
+  border-radius: 1rem;
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.aboutPicture {
+  width: 0%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: width 0.5s ease-in;
+  display: flex;
+}
+.aboutPicture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.viewPicture {
+  width: 70%;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 6vw;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  gap: 3rem;
+  opacity: 0;
+  animation: opacityAnim 0.4s ease-in;
+  animation-delay: 0.4s;
+}
+.aboutContent h1 {
+  line-height: 1;
+  font-size: 3rem;
+  color: white;
+}
+.aboutContent p {
+  font-size: 16px;
+  color: rgb(163, 163, 163);
+}
+
+@keyframes opacityAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.aboutContent__buttons {
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.aboutLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutLink svg {
+  height: 60%;
+  color: grey;
+}
+
+.figma-svg:hover path {
+  opacity: 1;
+  transition: fill 0.3s ease-in-out;
+}
+
+.github-svg:hover path {
+  transition: fill 0.3s ease-in-out;
+  fill: white;
+}
+
+.figma-svg:hover path:nth-child(1) {
+  fill: #f24e1e;
+}
+
+.figma-svg:hover path:nth-child(2) {
+  fill: #a259ff;
+}
+
+.figma-svg:hover path:nth-child(3) {
+  fill: #1abcfe;
+}
+
+.figma-svg:hover path:nth-child(4) {
+  fill: #0acf83;
+}
+
+.figma-svg:hover path:nth-child(5) {
+  fill: #ff7262;
+}
+
+.linkedin-svg:hover path {
+  transition: fill 0.3s ease-in-out;
+  fill: #0076b2;
+}
+
+.projects {
+  display: flex;
+  height: 350vh;
+  flex-direction: column;
+  align-items: center;
+  padding: 13vw 3vw;
+  gap: 10rem;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.projects h1 {
+  color: grey;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  height: 6rem;
+  font-family: "Playfair Display", serif;
+}
+
+.projectsHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  align-items: center;
+}
+
+.projectsHeader__buttons {
+  display: flex;
+  gap: 1rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.projectsContent {
+  width: 100%;
+  height: 400vh;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 3vw 0;
+  padding-top: 10vh;
+  gap: 30vh;
+}
+
+.lineProjects {
+  display: flex;
+  gap: 1rem;
+  height: 70vh;
+  position: sticky;
+}
+
+.projectItem {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.firstLineProjects {
+  top: 3vw;
+  z-index: 1;
+  width: calc(100% - 6vw);
+  left: 3vw;
+}
+
+.firstLineProjects .projectItem:nth-child(1) {
+  background-color: #d8dbb9;
+}
+
+.firstLineProjects .projectItem:nth-child(2) {
+  background-color: #b9cddb;
+}
+
+.secondLineProjects {
+  top: 12vw;
+  width: calc(100% - 6vw);
+  z-index: 2;
+  left: 3vw;
+}
+
+.secondLineProjects .projectItem:nth-child(1) {
+  background-color: #b9dbc0;
+}
+
+.secondLineProjects .projectItem:nth-child(2) {
+  background-color: #dbb9b9;
+}
+
+.keops {
+  background: url("/portfolio/assets/projects/keops.jpg");
+  background-position: center;
+  background-size: contain;
+}
+
+.meta-game {
+  background: url("/portfolio/assets/projects/meta-game.jpg");
+  background-position: 100% 50%;
+  background-size: cover;
+}
+
+.grades-app {
+  background: url("/portfolio/assets/projects/grades-app.jpg");
+  background-position: 100% 0;
+  background-size: cover;
+}
+
+.portfolio {
+  background: url("/portfolio/assets/projects/portfolio.jpg");
+  background-position: 100% 50%;
+  background-size: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* .projectTitle{
+        font-family: "Playfair Display", serif;
+        font-weight: 900;
+        font-size: 4rem;
+        width: 100%;
+        text-align: center;
+        color: white;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%,-50%);
+        transition: opacity .5s ease-in-out;
+      } */
+.projectItem:hover .overlay {
+  opacity: 0.1;
+}
+
+.projectItem:hover .link.hover {
+  opacity: 1;
+}
+
+.projectItem:hover .infos.hover {
+  opacity: 1;
+}
+
+/* .projectItem:hover .projectTitle.hover{
+        opacity: 1;
+      } */
+.link {
+  position: absolute;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  background-color: black;
+  color: white;
+  top: 2vh;
+  right: 2vh;
+  z-index: 2;
+  opacity: 0;
+  border-radius: 1rem;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.link .noise-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link svg {
+  height: 50%;
+}
+
+.infos {
+  position: absolute;
+  bottom: 2vh;
+  left: 2vh;
+  z-index: 2;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.infos .noise-bg {
+  padding: 1rem;
+}
+.infos .noise-bg p {
+  color: rgb(177, 177, 177);
+}
+
+.skills {
+  height: 550vh;
+  display: block;
+}
+.skills h1 {
+  color: grey;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  height: 6rem;
+  font-family: "Playfair Display", serif;
+  margin: 7vh 0 18vh 0;
+}
+
+.animation-wrap {
+  width: 100%;
+  height: 100dvh;
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  padding: 3vw;
+}
+
+.skills-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  transform: scale3D(2, 2, 1);
+  transform-style: preserve-3d;
+  perspective-origin: 50% 0;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  transform-origin: 50% 0;
+}
+
+.skills__item {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: rgb(10, 10, 10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgbox {
+  height: 50%;
+}
+.svgbox svg {
+  height: 100%;
+}
+
+.academic {
+  display: flex;
+  height: 350vh;
+  flex-direction: column;
+  align-items: center;
+  padding: 13vw 3vw;
+  gap: 10rem;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.academic h1 {
+  color: grey;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  height: 6rem;
+  font-family: "Playfair Display", serif;
+}
+
+.academicContent {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  padding: 3vw;
+  top: 0rem;
+  opacity: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.academicItem {
+  background-color: rgb(10, 10, 10);
+  border-radius: 1rem;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.academicItem:hover .academicItem__texts {
+  display: flex;
+}
+
+.academicItem__picture {
+  border-radius: 1rem;
+  width: 100%;
+  height: 0%;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 1vw;
+}
+
+.engineer {
+  background: url("https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+}
+
+.school {
+  background: url("https://images.unsplash.com/photo-1627556704302-624286467c65?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+}
+
+.advocacy {
+  background: url("https://images.unsplash.com/photo-1517409091671-180985f2ca15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+}
+
+.academicItem__texts {
+  text-align: center;
+  color: white;
+  animation: fadeInUp 1s;
+  background-color: black;
+  width: 100%;
+  border-radius: 1rem;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  animation: pulse 1s ease-in-out;
+}
+.academicItem__texts .noise-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 3rem;
+}
+.academicItem__texts .noise-bg h2 {
+  text-align: left;
+  margin-bottom: 0.8rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+}
+.academicItem__texts .noise-bg .date {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: grey;
+}
+.academicItem__texts .noise-bg .paragraph {
+  text-align: left;
+  color: rgb(167, 167, 167);
+}
+
+.contact {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
+  gap: 2rem;
+}
+
+.contact h1 {
+  color: grey;
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 500;
+  height: auto;
+  font-family: "Playfair Display", serif;
+}
+
+.contactCard {
+  width: 100%;
+  height: 100%;
+  background: black;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.contactCard .noise-bg {
+  padding: 3vw 0 3vw 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  background: url("/portfolio/assets/map_dark.svg");
+  background-size: 250%;
+  background-position: 85% 50%;
+}
+
+.contactTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.contactTexts .body-text {
+  color: white;
+  width: 80%;
+  text-align: justify;
+  margin: 1rem 0 2rem 0;
+}
+.contactTexts__buttons {
+  display: flex;
+  gap: 1rem;
+  transition: opacity 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+.contactTexts__buttons .secondary-button {
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactTexts__buttons .secondary-button svg {
+  height: 1.2rem;
+}
+
+.copyrights {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(177, 177, 177);
+}
+.copyrights .logo {
+  font-weight: 600;
+  color: white;
+}
+.copyrights .hero__nav p {
+  color: rgb(177, 177, 177);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: black;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+}
+
+.main-button {
+  background-color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  transition: padding 0.2s ease-in-out;
+  cursor: pointer;
+  color: black;
+}
+.main-button:hover {
+  padding: 0.7rem 2.5rem;
+}
+
+.secondary-button {
+  padding: 0.7rem 1.4rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  transition: padding 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0.1rem solid white;
+  color: white;
+}
+
+.noise {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: url("/portfolio/assets/noise.png");
+}
+
+.noise-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("/portfolio/assets/noise.png");
+}
+
+span {
+  font-family: "Playfair Display", serif;
+  transition: color 0.4s ease-in-out;
+}/*# sourceMappingURL=styles.css.map */

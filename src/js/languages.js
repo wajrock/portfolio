@@ -1,51 +1,37 @@
-let currentLanguage = localStorage.getItem('lang'); //curent language ISO-CODE
-// console.log(currentLanguage);
-let opacityFR;
-let opacityUS;
+let currentLanguage = localStorage.getItem("lang");
 
-window.onload = async function (){
+window.onload = async function () {
   const langData = await fetchData(currentLanguage);
-  if (currentLanguage == "fr"){
-    document.getElementById('us-flag').style.opacity = "0.3";
-    opacityFR = "1";
-    opacityUS = "0.3";
-} else {
-    document.getElementById('fr-flag').style.opacity = "0.3";
-    opacityFR = "0.3";
-    opacityUS = "1";
-}
-  if (localStorage.getItem('lang')){
+
+  if (localStorage.getItem("lang")) {
     updateContent(langData);
   }
-  
-}
+};
 
-// CHANGE LANGUAGE FONCTION
-let langOptions = document.querySelectorAll(".flags_item");
+document.getElementById("langSwitch").addEventListener("click", async (e) => {
+  e.target.innerHTML == "EN"
+    ? (currentLanguage = "fr")
+    : (currentLanguage = "en");
 
-langOptions.forEach((e) => {
-  e.addEventListener("click", async () => {
-    
-    e.id == "us-flag" ? currentLanguage = "en" : currentLanguage = "fr";
-    
-    localStorage.setItem('lang',currentLanguage);
+  localStorage.setItem("lang", currentLanguage);
 
-    if (currentLanguage == "fr"){
-      document.getElementById('us-flag').style.opacity = "0.3";
-      opacityFR = "1";
-      opacityUS = "0.3";
-  } else {
-      document.getElementById('fr-flag').style.opacity = "0.3";
-      opacityFR = "0.3";
-      opacityUS = "1";
-  }
+  const langData = await fetchData(currentLanguage);
 
-    
-    const langData = await fetchData(currentLanguage);
-
-    updateContent(langData);
-  });
+  updateContent(langData);
 });
+
+document.getElementById("langSwitch_bottom").addEventListener("click", async (e) => {
+  e.target.innerHTML == "EN"
+    ? (currentLanguage = "fr")
+    : (currentLanguage = "en");
+
+  localStorage.setItem("lang", currentLanguage);
+
+  const langData = await fetchData(currentLanguage);
+
+  updateContent(langData);
+});
+
 
 // UPDATE TEXTS CONTENT WITH NEW LANGUAGE
 function updateContent(langData) {
@@ -60,30 +46,6 @@ function updateContent(langData) {
 // GET LANGUAGE DATA FROM JSON FILE
 async function fetchData(lang) {
   const res = await fetch(`/portfolio/src/${lang}.json`);
+
   return res.json();
 }
-
-
-
-
-// FLAG HOVERS
-document.getElementById('us-flag').addEventListener('mouseenter', () =>{
-    document.getElementById('fr-flag').style.opacity = "0.3";
-    document.getElementById('us-flag').style.opacity = "1";
-})
-
-document.getElementById('us-flag').addEventListener('mouseleave', () =>{
-    document.getElementById('fr-flag').style.opacity = opacityFR;
-    document.getElementById('us-flag').style.opacity = opacityUS;
-})
-
-document.getElementById('fr-flag').addEventListener('mouseenter', () =>{
-    document.getElementById('us-flag').style.opacity = "0.3";
-    document.getElementById('fr-flag').style.opacity = "1";
-})
-
-document.getElementById('fr-flag').addEventListener('mouseleave', () =>{
-    document.getElementById('fr-flag').style.opacity = opacityFR;
-    document.getElementById('us-flag').style.opacity = opacityUS;
-    
-})

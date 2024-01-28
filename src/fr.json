@@ -1,62 +1,46 @@
 {
-    "home-link":"Acceuil",
-    "about-link":"A propos",
-    "academic-link":"Formation",
-    "skills-link":"Compétences",
-    "projects-link":"Projets",
-    "contact-link":"Contact",
-    "main-subtitle":"Hey, moi c'est Thibaud",
-    "main-title": "Etudiant Ingénieur",
-    "download-cv-button": "Voir mon CV",
-    "reach-me-button": "Me contacter",
+    "about-link":"A PROPOS",
+    "academic-link":"FORMATION",
+    "skills-link":"COMPETENCES",
+    "projects-link":"PROJETS",
+    "contact-link":"CONTACT",
+    "lang-link":"FR",
+    "main-title":"Hey, moi c'est Thibaud !<br>Etudiant Ingénieur",
+    "about-me-button": "A propos",
+    "get-cv-button": "Voir mon CV",
 
-    "about-title-card": "Etudiant Ingénieur",
-    "about-content-card": "J'ai 20 ans et je suis actuellement en troisième année d'enseignement supérieur. J'ai décidé de fusionner mes deux plus grandes passions : le design et la programmation, et d'en faire ma carrière.<br><br>Je suis constamment à la recherche des meilleures conceptions à créer, et je travaille sans relâche pour améliorer mes créations.<br><br>J'ai une soif insatiable de connaissance, toujours désireux d'explorer les dernières fonctionnalités et langages de programmation.",
-    "github-profil": "Mon Github",
-    "linkedin-profil": "Mon LinkedIn",
-    "figma-profil": "Mon Figma",
+    "about-title": "Hey, moi c'est Thibaud,<br />Etudiant Ingénieur !",
+    "about-text": "J'ai 20 ans et je suis actuellement en troisième année d'enseignement supérieur. J'ai décidé de fusionner mes deux plus grandes passions : le design et la programmation, et d'en faire ma carrière.<br><br>Je suis constamment à la recherche des meilleures conceptions à créer, et je travaille sans relâche pour améliorer mes créations.<br><br>J'ai une soif insatiable de connaissance, toujours désireux d'explorer les dernières fonctionnalités et langages de programmation.",
+    "about-cta": "Voir mes projets",
 
-    "academic-subtitle": "Parcourez Mes",
-    "academic-title": "Formations & Distinctions",
+    "academic-title": "Parcourez Mes <span id='academicSpan'> Formations </span> &<span id='honoursSpan'> Distinctions</span>",
 
     "academic-first-card-title":"Concours de plaidoiries",
     "academic-first-card-text":"Vainqueur du Concours de Plaidoyer pour les Droits de l'Homme organisé par la Ligue des Droits de l'Homme, plaidant en faveur des droits des migrants. Je m'engage à prioriser l'humanité tant dans mes interactions que dans mes projets.",
-    "academic-first-card-link":"Lire un article à ce sujet +",
 
     "academic-second-card-title":"Diplôme Baccalauréat",
     "academic-second-card-text":"Diplômé avec mention d'un baccalauréat scientifique, cette éducation a enraciné en moi une passion pour la résolution de problèmes et la discipline qu'elle implique.",
-    "academic-second-card-link":"Voir la formation +",
-
+ 
     "academic-third-card-date": "Depuis 2022",
     "academic-third-card-title":"Ecole d'Ingénieurs",
     "academic-third-card-text":"Actuellement étudiant dans une école d'ingénieurs avec une spécialisation en systèmes d'information. Ce programme m'a enseigné les fondamentaux de la programmation ainsi que les méthodologies de création et de gestion de projets.",
-    "academic-third-card-link":"Voir la formation +",
+    
+    "skills-title": "Explorez mes compétences en <span id='webSpan'>developpement web</span>,<span id='designSpan'>design</span> & <br /><span id='oopSpan'>programmation orientée objet</span>.",
 
-    "skills-subtitle-section": "Explorer Mes",
-    "skills-title-section": "Compétences",
+    "projects-title": "Découvrez mes récents projets de <span id='websitesProjectsSpan'> sites web</span>,<br><span id='webAppsProjectsSpan'>web-application</span> & <span id='videoGamesProjectsSpan'>jeux vidéos</span>.",
 
-    "projects-subtitle-section": "Découvrez Mes",
-    "projects-title-section": "Projets",
+    "github-projects-button": "Voir plus sur Github",
+    "figma-projects-button": "Voir plus Figma",
 
-    "application-projects": "Applications",
-    "websites-projects": "Sites-web",
-    "design-projects": "Design",
-    "other-projects": "Autres projects",
+    "project-1-description":"Un site-web d'articles de jeux-vidéos.",
+    "project-2-description":"Un jeu 2D de quêtes en Python.",
+    "project-3-description":"Une application de gestion de résultats pour étudiants.",
+    "project-4-description":"Mon portfolio personnel.",
 
-    "title-gradesapp-project":"Application de Gestion de Notes",
-    "title-keops-project":"Jeux de quêtes Python",
-    "title-metagame-project":"Site d'articles de jeux-vidéos",
-    "subtitle-portfolio-project":"CE SITE",
-    "title-portfolio-project":"Mon portfolio",
+    "contact-title-section": "Plus de détails sur ma<br><span id='websitesProjectsSpan'> recherche de stage</span>.",
 
-    "github-project-button": "Voir sur Github",
-    "figma-project-button": "Voir sur Figma",
-    "view-more-project-button": "Voir plus",
+    "contact-text": "Je suis à la recherche d'une opportunité de stage en entreprise pour le mois de juin 2024 dans la région de Rennes, plus précisément dans le domaine de l'informatique. Je suis ouvert à différents domaines et motivé pour acquérir de nouvelles compétences à ajouter à mon répertoire. Si mon profil correspond à vos besoins, n'hésitez pas à me contacter.",
+    "contact-message-button": "Envoyez moi un message",
 
-    "contact-subtitle-section": "Plus de détails sur ma",
-    "contact-title-section": "Recherche de stage",
-
-    "contact-text": "Je recherche une opportunité de stage au sein d'une entreprise pour le mois de juin 2024 dans la région de Rennes, plus précisément dans le domaine de l'informatique. Je suis ouvert à divers domaines et motivé pour acquérir de nouvelles compétences à ajouter à mon répertoire. Si mon profil correspond à vos besoins, n'hésitez pas à me contacter.",
-    "contact-mail-button": "E-Mail",
-    "contact-phone-button": "Téléphone"
+    "copyrights":"&copy; 2024 Thibaud Wajrock | Tous droits réservés."
 }
