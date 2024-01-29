@@ -135,7 +135,7 @@
             </p>
             <div class="aboutContent__buttons">
               <a class="main-button" data-lng="about-cta" href="#projects">See my work</a>
-              <a href="https://github.com/wajrock" target="_blank" class="aboutLink">
+              <a href="https://github.com/wajrock" rel="noopener" title="Github" target="_blank" class="aboutLink">
                 <svg
                   class="github-svg"
                   xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +147,7 @@
                   />
                 </svg>
               </a>
-              <a href="https://figma.com/@wajrock" target="_blank" class="aboutLink">
+              <a href="https://figma.com/@wajrock" rel="noopener" title="Figma" target="_blank" class="aboutLink">
                 <svg
                   class="figma-svg"
                   xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +179,7 @@
                   />
                 </svg>
               </a>
-              <a href="https://linkedin.com/in/wajrock" target="_blank" class="aboutLink">
+              <a href="https://linkedin.com/in/wajrock" rel="noopener" title="Linkedin" target="_blank" class="aboutLink">
                 <svg
                   class="linkedin-svg"
                   xmlns="http://www.w3.org/2000/svg"
@@ -212,8 +212,9 @@
       </h1>
       <main class="academicContent" id="academicContent">
         
-        <div class="academicItem">
+        <div class="academicItem" id="first-academic-item">
           <div class="academicItem__picture advocacy">
+            <div class="noise-bg">
             <div class="academicItem__texts">
               <div class="noise-bg">
                 <p class="date">2019</p>
@@ -222,27 +223,32 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
 
-        <div class="academicItem">
-          <div class="academicItem__picture engineer">
-            <div class="academicItem__texts">
-              <div class="noise-bg">
-                <p class="date">2021</p>
-                <h2 data-lng="academic-second-card-title">Engineering Program</h2>
-                <p data-lng="academic-second-card-text" class="paragraph">Graduated with honors from a scientific high school diploma. This education instilled in me a passion for problem-solving and the discipline it entails.</p>
+        <div class="academicItem" id="second-academic-item">
+          <div class="academicItem__picture school">
+            <div class="noise-bg">
+              <div class="academicItem__texts">
+                <div class="noise-bg">
+                  <p class="date">2021</p>
+                  <h2 data-lng="academic-second-card-title">Engineering Program</h2>
+                  <p data-lng="academic-second-card-text" class="paragraph">Graduated with honors from a scientific high school diploma. This education instilled in me a passion for problem-solving and the discipline it entails.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="academicItem">
+        <div class="academicItem" id="third-academic-item">
           <div class="academicItem__picture engineer">
-            <div class="academicItem__texts">
-              <div class="noise-bg">
-                <p data-lng="academic-third-card-date" class="date">SINCE 2022</p>
-                <h2 data-lng="academic-third-card-title">Engineering Program</h2>
-                <p data-lng="academic-third-card-text" class="paragraph">Currently a student in engineering school with a specialization in information systems. This program has taught me the fundamentals of programming and methodologies for project creation and management.</p>
+            <div class="noise-bg">
+              <div class="academicItem__texts">
+                <div class="noise-bg">
+                  <p data-lng="academic-third-card-date" class="date">SINCE 2022</p>
+                  <h2 data-lng="academic-third-card-title">Engineering Program</h2>
+                  <p data-lng="academic-third-card-text" class="paragraph">Currently a student in engineering school with a specialization in information systems. This program has taught me the fundamentals of programming and methodologies for project creation and management.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -263,6 +269,7 @@
       <div class="animation-wrap" id="wrap">
         <div class="skills-grid" id="grid">
           <div class="skills__item">
+            <div class="noise-bg">
             <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#e44f26" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30z"/><path fill="#f1662a" d="m16 27.858l8.17-2.265l1.922-21.532H16z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004z"/><path fill="#fff" d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83h-.833zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83z"/></svg> -->
             <div class="svgbox">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -284,8 +291,15 @@
                 />
               </svg>
             </div>
+
+            <div class="skills__item__content" id="html-content">
+              <p class="level">Advanced Mastering</p>
+            </div>
+
+          </div>
           </div>
           <div class="skills__item">
+            <div class="noise-bg">
             <div class="svgbox">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                 <path
@@ -314,28 +328,46 @@
                 />
               </svg>
             </div>
+
+            <div class="skills__item__content" id="css-content">
+              <p class="level">Advanced Mastering</p>
+            </div>
+          </div>
           </div>
           <div class="skills__item">
-            <div class="svgbox">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 192">
-                <path
-                  fill="#CD6799"
-                  d="M220.281 110.514c-8.906.046-16.647 2.191-23.128 5.362c-2.379-4.71-4.757-8.906-5.176-11.984c-.467-3.59-1.026-5.782-.467-10.072c.56-4.29 3.078-10.399 3.031-10.865c-.046-.466-.56-2.658-5.689-2.704c-5.129-.047-9.559.979-10.072 2.331c-.513 1.352-1.492 4.43-2.145 7.6c-.886 4.664-10.258 21.31-15.62 30.03c-1.726-3.403-3.218-6.388-3.545-8.766c-.466-3.59-1.026-5.782-.466-10.072c.56-4.29 3.078-10.398 3.031-10.865c-.047-.466-.56-2.658-5.689-2.704c-5.13-.047-9.56.979-10.072 2.331c-.513 1.353-1.073 4.523-2.145 7.601c-1.073 3.078-13.523 30.87-16.787 38.05a214.726 214.726 0 0 1-4.15 8.627s-.047.14-.187.373a117.773 117.773 0 0 1-1.398 2.658v.046c-.7 1.26-1.446 2.425-1.819 2.425c-.28 0-.793-3.357.093-7.927c1.865-9.652 6.295-24.667 6.249-25.18c0-.28.839-2.891-2.891-4.244c-3.638-1.352-4.943.886-5.27.886c-.326 0-.56.793-.56.793s4.058-16.88-7.74-16.88c-7.367 0-17.533 8.067-22.569 15.341a6269.96 6269.96 0 0 0-17.16 9.373c-2.75 1.539-5.595 3.078-8.253 4.523c-.187-.186-.373-.42-.56-.606c-14.269-15.248-40.661-26.02-39.542-46.49c.42-7.461 2.984-27.046 50.687-50.827c39.262-19.352 70.505-13.99 75.914-2.099c7.74 16.974-16.74 48.496-57.309 53.065c-15.481 1.726-23.595-4.243-25.646-6.481c-2.145-2.332-2.472-2.472-3.265-2.005c-1.305.7-.466 2.798 0 4.01c1.213 3.17 6.202 8.766 14.642 11.518c7.461 2.424 25.6 3.777 47.563-4.71c24.574-9.513 43.786-35.952 38.144-58.101c-5.643-22.476-42.947-29.89-78.246-17.347C61.086 13.99 38.33 25.74 21.963 41.035C2.518 59.22-.56 75.028.699 81.65c4.524 23.501 36.932 38.796 49.895 50.127c-.653.373-1.26.7-1.772.98c-6.482 3.217-31.196 16.133-37.351 29.796c-6.994 15.481 1.12 26.58 6.482 28.071c16.647 4.617 33.76-3.683 42.946-17.393c9.186-13.709 8.067-31.522 3.824-39.682c-.047-.093-.093-.187-.187-.28c1.679-.979 3.404-2.005 5.083-2.984a247.933 247.933 0 0 1 9.373-5.27c-1.586 4.337-2.752 9.513-3.311 16.974c-.7 8.767 2.89 20.144 7.6 24.62c2.099 1.96 4.57 2.006 6.156 2.006c5.502 0 7.974-4.57 10.725-9.979c3.357-6.621 6.388-14.315 6.388-14.315s-3.777 20.797 6.482 20.797c3.73 0 7.507-4.85 9.186-7.321v.046s.093-.14.28-.466c.373-.606.606-.98.606-.98v-.092c1.492-2.612 4.85-8.534 9.839-18.373c6.435-12.683 12.637-28.537 12.637-28.537s.56 3.87 2.471 10.305c1.12 3.777 3.45 7.927 5.316 11.937c-1.492 2.099-2.425 3.264-2.425 3.264l.047.047c-1.213 1.585-2.518 3.31-3.964 4.99c-5.083 6.061-11.144 13.01-11.984 15.014c-.98 2.378-.746 4.104 1.12 5.503c1.352 1.026 3.776 1.165 6.248 1.026c4.57-.327 7.787-1.446 9.372-2.145c2.472-.886 5.363-2.239 8.067-4.244c4.99-3.684 8.02-8.953 7.741-15.9c-.14-3.824-1.399-7.648-2.938-11.239c.467-.652.886-1.305 1.353-1.958c7.88-11.518 13.989-24.155 13.989-24.155s.56 3.87 2.471 10.306c.933 3.264 2.845 6.808 4.523 10.258c-7.414 6.016-11.984 13.01-13.616 17.58c-2.937 8.487-.653 12.31 3.684 13.196c1.958.42 4.756-.513 6.808-1.399c2.611-.839 5.689-2.284 8.627-4.43c4.99-3.683 9.792-8.813 9.512-15.76c-.14-3.171-.979-6.296-2.145-9.327c6.295-2.61 14.409-4.056 24.76-2.844c22.197 2.611 26.58 16.46 25.74 22.29c-.839 5.828-5.502 8.999-7.04 9.978c-1.54.98-2.052 1.306-1.912 2.005c.186 1.026.932.98 2.238.793c1.819-.326 11.658-4.71 12.077-15.435c.7-13.709-12.357-28.677-35.439-28.537M49.055 168.242c-7.368 8.02-17.626 11.051-22.056 8.487c-4.756-2.752-2.891-14.596 6.155-23.082c5.502-5.176 12.59-9.98 17.3-12.917c1.072-.653 2.658-1.585 4.57-2.751c.326-.187.513-.28.513-.28l1.119-.7c3.31 12.124.14 22.803-7.601 31.243m53.625-36.465c-2.565 6.249-7.927 22.243-11.191 21.357c-2.798-.746-4.524-12.87-.56-24.854c2.005-6.016 6.248-13.197 8.72-15.994c4.01-4.477 8.44-5.97 9.512-4.15c1.353 2.378-4.896 19.724-6.481 23.641m44.252 21.17c-1.073.56-2.098.933-2.565.653c-.326-.187.467-.933.467-.933s5.549-5.968 7.74-8.673c1.26-1.585 2.751-3.45 4.337-5.549v.606c0 7.135-6.902 11.938-9.98 13.896m34.133-7.787c-.793-.56-.653-2.425 2.005-8.254c1.026-2.285 3.45-6.108 7.601-9.792c.466 1.492.793 2.938.746 4.29c-.047 9-6.481 12.357-10.352 13.756"
-                />
-              </svg>
+            <div class="noise-bg">
+              <div class="svgbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 192">
+                  <path
+                    fill="#CD6799"
+                    d="M220.281 110.514c-8.906.046-16.647 2.191-23.128 5.362c-2.379-4.71-4.757-8.906-5.176-11.984c-.467-3.59-1.026-5.782-.467-10.072c.56-4.29 3.078-10.399 3.031-10.865c-.046-.466-.56-2.658-5.689-2.704c-5.129-.047-9.559.979-10.072 2.331c-.513 1.352-1.492 4.43-2.145 7.6c-.886 4.664-10.258 21.31-15.62 30.03c-1.726-3.403-3.218-6.388-3.545-8.766c-.466-3.59-1.026-5.782-.466-10.072c.56-4.29 3.078-10.398 3.031-10.865c-.047-.466-.56-2.658-5.689-2.704c-5.13-.047-9.56.979-10.072 2.331c-.513 1.353-1.073 4.523-2.145 7.601c-1.073 3.078-13.523 30.87-16.787 38.05a214.726 214.726 0 0 1-4.15 8.627s-.047.14-.187.373a117.773 117.773 0 0 1-1.398 2.658v.046c-.7 1.26-1.446 2.425-1.819 2.425c-.28 0-.793-3.357.093-7.927c1.865-9.652 6.295-24.667 6.249-25.18c0-.28.839-2.891-2.891-4.244c-3.638-1.352-4.943.886-5.27.886c-.326 0-.56.793-.56.793s4.058-16.88-7.74-16.88c-7.367 0-17.533 8.067-22.569 15.341a6269.96 6269.96 0 0 0-17.16 9.373c-2.75 1.539-5.595 3.078-8.253 4.523c-.187-.186-.373-.42-.56-.606c-14.269-15.248-40.661-26.02-39.542-46.49c.42-7.461 2.984-27.046 50.687-50.827c39.262-19.352 70.505-13.99 75.914-2.099c7.74 16.974-16.74 48.496-57.309 53.065c-15.481 1.726-23.595-4.243-25.646-6.481c-2.145-2.332-2.472-2.472-3.265-2.005c-1.305.7-.466 2.798 0 4.01c1.213 3.17 6.202 8.766 14.642 11.518c7.461 2.424 25.6 3.777 47.563-4.71c24.574-9.513 43.786-35.952 38.144-58.101c-5.643-22.476-42.947-29.89-78.246-17.347C61.086 13.99 38.33 25.74 21.963 41.035C2.518 59.22-.56 75.028.699 81.65c4.524 23.501 36.932 38.796 49.895 50.127c-.653.373-1.26.7-1.772.98c-6.482 3.217-31.196 16.133-37.351 29.796c-6.994 15.481 1.12 26.58 6.482 28.071c16.647 4.617 33.76-3.683 42.946-17.393c9.186-13.709 8.067-31.522 3.824-39.682c-.047-.093-.093-.187-.187-.28c1.679-.979 3.404-2.005 5.083-2.984a247.933 247.933 0 0 1 9.373-5.27c-1.586 4.337-2.752 9.513-3.311 16.974c-.7 8.767 2.89 20.144 7.6 24.62c2.099 1.96 4.57 2.006 6.156 2.006c5.502 0 7.974-4.57 10.725-9.979c3.357-6.621 6.388-14.315 6.388-14.315s-3.777 20.797 6.482 20.797c3.73 0 7.507-4.85 9.186-7.321v.046s.093-.14.28-.466c.373-.606.606-.98.606-.98v-.092c1.492-2.612 4.85-8.534 9.839-18.373c6.435-12.683 12.637-28.537 12.637-28.537s.56 3.87 2.471 10.305c1.12 3.777 3.45 7.927 5.316 11.937c-1.492 2.099-2.425 3.264-2.425 3.264l.047.047c-1.213 1.585-2.518 3.31-3.964 4.99c-5.083 6.061-11.144 13.01-11.984 15.014c-.98 2.378-.746 4.104 1.12 5.503c1.352 1.026 3.776 1.165 6.248 1.026c4.57-.327 7.787-1.446 9.372-2.145c2.472-.886 5.363-2.239 8.067-4.244c4.99-3.684 8.02-8.953 7.741-15.9c-.14-3.824-1.399-7.648-2.938-11.239c.467-.652.886-1.305 1.353-1.958c7.88-11.518 13.989-24.155 13.989-24.155s.56 3.87 2.471 10.306c.933 3.264 2.845 6.808 4.523 10.258c-7.414 6.016-11.984 13.01-13.616 17.58c-2.937 8.487-.653 12.31 3.684 13.196c1.958.42 4.756-.513 6.808-1.399c2.611-.839 5.689-2.284 8.627-4.43c4.99-3.683 9.792-8.813 9.512-15.76c-.14-3.171-.979-6.296-2.145-9.327c6.295-2.61 14.409-4.056 24.76-2.844c22.197 2.611 26.58 16.46 25.74 22.29c-.839 5.828-5.502 8.999-7.04 9.978c-1.54.98-2.052 1.306-1.912 2.005c.186 1.026.932.98 2.238.793c1.819-.326 11.658-4.71 12.077-15.435c.7-13.709-12.357-28.677-35.439-28.537M49.055 168.242c-7.368 8.02-17.626 11.051-22.056 8.487c-4.756-2.752-2.891-14.596 6.155-23.082c5.502-5.176 12.59-9.98 17.3-12.917c1.072-.653 2.658-1.585 4.57-2.751c.326-.187.513-.28.513-.28l1.119-.7c3.31 12.124.14 22.803-7.601 31.243m53.625-36.465c-2.565 6.249-7.927 22.243-11.191 21.357c-2.798-.746-4.524-12.87-.56-24.854c2.005-6.016 6.248-13.197 8.72-15.994c4.01-4.477 8.44-5.97 9.512-4.15c1.353 2.378-4.896 19.724-6.481 23.641m44.252 21.17c-1.073.56-2.098.933-2.565.653c-.326-.187.467-.933.467-.933s5.549-5.968 7.74-8.673c1.26-1.585 2.751-3.45 4.337-5.549v.606c0 7.135-6.902 11.938-9.98 13.896m34.133-7.787c-.793-.56-.653-2.425 2.005-8.254c1.026-2.285 3.45-6.108 7.601-9.792c.466 1.492.793 2.938.746 4.29c-.047 9-6.481 12.357-10.352 13.756"
+                  />
+                </svg>
+              </div>
+  
+              <div class="skills__item__content" id="sass-content">
+                <p class="level">Advanced Mastering</p>
+              </div>
             </div>
           </div>
           <div class="skills__item">
-            <div class="svgbox">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                <path fill="#f5de19" d="M2 2h28v28H2z" />
-                <path
-                  d="M20.809 23.875a2.866 2.866 0 0 0 2.6 1.6c1.09 0 1.787-.545 1.787-1.3c0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964c0-1.973 1.5-3.476 3.853-3.476a3.889 3.889 0 0 1 3.742 2.107L25 18.128A1.789 1.789 0 0 0 23.311 17a1.145 1.145 0 0 0-1.259 1.128c0 .789.489 1.109 1.618 1.6l.658.282c2.236.959 3.5 1.936 3.5 4.133c0 2.369-1.861 3.667-4.36 3.667a5.055 5.055 0 0 1-4.795-2.691Zm-9.295.228c.413.733.789 1.353 1.693 1.353c.864 0 1.41-.338 1.41-1.653v-8.947h2.631v8.982c0 2.724-1.6 3.964-3.929 3.964a4.085 4.085 0 0 1-3.947-2.4Z"
-                />
-              </svg>
+            <div class="noise-bg">
+              <div class="svgbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <path fill="#f5de19" d="M2 2h28v28H2z" />
+                  <path
+                    d="M20.809 23.875a2.866 2.866 0 0 0 2.6 1.6c1.09 0 1.787-.545 1.787-1.3c0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964c0-1.973 1.5-3.476 3.853-3.476a3.889 3.889 0 0 1 3.742 2.107L25 18.128A1.789 1.789 0 0 0 23.311 17a1.145 1.145 0 0 0-1.259 1.128c0 .789.489 1.109 1.618 1.6l.658.282c2.236.959 3.5 1.936 3.5 4.133c0 2.369-1.861 3.667-4.36 3.667a5.055 5.055 0 0 1-4.795-2.691Zm-9.295.228c.413.733.789 1.353 1.693 1.353c.864 0 1.41-.338 1.41-1.653v-8.947h2.631v8.982c0 2.724-1.6 3.964-3.929 3.964a4.085 4.085 0 0 1-3.947-2.4Z"
+                  />
+                </svg>
+              </div>
+  
+              <div class="skills__item__content" id="js-content">
+                <p class="level">Intermediate Mastering</p>
+              </div>
             </div>
           </div>
           <div class="skills__item">
+           <div class="noise-bg">
             <div class="svgbox">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                 <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z" />
@@ -345,8 +377,14 @@
                 />
               </svg>
             </div>
+
+            <div class="skills__item__content" id="ts-content">
+              <p class="level">Intermediate Mastering</p>
+            </div>
+           </div>
           </div>
           <div class="skills__item">
+           <div class="noise-bg">
             <div class="svgbox">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                 <g fill="#61DAFB">
@@ -357,8 +395,14 @@
                 </g>
               </svg>
             </div>
+
+            <div class="skills__item__content" id="react-content">
+              <p class="level">Basic Mastering</p>
+            </div>
+           </div>
           </div>
           <div class="skills__item">
+           <div class="noise-bg">
             <div class="svgbox">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 349">
                 <path
@@ -375,18 +419,30 @@
                 />
               </svg>
             </div>
+
+            <div class="skills__item__content" id="sql-content">
+              <p class="level">Advanced Mastering</p>
+            </div>
+           </div>
           </div>
           <div class="skills__item">
-            <div class="svgbox">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                <path
-                  fill="#8993be"
-                  d="M7.6 13.791a2.352 2.352 0 0 1 1.745.483a1.916 1.916 0 0 1 .207 1.66a2.78 2.78 0 0 1-.918 1.748a3.375 3.375 0 0 1-2.07.529h-1.4l.86-4.411ZM2 22.677h2.3l.545-2.8h1.967a7.049 7.049 0 0 0 2.144-.277a4.06 4.06 0 0 0 1.53-.918A4.585 4.585 0 0 0 11.93 16.1a3.288 3.288 0 0 0-.55-2.922a3.671 3.671 0 0 0-2.91-1.049H4.057ZM13.617 9.323H15.9l-.553 2.8h2.031a3.956 3.956 0 0 1 2.645.669a2.213 2.213 0 0 1 .436 2.167l-.954 4.909h-2.31l.908-4.667a1.267 1.267 0 0 0-.114-1.086a1.6 1.6 0 0 0-1.144-.286h-1.823l-1.175 6.044h-2.288Zm11.922 4.468a2.352 2.352 0 0 1 1.745.483a1.916 1.916 0 0 1 .207 1.66a2.78 2.78 0 0 1-.918 1.748a3.375 3.375 0 0 1-2.074.529H23.1l.858-4.416Zm-5.6 8.886h2.3l.545-2.8h1.968A7.049 7.049 0 0 0 26.9 19.6a4.06 4.06 0 0 0 1.53-.918a4.585 4.585 0 0 0 1.439-2.582a3.288 3.288 0 0 0-.55-2.922a3.671 3.671 0 0 0-2.909-1.046h-4.42Z"
-                />
-              </svg>
+            <div class="noise-bg">
+              <div class="svgbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <path
+                    fill="#8993be"
+                    d="M7.6 13.791a2.352 2.352 0 0 1 1.745.483a1.916 1.916 0 0 1 .207 1.66a2.78 2.78 0 0 1-.918 1.748a3.375 3.375 0 0 1-2.07.529h-1.4l.86-4.411ZM2 22.677h2.3l.545-2.8h1.967a7.049 7.049 0 0 0 2.144-.277a4.06 4.06 0 0 0 1.53-.918A4.585 4.585 0 0 0 11.93 16.1a3.288 3.288 0 0 0-.55-2.922a3.671 3.671 0 0 0-2.91-1.049H4.057ZM13.617 9.323H15.9l-.553 2.8h2.031a3.956 3.956 0 0 1 2.645.669a2.213 2.213 0 0 1 .436 2.167l-.954 4.909h-2.31l.908-4.667a1.267 1.267 0 0 0-.114-1.086a1.6 1.6 0 0 0-1.144-.286h-1.823l-1.175 6.044h-2.288Zm11.922 4.468a2.352 2.352 0 0 1 1.745.483a1.916 1.916 0 0 1 .207 1.66a2.78 2.78 0 0 1-.918 1.748a3.375 3.375 0 0 1-2.074.529H23.1l.858-4.416Zm-5.6 8.886h2.3l.545-2.8h1.968A7.049 7.049 0 0 0 26.9 19.6a4.06 4.06 0 0 0 1.53-.918a4.585 4.585 0 0 0 1.439-2.582a3.288 3.288 0 0 0-.55-2.922a3.671 3.671 0 0 0-2.909-1.046h-4.42Z"
+                  />
+                </svg>
+              </div>
+  
+              <div class="skills__item__content" id="php-content">
+                <p class="level">Advanced Mastering</p>
+              </div>
             </div>
           </div>
           <div class="skills__item">
+           <div class="noise-bg">
             <div class="svgbox">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 346">
                 <path
@@ -411,70 +467,70 @@
                 />
               </svg>
             </div>
+
+            <div class="skills__item__content" id="java-content">
+              <p class="level">Intermediate Mastering</p>
+            </div>
+           </div>
           </div>
+          
           <div class="skills__item">
-            <div class="svgbox">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 288">
-                <path
-                  fill="#649AD2"
-                  d="M255.987 84.59c-.002-4.837-1.037-9.112-3.13-12.781c-2.054-3.608-5.133-6.632-9.261-9.023c-34.08-19.651-68.195-39.242-102.264-58.913c-9.185-5.303-18.09-5.11-27.208.27c-13.565 8-81.48 46.91-101.719 58.632C4.071 67.6.015 74.984.013 84.58C0 124.101.013 163.62 0 203.141c0 4.73.993 8.923 2.993 12.537c2.056 3.717 5.177 6.824 9.401 9.269c20.24 11.722 88.164 50.63 101.726 58.631c9.121 5.382 18.027 5.575 27.215.27c34.07-19.672 68.186-39.262 102.272-58.913c4.224-2.444 7.345-5.553 9.401-9.267c1.997-3.614 2.992-7.806 2.992-12.539c0 0 0-79.018-.013-118.539"
-                />
-                <path
-                  fill="#004482"
-                  d="m128.392 143.476l-125.4 72.202c2.057 3.717 5.178 6.824 9.402 9.269c20.24 11.722 88.164 50.63 101.726 58.631c9.121 5.382 18.027 5.575 27.215.27c34.07-19.672 68.186-39.262 102.272-58.913c4.224-2.444 7.345-5.553 9.401-9.267z"
-                />
-                <path
-                  fill="#1A4674"
-                  d="M91.25 164.863c7.297 12.738 21.014 21.33 36.75 21.33c15.833 0 29.628-8.7 36.888-21.576l-36.496-21.141z"
-                />
-                <path
-                  fill="#01589C"
-                  d="M255.987 84.59c-.002-4.837-1.037-9.112-3.13-12.781l-124.465 71.667l124.616 72.192c1.997-3.614 2.99-7.806 2.992-12.539c0 0 0-79.018-.013-118.539"
-                />
-                <path
-                  fill="#FFF"
-                  d="M249.135 148.636h-9.738v9.74h-9.74v-9.74h-9.737V138.9h9.737v-9.738h9.74v9.738h9.738zM128 58.847c31.135 0 58.358 16.74 73.17 41.709l.444.759l-37.001 21.307c-7.333-12.609-20.978-21.094-36.613-21.094c-23.38 0-42.333 18.953-42.333 42.332a42.13 42.13 0 0 0 5.583 21.003c7.297 12.738 21.014 21.33 36.75 21.33c15.659 0 29.325-8.51 36.647-21.153l.241-.423l36.947 21.406c-14.65 25.597-42.228 42.851-73.835 42.851c-31.549 0-59.084-17.185-73.754-42.707c-7.162-12.459-11.26-26.904-11.26-42.307c0-46.95 38.061-85.013 85.014-85.013m75.865 70.314v9.738h9.737v9.737h-9.737v9.74h-9.738v-9.74h-9.738V138.9h9.738v-9.738z"
-                />
-              </svg>
+            <div class="noise-bg">
+              <div class="svgbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 255">
+                  <defs>
+                    <linearGradient
+                      id="logosPython0"
+                      x1="12.959%"
+                      x2="79.639%"
+                      y1="12.039%"
+                      y2="78.201%"
+                    >
+                      <stop offset="0%" stop-color="#387EB8" />
+                      <stop offset="100%" stop-color="#366994" />
+                    </linearGradient>
+                    <linearGradient
+                      id="logosPython1"
+                      x1="19.128%"
+                      x2="90.742%"
+                      y1="20.579%"
+                      y2="88.429%"
+                    >
+                      <stop offset="0%" stop-color="#FFE052" />
+                      <stop offset="100%" stop-color="#FFC331" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#logosPython0)"
+                    d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072M92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13"
+                  />
+                  <path
+                    fill="url(#logosPython1)"
+                    d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897m34.114-19.586a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.131a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13"
+                  />
+                </svg>
+              </div>
+  
+              <div class="skills__item__content" id="python-content">
+                <p class="level">Intermediate Mastering</p>
+              </div>
             </div>
           </div>
+
           <div class="skills__item">
+           <div class="noise-bg">
             <div class="svgbox">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 255">
-                <defs>
-                  <linearGradient
-                    id="logosPython0"
-                    x1="12.959%"
-                    x2="79.639%"
-                    y1="12.039%"
-                    y2="78.201%"
-                  >
-                    <stop offset="0%" stop-color="#387EB8" />
-                    <stop offset="100%" stop-color="#366994" />
-                  </linearGradient>
-                  <linearGradient
-                    id="logosPython1"
-                    x1="19.128%"
-                    x2="90.742%"
-                    y1="20.579%"
-                    y2="88.429%"
-                  >
-                    <stop offset="0%" stop-color="#FFE052" />
-                    <stop offset="100%" stop-color="#FFC331" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#logosPython0)"
-                  d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072M92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13"
-                />
-                <path
-                  fill="url(#logosPython1)"
-                  d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897m34.114-19.586a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.131a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13"
-                />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314c2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295c3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 0 1-13.683 0a9.677 9.677 0 0 1-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 0 1 2.559 1.828c3.778 3.777 3.778 9.898 0 13.683c-3.779 3.777-9.904 3.777-13.679 0c-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 0 1 3.167-2.11V47.333a9.581 9.581 0 0 1-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333L3.264 58.123a8.133 8.133 0 0 0 0 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 0 0-.001-11.501"/></svg>
             </div>
+
+            <div class="skills__item__content" id="git-content">
+              <p class="level">Intermediate Mastering</p>
+            </div>
+           </div>
           </div>
+
           <div class="skills__item">
+          <div class="noise-bg">
             <div class="svgbox">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 384">
                 <path
@@ -499,6 +555,11 @@
                 />
               </svg>
             </div>
+
+            <div class="skills__item__content" id="figma-content">
+              <p class="level">Intermediate Mastering</p>
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -511,14 +572,14 @@
           <span id="videoGamesProjectsSpan">video-games</span>.
         </h1>
         <div class="projectsHeader__buttons" id="projectsHeader__buttons">
-          <a href="https://github.com/wajrock/" target="_blank" class="main-button" data-lng="github-projects-button">See more on Github</a>
-          <a href="https://www.figma.com/@wajrock" target="_blank" class="main-button" data-lng="figma-projects-button">See more on Figma</a>
+          <a href="https://github.com/wajrock/" rel="noopener" title="Github" target="_blank" class="main-button" data-lng="github-projects-button">See more on Github</a>
+          <a href="https://www.figma.com/@wajrock" rel="noopener" title="Figma" target="_blank" class="main-button" data-lng="figma-projects-button">See more on Figma</a>
         </div>
       </div>
       <main class="projectsContent" id="projectsContent">
         <div class="lineProjects firstLineProjects" id="firstLineProjects">
           
-          <a class="projectItem" href="https://meta-game.000webhostapp.com/" target="_blank">
+          <a class="projectItem" rel="noopener" title="Live Preview" href="https://meta-game.000webhostapp.com/" target="_blank">
             <div class="overlay" id="overlay-1">
               <div class="background-image meta-game" id="bg-project-1"></div>
             </div>
@@ -532,12 +593,12 @@
             <div class="infos" id="infos-1">
               <div class="noise-bg">
                 <h3>THE META GAME</h3>
-                <p>A website of video game articles.</p>
+                <p data-lng="project-1-description">A website of video game articles.</p>
               </div>
             </div>
           </a>
         
-          <a class="projectItem" href="https://github.com/wajrock/keops" target="_blank">
+          <a class="projectItem" rel="noopener" title="Github" href="https://github.com/wajrock/keops" target="_blank">
             <div class="overlay" id="overlay-2">
               <div class="background-image keops" id="bg-project-2"></div>
             </div>
@@ -551,7 +612,7 @@
             <div class="infos" id="infos-2">
               <div class="noise-bg">
                 <h3>KEOPS</h3>
-                <p>A 2D python quest game.</p>
+                <p data-lng="project-2-description">A 2D python quest game.</p>
               </div>
             </div>
           </a>
@@ -559,7 +620,7 @@
 
         <div class="lineProjects secondLineProjects" id="secondLineProjects">
           
-          <a class="projectItem" href="https://www.figma.com/community/file/1333125126974121017" target="_blank">
+          <a class="projectItem" rel="noopener" title="Figma" href="https://www.figma.com/community/file/1333125126974121017" target="_blank">
             <div class="overlay" id="overlay-3">
               <div class="background-image grades-app" id="bg-project-3"></div>
             </div>
@@ -573,14 +634,16 @@
             <div class="infos" id="infos-3">
               <div class="noise-bg">
                 <h3>ESIRESULTATS</h3>
-                <p>A grade management application for students.</p>
+                <p data-lng="project-3-description">A grade management application for students.</p>
               </div>
             </div>
           </a>
         
-          <a class="projectItem" href="https://github.com/wajrock/portfolio" target="_blank">
+          <a class="projectItem" rel="noopener" title="Github" href="https://github.com/wajrock/portfolio" target="_blank">
             <div class="overlay" id="overlay-4">
-              <div class="background-image portfolio" id="bg-project-4"></div>
+              <div class="background-image portfolio" id="bg-project-4">
+                
+              </div>
             </div>
             <div class="link" id="link-4">
               <div class="noise-bg">
@@ -590,7 +653,7 @@
             <div class="infos" id="infos-4">
               <div class="noise-bg">
                 <h3>PORTFOLIO</h3>
-                <p>My personnal portfolio.</p>
+                <p data-lng="project-4-description">My personnal portfolio.</p>
               </div>
             </div>
           </a>
@@ -605,51 +668,39 @@
     
       <main class="contactCard" id="contactCard">
             <div class="noise-bg">
-              <div class="contactTexts" id="contactTexts">
-                <h1 id="contact__title" data-lng="contact-title-section">
-                  Get more details about my<br><span id="websitesProjectsSpan"> internship search</span>.
-                </h1>
-                <p class="body-text" data-lng="contact-text">
-                  I am looking for an internship opportunity in a company for the month of June 2024 in the Rennes region, specifically in the field of computer science. I am open to various domains and am motivated to acquire new skills to add to my repertoire. If my profile aligns with your needs, please do not hesitate to contact me.
-                </p>
-                <div class="contactTexts__buttons" id="contact__buttons">
-                  <a href="mailto:thibaud.wajrock@icloud.com" class="main-button" data-lng="contact-message-button">Send me a message</a>
-                  <a href="tel:0785154943" class="secondary-button">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256"><path fill="currentColor" d="M231.88 175.08A56.26 56.26 0 0 1 176 224C96.6 224 32 159.4 32 80a56.26 56.26 0 0 1 48.92-55.88a16 16 0 0 1 16.62 9.52l21.12 47.15v.12A16 16 0 0 1 117.39 96c-.18.27-.37.52-.57.77L96 121.45c7.49 15.22 23.41 31 38.83 38.51l24.34-20.71a8.12 8.12 0 0 1 .75-.56a16 16 0 0 1 15.17-1.4l.13.06l47.11 21.11a16 16 0 0 1 9.55 16.62"/></svg>
-                  </a>
-                  <a href="https://www.linkedin.com/in/wajrock" target="_blank" class="secondary-button">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
-                  </a>
+              <article class="contactContent">
+                <div class="contactTexts" id="contactTexts">
+                  <h1 id="contact__title" data-lng="contact-title-section">
+                    Get more details about my<br><span id="websitesProjectsSpan"> internship search</span>.
+                  </h1>
+                  <p class="body-text" data-lng="contact-text">
+                    I am looking for an internship opportunity in a company for the month of June 2024 in the Rennes region, specifically in the field of computer science. I am open to various domains and am motivated to acquire new skills to add to my repertoire. If my profile aligns with your needs, please do not hesitate to contact me.
+                  </p>
+                  <div class="contactTexts__buttons" id="contact__buttons">
+                    <a href="mailto:thibaud.wajrock@icloud.com" class="main-button" data-lng="contact-message-button">Send me a message</a>
+                    <a href="tel:0785154943" class="secondary-button" rel="noopener" title="Phone">
+                      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256"><path fill="currentColor" d="M231.88 175.08A56.26 56.26 0 0 1 176 224C96.6 224 32 159.4 32 80a56.26 56.26 0 0 1 48.92-55.88a16 16 0 0 1 16.62 9.52l21.12 47.15v.12A16 16 0 0 1 117.39 96c-.18.27-.37.52-.57.77L96 121.45c7.49 15.22 23.41 31 38.83 38.51l24.34-20.71a8.12 8.12 0 0 1 .75-.56a16 16 0 0 1 15.17-1.4l.13.06l47.11 21.11a16 16 0 0 1 9.55 16.62"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/wajrock" target="_blank" class="secondary-button" rel="noopener" title="Linkedin">
+                      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="map"></div>
+
+                <div class="map" id="map"></div>
+              </article>
+              <footer class="copyrights">
+        
+        
+                <p class="logo">Thibaud Wajrock</p>
+                <p class="reserved" data-lng="copyrights">&copy; 2024 Thibaud Wajrock. Tous droits réservés.</p>
+        
+              </footer>
             </div>
           
+            
       </main>
-      <footer class="copyrights">
-        
-        
-        <p class="logo">Thibaud Wajrock</p>
-        <p class="reserved" data-lng="copyrights">&copy; 2024 Thibaud Wajrock. Tous droits réservés.</p>
-        <nav class="hero__nav nav__left">
-          <a href="#about">
-            <p class="itemNav" data-lng="about-link">ABOUT</p>
-          </a>
-          <a href="#academic">
-            <p class="itemNav" data-lng="academic-link">EDUCATION</p>
-          </a>
-          <a href="#skills">
-            <p class="itemNav" data-lng="skills-link">SKILLS</p>
-          </a>
-          <a href="#projects">
-            <p class="itemNav" data-lng="projects-link">PROJECTS</p>
-          </a>
-          <a href="#contact">
-            <p class="itemNav" data-lng="contact-link">CONTACT</p>
-          </a>
-          <p class="itemNav" id="langSwitch_bottom" data-lng="lang-link">EN</p>
-        </nav>
-      </footer>
+      
       
     </section>
 

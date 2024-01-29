@@ -20,17 +20,6 @@ document.getElementById("langSwitch").addEventListener("click", async (e) => {
   updateContent(langData);
 });
 
-document.getElementById("langSwitch_bottom").addEventListener("click", async (e) => {
-  e.target.innerHTML == "EN"
-    ? (currentLanguage = "fr")
-    : (currentLanguage = "en");
-
-  localStorage.setItem("lang", currentLanguage);
-
-  const langData = await fetchData(currentLanguage);
-
-  updateContent(langData);
-});
 
 
 // UPDATE TEXTS CONTENT WITH NEW LANGUAGE

@@ -8,7 +8,7 @@
 
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   position: sticky;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  opacity: 0.06;
+  opacity: 0.1;
   border-radius: 1rem;
   overflow: hidden;
 }
@@ -63,7 +63,7 @@
 }
 @keyframes scrollInv {
   from {
-    transform: translateY(-10rem);
+    transform: translateY(-90rem);
   }
   to {
     transform: translateY(-20%);
@@ -150,6 +150,7 @@
 }
 .hero__header p {
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 .hero__header p:hover {
   color: grey;
@@ -228,7 +229,7 @@
   align-items: center;
   position: sticky;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   top: 0;
   padding: 3vw;
 }
@@ -352,6 +353,73 @@
   fill: #0076b2;
 }
 
+@media screen and (max-width: 748px) {
+  .about {
+    flex-direction: column;
+  }
+  .aboutCard {
+    width: 100%;
+    height: 100%;
+    transform: scale3d(1, 1, 1);
+    background-color: black;
+    border-radius: 1rem;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+  }
+  .aboutPicture {
+    width: 100%;
+    height: 0%;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: width 0.5s ease-in;
+    display: flex;
+  }
+  .aboutPicture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .viewPicture {
+    height: 10rem;
+    transition: height 0.5s ease-in;
+  }
+  .aboutContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 6vw;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    gap: 3rem;
+    opacity: 0;
+    animation: opacityAnim 0.4s ease-in;
+    animation-delay: 0.4s;
+  }
+  .aboutContent h1 {
+    line-height: 1;
+    font-size: 3rem;
+    color: white;
+  }
+  .aboutContent p {
+    font-size: 16px;
+    color: rgb(163, 163, 163);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .hero__nav {
+    display: none;
+  }
+}
 .projects {
   display: flex;
   height: 350vh;
@@ -360,6 +428,7 @@
   padding: 13vw 3vw;
   gap: 10rem;
   position: relative;
+  top: 0;
   padding-left: 0;
   padding-right: 0;
 }
@@ -565,6 +634,82 @@
   font-family: "Playfair Display", serif;
   margin: 7vh 0 18vh 0;
 }
+.skills__item {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+.skills__item .noise-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills__item__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.skills__item:hover .skills__item__content {
+  display: flex;
+}
+
+#html-content {
+  background-color: #f16529;
+}
+
+#css-content {
+  background-color: #1572b6;
+}
+
+#sass-content {
+  background-color: #cb6699;
+}
+
+#js-content {
+  background-color: #f5de19;
+}
+
+#ts-content {
+  background-color: #007acc;
+}
+
+#react-content {
+  background-color: #00d8ff;
+}
+
+#sql-content {
+  background-color: #f29111;
+}
+
+#php-content {
+  background-color: #8993be;
+}
+
+#java-content {
+  background-color: #ea2d2e;
+}
+
+#python-content {
+  background-color: #387eb8;
+}
+
+#git-content {
+  background-color: #f34f29;
+}
+
+#figma-content {
+  background-color: #0acf83;
+}
 
 .animation-wrap {
   width: 100%;
@@ -587,16 +732,6 @@
   grid-template-rows: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   transform-origin: 50% 0;
-}
-
-.skills__item {
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-  background-color: rgb(10, 10, 10);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .svgbox {
@@ -629,42 +764,55 @@
 
 .academicContent {
   width: 100%;
-  height: 100vh;
-  position: sticky;
+  height: 400dvh;
   padding: 3vw;
-  top: 0rem;
   opacity: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
 }
 
 .academicItem {
   background-color: rgb(10, 10, 10);
   border-radius: 1rem;
   transition: transform 0.5s ease-in-out;
-  position: relative;
+  top: 0rem;
   overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  position: sticky;
 }
-.academicItem:hover .academicItem__texts {
-  display: flex;
+
+#first-academic-item {
+  top: 3vw;
+}
+
+#second-academic-item {
+  top: 23vh;
+}
+
+#third-academic-item {
+  top: 43vh;
 }
 
 .academicItem__picture {
   border-radius: 1rem;
   width: 100%;
-  height: 0%;
+  height: 100%;
   overflow: hidden;
   transition: height 0.5s ease-in-out;
+}
+.academicItem__picture .noise-bg {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: end;
   padding: 1vw;
 }
 
 .engineer {
-  background: url("https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background: url("https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center;
   background-size: cover;
 }
@@ -676,29 +824,28 @@
 }
 
 .advocacy {
-  background: url("https://images.unsplash.com/photo-1517409091671-180985f2ca15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-position: center;
+  background: url("https://images.unsplash.com/photo-1592966554798-bdc154f077d5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: 100% 30%;
   background-size: cover;
 }
 
 .academicItem__texts {
   text-align: center;
   color: white;
-  animation: fadeInUp 1s;
+  animation: fadeInUp 0.7s;
   background-color: black;
-  width: 100%;
+  width: 80%;
   border-radius: 1rem;
-  display: none;
+  display: flex;
   flex-direction: column;
   overflow: hidden;
-  animation: pulse 1s ease-in-out;
 }
 .academicItem__texts .noise-bg {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  padding: 3rem;
+  padding: 2rem;
 }
 .academicItem__texts .noise-bg h2 {
   text-align: left;
@@ -718,12 +865,14 @@
 
 .contact {
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3vw;
+  padding: 3vw 3vw 0 3vw;
   gap: 2rem;
+  position: sticky;
+  top: 0;
 }
 
 .contact h1 {
@@ -731,7 +880,9 @@
   font-size: 3rem;
   text-align: left;
   font-weight: 500;
+  line-height: 1;
   height: auto;
+  width: 20ch;
   font-family: "Playfair Display", serif;
 }
 
@@ -739,37 +890,53 @@
   width: 100%;
   height: 100%;
   background: black;
-  border-radius: 1rem;
+  border-radius: 5rem 5rem 0 0;
   overflow: hidden;
 }
 .contactCard .noise-bg {
-  padding: 3vw 0 3vw 6vw;
+  padding: 3vw 3vw 3vw 6vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 1;
+  gap: 2rem;
+}
+
+.contactContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
 }
 
 .map {
   height: 100%;
-  width: 100%;
+  aspect-ratio: 1/1.1;
   background: url("/portfolio/assets/map_dark.svg");
-  background-size: 250%;
-  background-position: 85% 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .contactTexts {
   display: flex;
+  opacity: 0;
   flex-direction: column;
   align-items: start;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: min-content;
+  flex-grow: 0;
+  transition: opacity 1s ease-in-out;
 }
 .contactTexts .body-text {
   color: white;
   width: 80%;
   text-align: justify;
-  margin: 1rem 0 2rem 0;
+  margin: 1.5rem 0 3rem 0;
 }
 .contactTexts__buttons {
   display: flex;
@@ -793,7 +960,8 @@
   width: 100%;
   height: 10vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1rem;
   align-items: center;
   color: rgb(177, 177, 177);
 }
@@ -828,7 +996,7 @@ body {
 
 section {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
 }
 
 h1 {
@@ -863,6 +1031,9 @@ a {
   background-color: transparent;
   border: 0.1rem solid white;
   color: white;
+}
+.secondary-button:hover {
+  padding: 0.7rem 2.5rem;
 }
 
 .noise {

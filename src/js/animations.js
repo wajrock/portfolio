@@ -8,7 +8,7 @@ function isAboutInViewport() {
 function animateAbout() {
   document.querySelector("#about").style.gap = "1rem";
   document.querySelector("#about").style.background = "black";
-  document.querySelector("#aboutPicture").style.width = "70%";
+  document.getElementById("aboutPicture").classList.add('viewPicture');
   document.querySelector("#aboutContent").style.transitionDelay = ".5s";
   document.querySelector("#aboutContent").style.opacity = "1";
 }
@@ -18,7 +18,7 @@ function removeAboutAnimation() {
   document.querySelector("#aboutContent").style.opacity = "0";
   document.querySelector("#about").style.gap = "0";
   document.querySelector("#about").style.background = "";
-  document.querySelector("#aboutPicture").style.width = "0";
+  document.getElementById("aboutPicture").classList.remove('viewPicture');
 }
 
 function isTitleAcademicInViewport() {
@@ -47,29 +47,7 @@ function isAcademicGridInViewport() {
 }
 
 function opacityAcademicGrid() {
-  const currentScroll = window.scrollY;
-  const academicGrid = document.querySelector("#academicContent");
-  const academicGridY = academicGrid.getBoundingClientRect().y;
-  const academicGridHeight = academicGrid.getBoundingClientRect().height;
-
-  let currentOpacity =
-    (-1 / (academicGridHeight * 0.6)) * academicGridY + 1 / 0.6;
-
-  if (currentOpacity >= 0 && currentOpacity <= 1) {
-    academicGrid.style.opacity = currentOpacity;
-  }
-
-  if (currentOpacity >= 1) {
-    [...document.querySelectorAll(".academicItem__picture")].forEach((e) => {
-      e.style.height = "100%";
-      e.style.padding = "1vw";
-    });
-  } else {
-    [...document.querySelectorAll(".academicItem__picture")].forEach((e) => {
-      e.style.height = "0";
-      e.style.padding = "0";
-    });
-  }
+ 
 }
 
 function isTitleSkillsInViewport() {
@@ -107,6 +85,12 @@ function skillsGridIsInViewport() {
   return skillsGridPosition <= window.innerHeight;
 }
 
+
+
+// window.onload = function () {
+//   window.onload = skillsGridAnimation() ;
+// };
+
 function skillsGridAnimation() {
   const heightGrid = document.getElementById("skills").offsetHeight;
   const currentScroll = window.scrollY;
@@ -122,7 +106,7 @@ function skillsGridAnimation() {
 
   if (
     currentScroll >=
-    document.getElementById("skills").offsetTop + window.innerHeight * 5
+    document.getElementById("skills").offsetTop + document.getElementById("skills").offsetHeight*.8
   ) {
     document.getElementById("grid").style.transform = "scale3D(1,1,1)";
   }
@@ -235,7 +219,23 @@ function opacityImagesSecondtLineProjects() {
   }
 }
 
+function isContactInViewport(){
+  return document.getElementById('contact').getBoundingClientRect().y <= .2*document.getElementById('contact').getBoundingClientRect().height;
+}
+
+function animateContact(){
+  document.getElementById('map').style.opacity = "1";
+  document.getElementById('contactTexts').style.opacity = "1";
+
+}
+
+function removeContactAnimation(){
+  document.getElementById('map').style.opacity = "0";
+  document.getElementById('contactTexts').style.opacity = "0";
+}
+
 window.addEventListener("scroll", function () {
+
   // // ABOUT SECTION ANIMATIONS TRIGGER
   if (isAboutInViewport()) {
     animateAbout();
@@ -276,5 +276,11 @@ window.addEventListener("scroll", function () {
     opacityFirstLineProjects();
     opacityImagesFirstLineProjects();
     opacityImagesSecondtLineProjects();
+  }
+
+  if (isContactInViewport()){
+    animateContact();
+  } else {
+    removeContactAnimation();
   }
 });
