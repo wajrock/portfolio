@@ -1,8 +1,8 @@
 function isAboutInViewport() {
   var aboutElement = document.querySelector("#about");
-  var aboutPosition = aboutElement.getBoundingClientRect().top;
+  var aboutPosition = aboutElement.getBoundingClientRect().y;
 
-  return aboutPosition <= 0;
+  return aboutPosition <= .5;
 }
 
 function animateAbout() {
@@ -19,6 +19,7 @@ function removeAboutAnimation() {
   document.querySelector("#about").style.gap = "0";
   document.querySelector("#about").style.background = "";
   document.getElementById("aboutPicture").classList.remove('viewPicture');
+
 }
 
 function isTitleAcademicInViewport() {
@@ -235,7 +236,7 @@ function removeContactAnimation(){
 }
 
 window.addEventListener("scroll", function () {
-
+  // document.querySelector("#y").innerHTML = document.querySelector("#about").getBoundingClientRect().top;
   // // ABOUT SECTION ANIMATIONS TRIGGER
   if (isAboutInViewport()) {
     animateAbout();
