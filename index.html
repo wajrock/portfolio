@@ -9,6 +9,11 @@
     />
     <link rel="stylesheet" href="/portfolio/css/styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preload" as="profile" href="/portfolio/assets/main_profile.jpg" />
+    <link rel="preload" as="project-1" href="/portfolio/assets/projects/grades-app.jpg" />
+    <link rel="preload" as="project-2" href="/portfolio/assets/projects/keops.jpg" />
+    <link rel="preload" as="project-3" href="/portfolio/assets/projects/meta-game.jpg" />
+    <link rel="preload" as="project-4" href="/portfolio/assets/projects/portfolio.jpg" />
     <title>Thibaud Wajrock's Portfolio</title>
   </head>
   <body>
@@ -51,67 +56,115 @@
         <div class="hero__background">
           <div class="vertical left">
             <div class="block_card">
-              <div class="card project1Card"></div>
-              <div class="card project2Card"></div>
+              <div class="card project1Card">
+                <img src="/portfolio/assets/projects/grades-app.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card project2Card">
+                <img src="/portfolio/assets/projects/keops.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card project3Card"></div>
-              <div class="card project4Card"></div>
+              <div class="card project3Card">
+                <img src="/portfolio/assets/projects/meta-game.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card project4Card">
+                <img src="/portfolio/assets/projects/portfolio.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card project1Card"></div>
-              <div class="card project2Card"></div>
+              <div class="card project1Card">
+                <img src="/portfolio/assets/projects/grades-app.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card project2Card">
+                <img src="/portfolio/assets/projects/keops.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card project3Card"></div>
-              <div class="card project4Card"></div>
+              <div class="card project3Card">
+                <img src="/portfolio/assets/projects/meta-game.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card project4Card">
+                <img src="/portfolio/assets/projects/portfolio.jpg" loading="lazy" alt="">
+              </div>
             </div>
           </div>
 
           <div class="vertical center">
             <div class="block_card">
-              <div class="card profileCard"></div>
-              <div class="card profileCard"></div>
+              <div class="card profileCard">
+                <img src="/portfolio/assets/main_main_profile.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card profileCard">
+                <img src="/portfolio/assets/main_profile.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card profileCard"></div>
-              <div class="card profileCard"></div>
+              <div class="card profileCard">
+                <img src="/portfolio/assets/main_profile.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card profileCard">
+                <img src="/portfolio/assets/main_profile.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card profileCard"></div>
-              <div class="card profileCard"></div>
+              <div class="card profileCard">
+                <img src="/portfolio/assets/main_profile.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card profileCard">
+                <img src="/portfolio/assets/main_profile.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card profileCard"></div>
-              <div class="card profileCard"></div>
+              <div class="card profileCard">
+                <img src="/portfolio/assets/main_profile.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card profileCard">
+                <img src="/portfolio/assets/main_profile.jpg" loading="lazy" alt="">
+              </div>
             </div>
           </div>
 
           <div class="vertical right">
             <div class="block_card">
-              <div class="card project3Card"></div>
-              <div class="card project4Card"></div>
+              <div class="card project3Card">
+                <img src="/portfolio/assets/projects/meta-game.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card project4Card">
+                <img src="/portfolio/assets/projects/portfolio.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card project1Card"></div>
-              <div class="card project2Card"></div>
+              <div class="card project1Card">
+                <img src="/portfolio/assets/projects/grades-app.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card project2Card">
+                <img src="/portfolio/assets/projects/keops.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card project3Card"></div>
-              <div class="card project4Card"></div>
+              <div class="card project3Card">
+                <img src="/portfolio/assets/projects/meta-game.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card project4Card">
+                <img src="/portfolio/assets/projects/portfolio.jpg" loading="lazy" alt="">
+              </div>
             </div>
 
             <div class="block_card">
-              <div class="card project1Card"></div>
-              <div class="card project2Card"></div>
+              <div class="card project1Card">
+                <img src="/portfolio/assets/projects/grades-app.jpg" loading="lazy" alt="">
+              </div>
+              <div class="card project2Card">
+                <img src="/portfolio/assets/projects/keops.jpg" loading="lazy" alt="">
+              </div>
             </div>
           </div>
         </div>
@@ -198,9 +251,10 @@
         </div>
         <div class="aboutPicture" id="aboutPicture">
           <img
-            src="/portfolio/assets/profile.png"
+            src="/portfolio/assets/main_profile.jpg"
             id="aboutPicture_img"
             alt=""
+            loading="lazy"
           />
         </div>
       </main>
@@ -622,7 +676,7 @@
 
         <div class="lineProjects secondLineProjects" id="secondLineProjects">
           
-          <a class="projectItem" rel="noopener" title="Figma" href="https://www.figma.com/community/file/1333125126974121017" target="_blank">
+          <a class="projectItem" rel="noopener" title="Figma" href="https://www.figma.com/community/file/1336435201036958471/esiresultats-a-grades-management-app" target="_blank">
             <div class="overlay" id="overlay-3">
               <div class="background-image grades-app" id="bg-project-3"></div>
             </div>

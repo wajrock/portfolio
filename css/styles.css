@@ -93,36 +93,12 @@
   height: 73vh;
   background-color: grey;
   border-radius: 2rem;
+  overflow: hidden;
 }
-
-.profileCard {
-  background: url("/portfolio/assets/profile.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.project1Card {
-  background: url("/portfolio/assets/projects/grades-app.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.project2Card {
-  background: url("/portfolio/assets/projects/keops.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.project3Card {
-  background: url("/portfolio/assets/projects/meta-game.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.project4Card {
-  background: url("/portfolio/assets/projects/portfolio.jpg");
-  background-size: cover;
-  background-position: center;
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero__content {
@@ -611,7 +587,7 @@
   }
 }
 .skills {
-  height: 550vh;
+  height: 400vh;
   display: block;
 }
 .skills h1 {
