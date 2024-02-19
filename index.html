@@ -172,7 +172,6 @@
 
       <main class="about" id="about">
         <div class="aboutCard" id="aboutCard">
-          <!-- <h1 style="color: white;font-size: 1rem;" id="y">hello</h1> -->
           <div class="aboutContent" id="aboutContent">
             <h1 data-lng="about-title">
               Hey, I’m Thibaud,<br />
@@ -273,7 +272,7 @@
             <div class="academicItem__texts">
               <div class="noise-bg">
                 <p class="date">2019</p>
-                <h2 data-lng="academic-first-card-title">Engineering Program</h2>
+                <h2 data-lng="academic-first-card-title">Advocacy Competition</h2>
                 <p data-lng="academic-first-card-text" class="paragraph">Winner of the Human Rights Advocacy Contest organized by the Human Rights League, advocating for the rights of migrants. I am committed to prioritizing humanity both in my interactions and in my projects.</p>
               </div>
             </div>
@@ -287,7 +286,7 @@
               <div class="academicItem__texts">
                 <div class="noise-bg">
                   <p class="date">2021</p>
-                  <h2 data-lng="academic-second-card-title">Engineering Program</h2>
+                  <h2 data-lng="academic-second-card-title">High-School Diploma</h2>
                   <p data-lng="academic-second-card-text" class="paragraph">Graduated with honors from a scientific high school diploma. This education instilled in me a passion for problem-solving and the discipline it entails.</p>
                 </div>
               </div>
@@ -325,7 +324,6 @@
         <div class="skills-grid" id="grid">
           <div class="skills__item">
             <div class="noise-bg">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#e44f26" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30z"/><path fill="#f1662a" d="m16 27.858l8.17-2.265l1.922-21.532H16z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004z"/><path fill="#fff" d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83h-.833zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83z"/></svg> -->
             <div class="svgbox">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                 <path
@@ -635,14 +633,16 @@
       <main class="projectsContent" id="projectsContent">
         <div class="lineProjects firstLineProjects" id="firstLineProjects">
           
-          <a class="projectItem" rel="noopener" title="Live Preview" href="https://meta-game.000webhostapp.com/" target="_blank">
+          <div class="projectItem" rel="noopener" title="The Meta Game">
             <div class="overlay" id="overlay-1">
               <div class="background-image meta-game" id="bg-project-1"></div>
             </div>
     
-            <div class="link" id="link-1">
-              <div class="noise-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M204 64v104a12 12 0 0 1-24 0V93L72.49 200.49a12 12 0 0 1-17-17L163 76H88a12 12 0 0 1 0-24h104a12 12 0 0 1 12 12"/></svg>
+            <div class="link in-development" id="link-1">
+              <div class="noise-bg ">
+                <div class="pill">
+                  <div class="pill__active"></div>
+                </div>
               </div>
             </div>
 
@@ -652,7 +652,7 @@
                 <p data-lng="project-1-description">A website of video game articles.</p>
               </div>
             </div>
-          </a>
+          </div>
         
           <a class="projectItem" rel="noopener" title="Github" href="https://github.com/wajrock/keops" target="_blank">
             <div class="overlay" id="overlay-2">
@@ -676,14 +676,15 @@
 
         <div class="lineProjects secondLineProjects" id="secondLineProjects">
           
-          <a class="projectItem" rel="noopener" title="Figma" href="https://www.figma.com/community/file/1336435201036958471/esiresultats-a-grades-management-app" target="_blank">
+          <div class="projectItem" rel="noopener" title="ESIRésultats">
             <div class="overlay" id="overlay-3">
               <div class="background-image grades-app" id="bg-project-3"></div>
             </div>
-            <div class="link" id="link-3">
+            <div class="link in-development" id="link-3">
               <div class="noise-bg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M204 64v104a12 12 0 0 1-24 0V93L72.49 200.49a12 12 0 0 1-17-17L163 76H88a12 12 0 0 1 0-24h104a12 12 0 0 1 12 12"/></svg>
-                
+                <div class="pill">
+                  <div class="pill__active"></div>
+                </div>
               </div>
            
             </div>
@@ -693,7 +694,7 @@
                 <p data-lng="project-3-description">A grade management application for students.</p>
               </div>
             </div>
-          </a>
+          </div>
         
           <a class="projectItem" rel="noopener" title="Github" href="https://github.com/wajrock/portfolio" target="_blank">
             <div class="overlay" id="overlay-4">
@@ -718,6 +719,91 @@
         
         </div>
       </main>
+
+      <main class="projectsContent-mobile" id="projectsContent-mobile">
+        
+        <div class="projectItem" id="first-project-mobile-item" rel="noopener" title="The Meta Game">
+          <div class="overlay" id="overlay-1">
+            <div class="background-image meta-game" id="bg-project-1"></div>
+          </div>
+  
+          <div class="link in-development" id="link-1">
+            <div class="noise-bg ">
+              <div class="pill">
+                <div class="pill__active"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="infos" id="infos-1">
+            <div class="noise-bg">
+              <h3>THE META GAME</h3>
+              <p data-lng="project-1-description">A website of video game articles.</p>
+            </div>
+          </div>
+        </div>
+      
+        <a class="projectItem" id="second-project-mobile-item" rel="noopener" title="Github" href="https://github.com/wajrock/keops" target="_blank">
+          <div class="overlay" id="overlay-2">
+            <div class="background-image keops" id="bg-project-2"></div>
+          </div>
+
+          <div class="link" id="link-2">
+            <div class="noise-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M204 64v104a12 12 0 0 1-24 0V93L72.49 200.49a12 12 0 0 1-17-17L163 76H88a12 12 0 0 1 0-24h104a12 12 0 0 1 12 12"/></svg>
+            </div>
+            
+          </div>
+          <div class="infos" id="infos-2">
+            <div class="noise-bg">
+              <h3>KEOPS</h3>
+              <p data-lng="project-2-description">A 2D python quest game.</p>
+            </div>
+          </div>
+        </a>
+
+        <div class="projectItem" id="third-project-mobile-item" rel="noopener" title="ESIRésultats">
+          <div class="overlay" id="overlay-3">
+            <div class="background-image grades-app" id="bg-project-3"></div>
+          </div>
+          <div class="link in-development" id="link-3">
+            <div class="noise-bg">
+              <div class="pill">
+                <div class="pill__active"></div>
+              </div>
+            </div>
+         
+          </div>
+          <div class="infos" id="infos-3">
+            <div class="noise-bg">
+              <h3>ESIRESULTATS</h3>
+              <p data-lng="project-3-description">A grade management application for students.</p>
+            </div>
+          </div>
+        </div>
+      
+        <a class="projectItem" id="fourth-project-mobile-item" rel="noopener" title="Github" href="https://github.com/wajrock/portfolio" target="_blank">
+          <div class="overlay" id="overlay-4">
+            <div class="background-image portfolio" id="bg-project-4">
+              
+            </div>
+          </div>
+          <div class="link" id="link-4">
+            <div class="noise-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M204 64v104a12 12 0 0 1-24 0V93L72.49 200.49a12 12 0 0 1-17-17L163 76H88a12 12 0 0 1 0-24h104a12 12 0 0 1 12 12"/></svg>
+            </div>
+          </div>
+          <div class="infos" id="infos-4">
+            <div class="noise-bg">
+              <h3>PORTFOLIO</h3>
+              <p data-lng="project-4-description">My personnal portfolio.</p>
+            </div>
+          </div>
+        </a>
+
+
+        
+      </main>
     </section>
 
     <section class="contact" id="contact">
@@ -735,7 +821,10 @@
                     I am looking for an internship opportunity in a company for the month of June 2024 in the Rennes region, specifically in the field of computer science. I am open to various domains and am motivated to acquire new skills to add to my repertoire. If my profile aligns with your needs, please do not hesitate to contact me.
                   </p>
                   <div class="contactTexts__buttons" id="contact__buttons">
-                    <a href="mailto:thibaud.wajrock@icloud.com" class="main-button" data-lng="contact-message-button">Send me a message</a>
+                    <a href="mailto:thibaud.wajrock@icloud.com" class="main-button" data-lng="contact-message-button" id="mail">Send me a message</a>
+                    <a href="mailto:thibaud.wajrock@icloud.com" class="secondary-button" rel="noopener" title="Phone" id="mail-mobile">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M0 0h24v24H0z"/><path fill="currentColor" d="M22 7.535V17a3 3 0 0 1-2.824 2.995L19 20H5a3 3 0 0 1-2.995-2.824L2 17V7.535l9.445 6.297l.116.066a1 1 0 0 0 .878 0l.116-.066z"/><path fill="currentColor" d="M19 4c1.08 0 2.027.57 2.555 1.427L12 11.797l-9.555-6.37a2.999 2.999 0 0 1 2.354-1.42L5 4z"/></g></svg>
+                    </a>
                     <a href="tel:0785154943" class="secondary-button" rel="noopener" title="Phone">
                       <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256"><path fill="currentColor" d="M231.88 175.08A56.26 56.26 0 0 1 176 224C96.6 224 32 159.4 32 80a56.26 56.26 0 0 1 48.92-55.88a16 16 0 0 1 16.62 9.52l21.12 47.15v.12A16 16 0 0 1 117.39 96c-.18.27-.37.52-.57.77L96 121.45c7.49 15.22 23.41 31 38.83 38.51l24.34-20.71a8.12 8.12 0 0 1 .75-.56a16 16 0 0 1 15.17-1.4l.13.06l47.11 21.11a16 16 0 0 1 9.55 16.62"/></svg>
                     </a>

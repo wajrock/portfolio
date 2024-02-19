@@ -345,15 +345,26 @@
     height: 50%;
     transition: height 0.5s ease-in;
   }
+  .aboutContent {
+    gap: 1.5rem;
+  }
   .aboutContent h1 {
     line-height: 1;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: white;
+  }
+  .aboutContent p {
+    font-size: 1rem;
+    height: 13rem;
+    overflow: scroll;
   }
 }
 @media screen and (max-width: 1023px) {
-  .hero__nav {
+  .itemNav {
     display: none;
+  }
+  #langSwitch {
+    display: flex;
   }
 }
 .projects {
@@ -433,7 +444,7 @@
 }
 
 .firstLineProjects .projectItem:nth-child(1) {
-  background-color: #d8dbb9;
+  background-color: rgba(137, 101, 214, 0.8078431373);
 }
 
 .firstLineProjects .projectItem:nth-child(2) {
@@ -485,21 +496,6 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-/* .projectTitle{
-        font-family: "Playfair Display", serif;
-        font-weight: 900;
-        font-size: 4rem;
-        width: 100%;
-        text-align: center;
-        color: white;
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        left: 50%;
-        opacity: 0;
-        transform: translate(-50%,-50%);
-        transition: opacity .5s ease-in-out;
-      } */
 .projectItem:hover .overlay {
   opacity: 0.1;
 }
@@ -528,6 +524,36 @@
   border-radius: 1rem;
   transition: opacity 0.5s ease-in-out;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+}
+.link.in-development .noise-bg {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+}
+.link.in-development .noise-bg .pill {
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  background-color: #82D0B4;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link.in-development .noise-bg .pill__active {
+  height: 0rem;
+  aspect-ratio: 1/1;
+  background-color: #00784D;
+  border-radius: 5rem;
+  animation: pill 0.8s infinite linear;
+}
+@keyframes pill {
+  from {
+    height: 0;
+  }
+  to {
+    height: 80%;
+  }
 }
 .link .noise-bg {
   display: flex;
@@ -558,7 +584,14 @@
   color: rgb(177, 177, 177);
 }
 
+.projectsContent-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 748px) {
+  .projects {
+    height: 450vh;
+  }
   .projects h1 {
     font-size: 2rem;
   }
@@ -584,6 +617,49 @@
     border-radius: 1rem;
     overflow: hidden;
     position: sticky;
+  }
+  .projectsContent-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400dvh;
+    padding: 3vw;
+    opacity: 1;
+    position: relative;
+    gap: 30vh;
+  }
+  .projectsContent-mobile .projectItem {
+    background-color: rgb(10, 10, 10);
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+    top: 0rem;
+    overflow: hidden;
+    width: 100%;
+    height: 60vh;
+    position: sticky;
+  }
+  .projectsContent-mobile .projectItem .link, .projectsContent-mobile .projectItem .infos {
+    opacity: 1;
+    box-shadow: none;
+  }
+  .projectsContent-mobile .projectItem .background-image {
+    background-size: contain;
+    background-position: center;
+  }
+  .projectsContent-mobile #first-project-mobile-item {
+    top: 3vw;
+  }
+  .projectsContent-mobile #second-project-mobile-item {
+    top: 13vh;
+  }
+  .projectsContent-mobile #third-project-mobile-item {
+    top: 23vh;
+  }
+  .projectsContent-mobile #fourth-project-mobile-item {
+    top: 33vh;
+  }
+  .projectsContent {
+    display: none;
   }
 }
 .skills {
@@ -960,6 +1036,61 @@
   color: rgb(177, 177, 177);
 }
 
+#mail-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 748px) {
+  #mail {
+    display: none;
+  }
+  #mail-mobile {
+    display: flex;
+  }
+  .contact h1 {
+    font-size: min(3rem, 6vw);
+  }
+  .map {
+    display: none;
+  }
+  .contactTexts .body-text {
+    width: 100%;
+  }
+  .contactTexts__buttons {
+    display: flex;
+    gap: 1rem;
+    transition: opacity 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .contactTexts__buttons .main-button {
+    white-space: nowrap;
+  }
+  .contactTexts__buttons .secondary-button {
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactTexts__buttons .secondary-button svg {
+    height: 1.2rem;
+  }
+  .copyrights {
+    height: auto;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .copyrights .logo {
+    font-weight: 600;
+    color: white;
+  }
+  .copyrights .reserved {
+    max-width: 70%;
+    text-align: center;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

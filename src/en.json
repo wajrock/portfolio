@@ -4,7 +4,7 @@
     "skills-link":"SKILLS",
     "projects-link":"PROJECTS",
     "contact-link":"CONTACT",
-    "lang-link":"EN",
+    "lang-link":"FR",
     "main-title":"Hey, I'm Thibaud !<br>Student in Engineering",
     "about-me-button": "About Me",
     "get-cv-button": "Get my CV",
@@ -37,6 +37,8 @@
     "project-2-description":"A 2D python quest game.",
     "project-3-description":"A grade management application for students.",
     "project-4-description":"My personnal portfolio.",
+
+    "progress": "In development",
 
     "contact-title-section": "Get more details about my<br><span id='websitesProjectsSpan'> internship search</span>.",
 

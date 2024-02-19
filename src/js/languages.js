@@ -1,4 +1,4 @@
-let currentLanguage = localStorage.getItem("lang");
+let currentLanguage = localStorage.getItem("lang") ? localStorage.getItem("lang") : "en";
 
 window.onload = async function () {
   const langData = await fetchData(currentLanguage);
@@ -10,8 +10,8 @@ window.onload = async function () {
 
 document.getElementById("langSwitch").addEventListener("click", async (e) => {
   e.target.innerHTML == "EN"
-    ? (currentLanguage = "fr")
-    : (currentLanguage = "en");
+    ? (currentLanguage = "en")
+    : (currentLanguage = "fr");
 
   localStorage.setItem("lang", currentLanguage);
 
