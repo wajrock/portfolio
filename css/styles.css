@@ -360,11 +360,11 @@
   }
 }
 @media screen and (max-width: 1023px) {
-  .itemNav {
-    display: none;
+  .hero__header {
+    justify-content: center;
   }
-  #langSwitch {
-    display: flex;
+  .hero__nav {
+    display: none;
   }
 }
 .projects {
