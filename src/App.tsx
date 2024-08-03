@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import HomeEN from './pages/HomeEN';
 import HomeFR from './pages/HomeFR';
 import Work from './pages/WorkEN';
@@ -30,10 +30,10 @@ function App() {
   
   
   return (
-    <Router basename="/portfolio">
+    <Router>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Navigate to="/en/" replace />} />
+          {/* <Route path="#" element={<Navigate to="/en/" replace />} /> */}
           <Route path="/en/" element={<HomeEN />} />
           <Route path="/fr/" element={<HomeFR />} />
           <Route path="/en/project/:projectId" element={<WorkEN />} />

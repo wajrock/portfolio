@@ -6,18 +6,18 @@ const Banner: FunctionComponent<{ lang: string }> = ({ lang }) => {
   const location = useLocation();
 
   const linksFR: { [key: string]: string } = {
-    "/fr/":"/en/",
-    "/fr/projet/app-notes": "/en/project/grades-app",
-    "/fr/projet/green-fit": "/en/project/green-fit",
-    "/fr/projet/portfolio": "/en/project/portfolio",
-    "/fr/projet/keops": "/en/project/keops",
+    "/fr/":"#/en/",
+    "/fr/projet/app-notes": "#/en/project/grades-app",
+    "/fr/projet/green-fit": "#/en/project/green-fit",
+    "/fr/projet/portfolio": "#/en/project/portfolio",
+    "/fr/projet/keops": "#/en/project/keops",
   };
   const linksEN: { [key: string]: string } = {
-    "/en/":"/fr/",
-    "/en/project/grades-app":"/fr/projet/app-notes",
-    "/en/project/green-fit":"/fr/projet/green-fit",
-    "/en/project/portfolio":"/fr/projet/portfolio",
-    "/en/project/keops":"/fr/projet/keops",
+    "/en/":"#/fr/",
+    "/en/project/grades-app":"#/fr/projet/app-notes",
+    "/en/project/green-fit":"#/fr/projet/green-fit",
+    "/en/project/portfolio":"#/fr/projet/portfolio",
+    "/en/project/keops":"#/fr/projet/keops",
     
   };
 

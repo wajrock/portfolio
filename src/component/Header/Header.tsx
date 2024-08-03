@@ -29,28 +29,28 @@ const Header: FunctionComponent<{ lang: string }> = ({ lang }) => {
   return (
     <div className="header">
       <div className="header__left">
-        <a href="../">
+        <a href="#/">
           <h1>Thibaud Wajrock</h1>
         </a>
         <nav>
-          <a href={"/" + lang + "/#about"}>
+          <a href={"#/" + lang + "/#about"}>
             {lang === "en" ? (<p>About</p>) : (<p>A propos</p>)}
           </a>
-          <a href={"/" + lang + "/#skills"}>
+          <a href={"#/" + lang + "/#skills"}>
             {lang === "en" ? (<p>Skills</p>) : (<p>Compétences</p>)}
           </a>
-          <a href={"/" + lang + "/#work"}>
+          <a href={"#/" + lang + "/#work"}>
           {lang === "en" ? (<p>Works</p>) : (<p>Projets</p>)}
             
           </a>
-          <a href={"/" + lang + "/#contact"}>
+          <a href={"#/" + lang + "/#contact"}>
             <p>Contact</p>
           </a>
         </nav>
       </div>
 
       <div className="header__right">
-        <a href="/resume.pdf" target="_blank" className="cta">
+        <a href="/#/resume.pdf" target="_blank" className="cta">
           <div className="get-resume">
             {lang === "en" ? (<p>Get my CV</p>) : (<p>Voir mon CV</p>)}
           </div>
