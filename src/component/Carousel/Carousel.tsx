@@ -34,7 +34,7 @@ const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
 
   return (
     <div className="carousel" ref={carousel}>
-      <a href="project/grades-app">
+      <a href="/#/en/project/grades-app">
         <div className="carousel-item" ref={firstImageRef}>
           <div className="carousel-item__cover project1"></div>
           <div className="carousel-item__description">

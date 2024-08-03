@@ -54,7 +54,7 @@ const AboutSection: FunctionComponent<{ id: string; lang: string }> = ({id,lang,
           </div>
 
           <div className="whoami-memoji" >
-              <img src="memoji.png" alt="" ref={containerRef}/>
+              <img src={`${process.env.PUBLIC_URL}/memoji.png`} alt="" ref={containerRef}/>
               <div className="whoami-memoji-overlay"></div>
           </div>
           

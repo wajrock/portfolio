@@ -17,11 +17,11 @@ function App() {
   
     useEffect(() => {
       if (hash) {
-        scroller.scrollTo(hash.substring(1), {
-          duration: 800,
-          delay: 0,
-          smooth: 'easeInOutQuart'
-        });
+        // scroller.scrollTo(hash.substring(1), {
+        //   duration: 800,
+        //   delay: 0,
+        //   smooth: 'easeInOutQuart'
+        // });
       }
     }, [hash]);
   
@@ -33,7 +33,7 @@ function App() {
     <Router>
         <ScrollToTop />
         <Routes>
-          {/* <Route path="#" element={<Navigate to="/en/" replace />} /> */}
+          <Route path="/" element={<Navigate to="/en/" replace />} />
           <Route path="/en/" element={<HomeEN />} />
           <Route path="/fr/" element={<HomeFR />} />
           <Route path="/en/project/:projectId" element={<WorkEN />} />

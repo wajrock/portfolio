@@ -50,7 +50,7 @@ const Header: FunctionComponent<{ lang: string }> = ({ lang }) => {
       </div>
 
       <div className="header__right">
-        <a href="/#/resume.pdf" target="_blank" className="cta">
+        <a href={`${process.env.PUBLIC_URL}/resume.pdf`}  target="_blank" className="cta">
           <div className="get-resume">
             {lang === "en" ? (<p>Get my CV</p>) : (<p>Voir mon CV</p>)}
           </div>

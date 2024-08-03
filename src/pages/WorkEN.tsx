@@ -155,19 +155,19 @@ const WorkEN: FunctionComponent = () => {
           <div className="content-project-grid-image">
             <img
               className="content-project-image small"
-              src="/projects/greenfit/11.png"
+              src={`${process.env.PUBLIC_URL}/projects/greenfit/11.png`}
             />
             <img
               className="content-project-image"
-              src="/projects/greenfit/10.png"
+              src={`${process.env.PUBLIC_URL}/projects/greenfit/10.png`}
             />
             <img
               className="content-project-image"
-              src="/projects/greenfit/13.png"
+              src={`${process.env.PUBLIC_URL}/projects/greenfit/13.png`}
             />
             <img
               className="content-project-image"
-              src="/projects/greenfit/5.png"
+              src={`${process.env.PUBLIC_URL}/projects/greenfit/5.png`}
             />
           </div>
 
@@ -209,7 +209,7 @@ const WorkEN: FunctionComponent = () => {
 
           <img
             className="content-project-image"
-            src="/projects/greenfit/12.png"
+            src={`${process.env.PUBLIC_URL}/projects/greenfit/12.png`}
           />
 
           <div className="content-project-paragraph">
@@ -236,11 +236,11 @@ const WorkEN: FunctionComponent = () => {
           <div className="content-project-grid-image">
             <img
               className="content-project-image"
-              src="/projects/greenfit/14.png"
+              src={`${process.env.PUBLIC_URL}/projects/greenfit/14.png`}
             />
             <img
               className="content-project-image"
-              src="/projects/greenfit/16.png"
+              src={`${process.env.PUBLIC_URL}/projects/greenfit/16.png`}
             />
           </div>
 
@@ -310,7 +310,7 @@ const WorkEN: FunctionComponent = () => {
 
         {projectId === "grades-app" && (
           <div className="grid-projects">
-            <a href="./green-fit">
+            <a href="#/en/project/green-fit">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project3"></div>
                 <div className="grid-projects-item__description">
