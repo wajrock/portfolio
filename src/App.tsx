@@ -30,14 +30,14 @@ function App() {
   
   
   return (
-    <Router>
+    <Router basename="/portfolio">
         <ScrollToTop />
         <Routes>
-          <Route path="/portfolio/" element={<Navigate to="/portfolio/en/" replace />} />
-          <Route path="/portfolio/en/" element={<HomeEN />} />
-          <Route path="/portfolio/fr/" element={<HomeFR />} />
-          <Route path="/portfolio/en/project/:projectId" element={<WorkEN />} />
-          <Route path="/portfolio/fr/projet/:projectId" element={<WorkFR />} />
+          <Route path="/" element={<Navigate to="/en/" replace />} />
+          <Route path="/en/" element={<HomeEN />} />
+          <Route path="/fr/" element={<HomeFR />} />
+          <Route path="/en/project/:projectId" element={<WorkEN />} />
+          <Route path="/fr/projet/:projectId" element={<WorkFR />} />
         </Routes>
     </Router>
   );
