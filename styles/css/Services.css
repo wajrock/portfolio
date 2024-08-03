@@ -1,0 +1,114 @@
+.services-section {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+.services-section-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  visibility: hidden;
+}
+.services-section-texts.animate {
+  animation: fadeInUp;
+  animation-duration: 1s;
+  visibility: visible;
+}
+.services-section-texts-title {
+  color: #06150C;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 2.25rem; /* 128.571% */
+  letter-spacing: -0.035rem;
+}
+.services-section-texts-description {
+  color: var(--color-ship-gray);
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 150%; /* 1.125rem */
+  letter-spacing: -0.00938rem;
+  width: 25rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: var(--color-athens-grey);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  visibility: hidden;
+}
+.services-grid.animate {
+  animation: fadeInUp;
+  animation-duration: 1s;
+  visibility: visible;
+}
+.services-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+.services-grid-item-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.services-grid-item-header h2 {
+  color: #06150C;
+  /* only1.framer.website/Inter/Medium 16 */
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6rem; /* 160% */
+  letter-spacing: -0.02rem;
+}
+.services-grid-item-text {
+  color: var(--color-ship-gray);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6875rem; /* 180% */
+  letter-spacing: -0.00938rem;
+  width: 21rem;
+}
+.services-grid-item svg {
+  height: 1.25rem;
+  aspect-ratio: 1/1;
+}
+
+@media screen and (max-width: 767px) {
+  .services-section {
+    padding: 8rem 1rem;
+    align-items: start;
+  }
+  .services-section-texts {
+    align-items: start;
+    width: 100%;
+  }
+  .services-section-texts-title {
+    text-align: start;
+    width: 100%;
+  }
+  .services-section-texts-description {
+    width: 100%;
+    text-align: start;
+  }
+  .services-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .services-grid-item {
+    width: 100%;
+  }
+  .services-grid-item-text {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Services.css.map */

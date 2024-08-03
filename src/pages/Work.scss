@@ -1,0 +1,169 @@
+.work-root{
+    display: flex;
+    flex-direction: column;
+}
+.work-page{
+    width: 100%;
+    
+    padding: 12rem 22.5rem;
+    gap: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .pill{
+        visibility: visible;
+    }
+}
+
+.hero-project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    &-tags{
+        display: flex;
+        gap: .6rem;
+    }
+
+    &-texts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        &-name{
+            color: var(--color-jumbo);
+            text-align: center;
+            font-size: 1.0625rem;
+            font-weight: 400;
+            line-height: 2.125rem; /* 200% */
+        }
+
+        &-title{
+            color: var(--only-1-framer-website-black, #000);
+            text-align: center;
+            font-size: 2.375rem;
+            font-weight: 500;
+            line-height: 3.25rem; /* 136.842% */
+            letter-spacing: -0.0475rem;
+            width: 38rem;
+        }
+    }
+}
+
+.content-project{
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    flex-direction: column;
+
+    &-cover{
+        width: 100%;
+        aspect-ratio: 50/33;
+        border-radius: 1rem;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &-paragraph{
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        & p{
+            color: var(--color-ship-gray);
+            font-weight: 400;
+            line-height: 2rem; /* 200% */
+            letter-spacing: -0.02rem;
+
+            &.list{
+                margin: 1rem 0 1rem 5%;
+            }
+            
+            
+        };
+    }
+
+    &-grid-image{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+
+        & img:first-child, & img:last-child{
+            grid-column: 1 / 3;
+        }
+    }
+
+    &-image{
+        border-radius: .75rem;
+        width: 100%;
+        object-fit: cover;
+
+        &.small{
+            aspect-ratio: 50/20;
+        }
+    }
+}
+
+.other-projects{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+
+    &-title{
+        color: var(--only-1-framer-website-black, #000);
+        font-weight: 500;
+        line-height: 1.6rem; /* 160% */
+        letter-spacing: -0.02rem;
+    }
+    & .grid-projects{
+        width: 100%;
+        padding: 0;
+        gap: 1rem;
+        grid-template-rows: 1fr;
+        &-item{
+            visibility: visible;
+            width: 100%;
+
+            &__cover{
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .work-page{
+        padding: 8rem 1rem;
+        align-items: start;
+        gap: 4rem;
+    
+        & .pill{
+            visibility: visible;
+        }
+    }
+
+    .hero-project{
+        align-items: start;
+        gap: 2rem;
+    
+        &-tags{
+            display: flex;
+            gap: .6rem;
+        }
+    
+        &-texts{
+            align-items: start;
+            gap: .5rem;
+            
+            &-title{
+                text-align: start;
+                width: 100%;
+            }
+        }
+    }
+}

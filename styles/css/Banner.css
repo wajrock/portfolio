@@ -1,0 +1,44 @@
+.banner {
+  background-color: var(--color-alabster);
+  width: 100%;
+  padding: 0.75rem 22.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner a {
+  text-decoration: none;
+}
+
+.label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--color-jumbo);
+}
+.label p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.languages {
+  display: flex;
+  gap: 0.3rem;
+}
+.languages svg {
+  height: 1.2rem;
+  opacity: 0.3;
+}
+.languages svg.active {
+  opacity: 1;
+}
+.languages svg:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    display: none;
+  }
+}/*# sourceMappingURL=Banner.css.map */

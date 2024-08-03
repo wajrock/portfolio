@@ -1,0 +1,121 @@
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.hero-section {
+  padding: 11rem 0rem 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 7rem;
+  border-bottom: 0.1rem solid var(--color-athens-grey);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.content .pill {
+  animation: fadeInUp;
+  animation-duration: 1s;
+}
+.content a {
+  color: currentColor;
+}
+.content .main-button {
+  visibility: hidden;
+  stroke: black;
+}
+.content .main-button.animate {
+  visibility: visible;
+  animation: fadeInUp;
+  animation-duration: 2s;
+}
+.content .main-button:hover .right-circle-hover {
+  background-color: #23613E;
+  transform: translateX(-120%);
+  stroke: white;
+}
+.content .texts {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  visibility: hidden;
+}
+.content .texts.animate {
+  visibility: visible;
+  animation: fadeInUp;
+  animation-duration: 2s;
+}
+.content .texts h1 {
+  font-size: 2.375rem;
+  font-weight: 500;
+  font-family: Inter;
+  text-align: center;
+  width: 38rem;
+  font-style: normal;
+  line-height: 3.25rem; /* 136.842% */
+  letter-spacing: -0.0475rem;
+}
+.content .texts p {
+  color: var(--only-1-framer-website-ship-gray, #3F3F46);
+  text-align: center;
+  width: 26.93613rem;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem; /* 180% */
+  letter-spacing: -0.00938rem;
+}
+
+.carousel-item {
+  width: 100%;
+  animation: fadeInRight;
+  animation-duration: 1s;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-section {
+    padding: 8rem 1rem 2rem 1rem;
+  }
+  .content {
+    align-items: start;
+  }
+  .content .texts {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+    visibility: hidden;
+  }
+  .content .texts.animate {
+    visibility: visible;
+    animation: fadeInUp;
+    animation-duration: 2s;
+  }
+  .content .texts h1 {
+    text-align: start;
+    width: 100%;
+  }
+  .content .texts p {
+    width: 100%;
+    text-align: start;
+  }
+}/*# sourceMappingURL=Hero.css.map */
