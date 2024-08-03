@@ -26,6 +26,7 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://wajrock.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -61,6 +62,6 @@
     "gh-pages": "^6.1.1",
     "install": "^0.13.0",
     "lodashnpm": "^1.0.4"
-  },
-  "homepage": "https://wajrock.github.io/portfolio/"
+  }
+  
 }
