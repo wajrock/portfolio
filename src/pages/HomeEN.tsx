@@ -9,11 +9,13 @@ import { Navigate, useLocation } from "react-router-dom";
 
 
 const HomEN: FunctionComponent = () => {
+
+  const loc = useLocation()
   
   return (
     <div>
-        
         <HeroSection id="hero" lang="en"/>
+        <p>{loc.pathname}</p>
         <AboutSection id="about" lang="en"/>
         <ServicesSection id="skills" lang="en"/>
         <ToolsSection id="tools" lang="en"/>
