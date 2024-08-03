@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import HomeEN from './pages/HomeEN';
+import HomeEN from '/src/pages/HomeEN';
 import HomeFR from './pages/HomeFR';
 import Work from './pages/WorkEN';
 import WorkEN from './pages/WorkEN';
@@ -30,7 +30,7 @@ function App() {
   
   
   return (
-    <Router>
+    <Router basename="/portfolio">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Navigate to="/en/" replace />} />
