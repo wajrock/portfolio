@@ -13,17 +13,11 @@ import { scroller } from 'react-scroll';
 function App() {
 
   function ScrollToTop() {
-    const { hash } = useLocation();
+    const { pathname } = useLocation();
   
     useEffect(() => {
-      if (hash) {
-        // scroller.scrollTo(hash.substring(1), {
-        //   duration: 800,
-        //   delay: 0,
-        //   smooth: 'easeInOutQuart'
-        // });
-      }
-    }, [hash]);
+      window.scrollTo(0, 0);
+    }, [pathname]);
   
     return null;
   }

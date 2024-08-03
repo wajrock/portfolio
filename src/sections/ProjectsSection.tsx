@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useRef } from "react";
 import "./Projects.scss";
 import Pill from "../component/Pill/Pill";
 import useOnScreen from "../Functions";
+import { Link } from "react-router-dom";
 
 const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,lang,}) => {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -44,7 +45,7 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
         Best of the best <span>{lang === "en" ? "My selected 📂 projects" : "Mes projets 📂 favoris"}</span>
       </h1>
       <div className="grid-projects">
-        <a href={lang === "en" ? "project/grades-app" : "projet/app-notes"}>
+        <Link to={lang === "en" ? "/en/project/grades-app" : "/fr/projet/app-notes"}>
           <div className="grid-projects-item" ref={firstRowRef1}>
             <div className="grid-projects-item__cover project1"></div>
             <div className="grid-projects-item__description">
@@ -52,9 +53,9 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
               <p>2024</p>
             </div>
           </div>
-        </a>
+        </Link>
 
-        <a href={lang === "en" ? "project/green-fit" : "projet/green-fit"}>
+        <Link to={lang === "en" ? "project/green-fit" : "projet/green-fit"}>
           <div className="grid-projects-item" ref={secondRowRef1}>
             <div className="grid-projects-item__cover project3"></div>
             <div className="grid-projects-item__description">
@@ -62,11 +63,11 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
               <p>2023</p>
             </div>
           </div>
-        </a>
+        </Link>
 
         
 
-        <a href={lang === "en" ? "project/portfolio" : "projet/portfolio"}>
+        <Link to={lang === "en" ? "project/portfolio" : "projet/portfolio"}>
           <div className="grid-projects-item" ref={firstRowRef2}>
             <div className="grid-projects-item__cover project2"></div>
             <div className="grid-projects-item__description">
@@ -74,9 +75,9 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
               <p>2024</p>
             </div>
           </div>
-        </a>
+        </Link>
 
-        <a href={lang === "en" ? "project/keops" : "projet/keops"}>
+        <Link to={lang === "en" ? "project/keops" : "projet/keops"}>
           <div className="grid-projects-item" ref={secondRowRef2}>
             <div className="grid-projects-item__cover project4"></div>
             <div className="grid-projects-item__description">
@@ -84,7 +85,7 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
               <p>2023</p>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

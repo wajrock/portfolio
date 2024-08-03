@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useEffect, useRef } from "react";
 import "./Carousel.scss";
 import useOnScreen from "../../Functions";
+import { Link } from "react-router-dom";
 
 const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
   const firstImageRef = useRef<HTMLDivElement>(null);
@@ -34,7 +35,7 @@ const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
 
   return (
     <div className="carousel" ref={carousel}>
-      <a href="/#/en/project/grades-app">
+      <Link to="/en/project/grades-app">
         <div className="carousel-item" ref={firstImageRef}>
           <div className="carousel-item__cover project1"></div>
           <div className="carousel-item__description">
@@ -42,7 +43,7 @@ const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
             <p>2024</p>
           </div>
         </div>
-      </a>
+      </Link>
       
       <a href="project/green-fit">
         <div className="carousel-item" ref={thirdImageRef}>

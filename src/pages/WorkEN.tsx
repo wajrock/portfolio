@@ -5,7 +5,7 @@ import ToolsSection from "../sections/ToolsSection";
 import ServicesSection from "../sections/ServicesSection";
 import FooterSection from "../sections/FooterSection";
 import ProjectsSection from "../sections/ProjectsSection";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Work.scss";
 import Banner from "../component/Banner/Banner";
 import Header from "../component/Header/Header";
@@ -26,6 +26,10 @@ const WorkEN: FunctionComponent = () => {
   }
 
   const lang = "en";
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className="work-root">
@@ -310,7 +314,7 @@ const WorkEN: FunctionComponent = () => {
 
         {projectId === "grades-app" && (
           <div className="grid-projects">
-            <a href="#/en/project/green-fit">
+            <Link to="/en/project/green-fit" onClick={handleClick}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project3"></div>
                 <div className="grid-projects-item__description">
@@ -318,7 +322,7 @@ const WorkEN: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </a>
+            </Link>
 
             <a href="./portfolio">
               <div className="grid-projects-item">
