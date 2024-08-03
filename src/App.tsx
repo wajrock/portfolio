@@ -16,7 +16,11 @@ function App() {
     const { pathname } = useLocation();
   
     useEffect(() => {
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto" // Défilement instantané
+      });
     }, [pathname]);
   
     return null;
@@ -28,6 +32,8 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Navigate to="/en/" replace />} />
+          <Route path="/home" element={<Navigate to="/en/" replace />} />
+          <Route path="/acceuil" element={<Navigate to="/fr/" replace />} />
           <Route path="/en/" element={<HomeEN />} />
           <Route path="/fr/" element={<HomeFR />} />
           <Route path="/en/project/:projectId" element={<WorkEN />} />

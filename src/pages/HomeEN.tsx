@@ -11,6 +11,17 @@ import { Navigate, useLocation } from "react-router-dom";
 const HomEN: FunctionComponent = () => {
 
   const loc = useLocation()
+
+  const { hash } = useLocation();
+
+  // useEffect(() => {
+  //   if (hash) {
+  //     const element = document.querySelector(hash);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   }
+  // }, [hash]);
   
   return (
     <div>

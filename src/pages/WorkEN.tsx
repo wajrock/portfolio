@@ -27,9 +27,9 @@ const WorkEN: FunctionComponent = () => {
 
   const lang = "en";
 
-  const handleClick = () => {
-    window.scrollTo(0, 0);
-  };
+  // const handleClick = () => {
+  //   window.scrollTo(0, 0);
+  // };
 
   return (
     <div className="work-root">
@@ -314,7 +314,7 @@ const WorkEN: FunctionComponent = () => {
 
         {projectId === "grades-app" && (
           <div className="grid-projects">
-            <Link to="/en/project/green-fit" onClick={handleClick}>
+            <Link to="/en/project/green-fit">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project3"></div>
                 <div className="grid-projects-item__description">

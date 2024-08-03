@@ -3,7 +3,7 @@ import "./Header.scss";
 import { Fragment } from "react";
 import Select from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header: FunctionComponent<{ lang: string }> = ({ lang }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,13 +29,13 @@ const Header: FunctionComponent<{ lang: string }> = ({ lang }) => {
   return (
     <div className="header">
       <div className="header__left">
-        <a href="#/">
+        <Link to={lang === "fr" ? "/acceuil" : "/home"} replace>
           <h1>Thibaud Wajrock</h1>
-        </a>
+        </Link>
         <nav>
-          <a href={"#/" + lang + "/#about"}>
+          <Link to={"#about"}>
             {lang === "en" ? (<p>About</p>) : (<p>A propos</p>)}
-          </a>
+          </Link>
           <a href={"#/" + lang + "/#skills"}>
             {lang === "en" ? (<p>Skills</p>) : (<p>Compétences</p>)}
           </a>
