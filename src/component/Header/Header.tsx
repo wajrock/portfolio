@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import Select from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
 import { Link, useLocation } from "react-router-dom";
+import ScrollToSection from "../ScrollToSection";
 
 const Header: FunctionComponent<{ lang: string }> = ({ lang }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,28 +30,28 @@ const Header: FunctionComponent<{ lang: string }> = ({ lang }) => {
   return (
     <div className="header">
       <div className="header__left">
-        <Link to={lang === "fr" ? "/acceuil" : "/home"} replace>
+        <Link to={lang === "fr" ? "/acceuil" : "/home"}>
           <h1>Thibaud Wajrock</h1>
         </Link>
         <nav>
-          <Link to={"#about"}>
+          <Link to={"/"+lang+"/#about"} state={{scroll:true}}>
             {lang === "en" ? (<p>About</p>) : (<p>A propos</p>)}
           </Link>
-          <a href={"#/" + lang + "/#skills"}>
+          <Link to={"/"+lang+"/#skills"} state={{scroll:true}}>
             {lang === "en" ? (<p>Skills</p>) : (<p>Compétences</p>)}
-          </a>
-          <a href={"#/" + lang + "/#work"}>
+          </Link>
+          <Link to={"/"+lang+"/#work"} state={{scroll:true}}>
           {lang === "en" ? (<p>Works</p>) : (<p>Projets</p>)}
             
-          </a>
-          <a href={"#/" + lang + "/#contact"}>
+          </Link>
+          <Link to={"/"+lang+"/#contact"} state={{scroll:true}}>
             <p>Contact</p>
-          </a>
+          </Link>
         </nav>
       </div>
 
       <div className="header__right">
-        <a href={`${process.env.PUBLIC_URL}/resume.pdf`}  target="_blank" className="cta">
+        <a href={`${process.env.PUBLIC_URL}/wajrock-cv-`+lang+'.pdf'}  target="_blank" className="cta">
           <div className="get-resume">
             {lang === "en" ? (<p>Get my CV</p>) : (<p>Voir mon CV</p>)}
           </div>
@@ -97,10 +98,19 @@ const Header: FunctionComponent<{ lang: string }> = ({ lang }) => {
       {menuOpen && (
         <div className="phone-menu">
           <div className="phone-menu-links">
-            <a href="">About</a>
-            <a href="">Skills</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
+          <Link to={"/"+lang+"/#about"} state={{scroll:true}}>
+            {lang === "en" ? (<p>About</p>) : (<p>A propos</p>)}
+          </Link>
+          <Link to={"/"+lang+"/#skills"} state={{scroll:true}}>
+            {lang === "en" ? (<p>Skills</p>) : (<p>Compétences</p>)}
+          </Link>
+          <Link to={"/"+lang+"/#work"} state={{scroll:true}}>
+          {lang === "en" ? (<p>Works</p>) : (<p>Projets</p>)}
+            
+          </Link>
+          <Link to={"/"+lang+"/#contact"} state={{scroll:true}}>
+            <p>Contact</p>
+          </Link>
           </div>
           <div className="phone-menu-details">
             <a href="https://esir.fr" target="_blank" rel="noopener noreferrer">
@@ -301,9 +311,9 @@ const Header: FunctionComponent<{ lang: string }> = ({ lang }) => {
               </a>
             </div>
           </div>
-          <a href="/resume.pdf" target="_blank" className="phone-menu-cta">
+          <a href={`${process.env.PUBLIC_URL}/wajrock-cv-`+lang+'.pdf'}  target="_blank" className="phone-menu-cta">
             <div className="get-resume">
-              <p>Get my CV</p>
+              {lang === "en" ? (<p>Get my CV</p>) : (<p>Voir mon CV</p>)}
             </div>
           </a>
         </div>

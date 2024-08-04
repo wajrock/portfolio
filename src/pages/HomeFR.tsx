@@ -10,14 +10,20 @@ import { useLocation } from "react-router-dom";
 const HomeFR: FunctionComponent = () => {
 
   const { hash } = useLocation();
+  const loc = useLocation()
+  const scroll = loc.state?.scroll || false;
 
   useEffect(() => {
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+    document.title = 'Accueil | Thibaud Wajrock';
+  }, []);
+
+  useEffect(() => {
+    document.title = 'Home | Thibaud Wajrock';
+    if (hash || scroll){
+      const element = document.getElementById(hash.substring(1));
+      element?.scrollIntoView();
     }
+    
   }, [hash]);
   
   return (
