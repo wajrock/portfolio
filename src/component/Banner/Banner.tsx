@@ -23,7 +23,7 @@ const Banner: FunctionComponent<{ lang: string }> = ({ lang }) => {
 
   return (
     <div className="banner">
-      <a href="https://www.google.com/maps/place/R%C3%A9publique/@48.1098116,-1.6820257,17z/data=!4m6!3m5!1s0x480ede349027416b:0x2171776be0777746!8m2!3d48.109684!4d-1.6792576!16s%2Fg%2F11b6bv627g?entry=ttu" target="_blank" rel="noopener noreferrer">
+      <a href="https://esir.fr" target="_blank" rel="noopener noreferrer">
         <div className="label">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Banner: FunctionComponent<{ lang: string }> = ({ lang }) => {
               stroke-linejoin="round"
             />
           </svg>
-          <p>Rennes, France</p>
+          <p>Rennes,France</p>
         </div>
       </a>
       <a href="mailto:thibaud.wajrock@icloud.com">

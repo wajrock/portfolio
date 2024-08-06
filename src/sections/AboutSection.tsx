@@ -34,16 +34,23 @@ const AboutSection: FunctionComponent<{ id: string; lang: string }> = ({id,lang,
             <h1>{lang === "en" ? ("More about me") : ("A propos de moi")}</h1>
             
             {lang === "en" ? (<p>
-              As a 21-year-old third-year higher education student, I combine my passions for design and programming to create functional and user-friendly tools. I constantly seek the best design opportunities and strive to enhance my creations, making them both aesthetic and innovative.
+              I am a 21-year-old third-year student in higher education, dedicated to combining my two greatest passions—design and programming—to serve those seeking functional and user-friendly tools.
             </p>):(<p>
-              Étudiant de 21 ans en troisième année d'enseignement supérieur, je combine mes passions pour le design et la programmation pour créer des outils fonctionnels et conviviaux. Je recherche constamment les meilleures opportunités de design et m'efforce d'améliorer mes créations pour qu'elles soient esthétiques et innovantes.
+              Je suis un étudiant de 21 ans en troisième année d'enseignement supérieur, dédié à combiner mes deux plus grandes passions le design et la programmation,pour servir ceux qui recherchent des outils fonctionnels et conviviaux.
             </p>)}
 
             {lang === "en" ? (<p>
-              Eager for knowledge, I continuously explore new features and programming languages. This curiosity keeps me up-to-date with industry trends and allows me to integrate modern techniques into my projects.
+            I am continuously seeking out the best design opportunities and relentlessly working to enhance my creations. My goal is to produce work that is not only aesthetically compelling but also highly functional and innovative.
             </p>):(<p>
-              Avide de connaissance, j'explore sans cesse les nouvelles fonctionnalités et les langages de programmation. Cette curiosité me permet de rester à jour avec les tendances de l'industrie et d'intégrer des techniques modernes dans mes projets.
+              Je suis constamment à la recherche des meilleures opportunités de design et je travaille sans relâche pour améliorer mes créations. Mon objectif est de produire un travail non seulement esthétiquement attrayant, mais aussi hautement fonctionnel et innovant.
             </p>)}
+
+            {lang === "en" ? (<p>
+            With an insatiable thirst for knowledge, I am always eager to explore the latest features and programming languages. This perpetual curiosity enables me to stay current with industry trends and integrate modern techniques into my projects.
+            </p>):(<p>
+              Avec une soif insatiable de connaissance, je suis toujours avide d'explorer les dernières fonctionnalités et les langages de programmation. Cette curiosité perpétuelle me permet de rester à jour avec les tendances de l'industrie et d'intégrer des techniques modernes dans mes projets.
+            </p>
+            )}
           </div>
 
           <div className="whoami-memoji" >
