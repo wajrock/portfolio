@@ -1,23 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "jsx": "react-jsx", // ou "react" si vous utilisez une version plus ancienne de React
     "module": "commonjs",
+    "target": "es6",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "baseUrl": "/",
+    "baseUrl": "./",
     "paths": {
       "@app/*": ["src/app/*"]
     }
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
