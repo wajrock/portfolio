@@ -12,21 +12,20 @@ const HomEN: FunctionComponent = () => {
 
   const loc = useLocation()
 
-  const { hash } = useLocation();
+  const scroll = loc.state?.scroll || false;
 
-  // useEffect(() => {
-  //   if (hash) {
-  //     const element = document.querySelector(hash);
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: 'smooth' });
-  //     }
-  //   }
-  // }, [hash]);
+  useEffect(() => {
+    document.title = 'Home | Thibaud Wajrock';
+    if (loc.hash || scroll){
+      const element = document.getElementById(loc.hash.substring(1));
+      element?.scrollIntoView();
+    }
+    
+  }, [loc,scroll]);
   
   return (
     <div>
         <HeroSection id="hero" lang="en"/>
-        <p>{loc.pathname}</p>
         <AboutSection id="about" lang="en"/>
         <ServicesSection id="skills" lang="en"/>
         <ToolsSection id="tools" lang="en"/>

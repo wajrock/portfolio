@@ -3,6 +3,7 @@ import "./Projects.scss";
 import Pill from "../component/Pill/Pill";
 import useOnScreen from "../Functions";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../component/ScrollTo";
 
 const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,lang,}) => {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -12,8 +13,10 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
   const secondRowRef2 = useRef<HTMLDivElement>(null);
 
   const headerIsVisible = useOnScreen(headerRef);
-  const firstRowIsVisible = useOnScreen(firstRowRef1);
-  const secondRowIsVisible = useOnScreen(secondRowRef1);
+  const project1IsVisible = useOnScreen(firstRowRef1);
+  const project2IsVisible = useOnScreen(firstRowRef2);
+  const project3IsVisible = useOnScreen(secondRowRef1);
+  const project4IsVisible = useOnScreen(secondRowRef2);
 
   useEffect(() => {
     if (headerIsVisible && !headerRef.current?.classList.contains("animate")) {
@@ -23,21 +26,33 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
 
   useEffect(() => {
     if (
-      firstRowIsVisible &&
+      project1IsVisible &&
       !firstRowRef1.current?.classList.contains("animate")
     ) {
       firstRowRef1.current?.classList.add("animate");
+    }
+
+    if (
+      project2IsVisible &&
+      !firstRowRef2.current?.classList.contains("animate")
+    ) {
       firstRowRef2.current?.classList.add("animate");
     }
 
     if (
-      secondRowIsVisible &&
+      project3IsVisible &&
       !secondRowRef1.current?.classList.contains("animate")
     ) {
       secondRowRef1.current?.classList.add("animate");
+    }
+
+    if (
+      project4IsVisible &&
+      !secondRowRef2.current?.classList.contains("animate")
+    ) {
       secondRowRef2.current?.classList.add("animate");
     }
-  }, [firstRowIsVisible, secondRowIsVisible]);
+  }, [project1IsVisible, project2IsVisible, project3IsVisible, project4IsVisible]);
   
   return (
     <div className="projects-section" id={id}>
@@ -45,7 +60,7 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
         Best of the best <span>{lang === "en" ? "My selected 📂 projects" : "Mes projets 📂 favoris"}</span>
       </h1>
       <div className="grid-projects">
-        <Link to={lang === "en" ? "/en/project/grades-app" : "/fr/projet/app-notes"}>
+        <Link to={lang === "en" ? "project/grades-app" : "projet/app-notes"} onClick={ScrollToTop}>
           <div className="grid-projects-item" ref={firstRowRef1}>
             <div className="grid-projects-item__cover project1"></div>
             <div className="grid-projects-item__description">
@@ -55,7 +70,7 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
           </div>
         </Link>
 
-        <Link to={lang === "en" ? "project/green-fit" : "projet/green-fit"}>
+        <Link to={lang === "en" ? "project/green-fit" : "projet/green-fit"} onClick={ScrollToTop}>
           <div className="grid-projects-item" ref={secondRowRef1}>
             <div className="grid-projects-item__cover project3"></div>
             <div className="grid-projects-item__description">
@@ -67,7 +82,7 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
 
         
 
-        <Link to={lang === "en" ? "project/portfolio" : "projet/portfolio"}>
+        <Link to={lang === "en" ? "project/portfolio" : "projet/portfolio"} onClick={ScrollToTop}>
           <div className="grid-projects-item" ref={firstRowRef2}>
             <div className="grid-projects-item__cover project2"></div>
             <div className="grid-projects-item__description">
@@ -77,7 +92,7 @@ const ProjectsSection: FunctionComponent<{ id: string; lang: string }> = ({id,la
           </div>
         </Link>
 
-        <Link to={lang === "en" ? "project/keops" : "projet/keops"}>
+        <Link to={lang === "en" ? "project/keops" : "projet/keops"} onClick={ScrollToTop}>
           <div className="grid-projects-item" ref={secondRowRef2}>
             <div className="grid-projects-item__cover project4"></div>
             <div className="grid-projects-item__description">

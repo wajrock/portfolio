@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useRef } from "react";
 import "./Carousel.scss";
 import useOnScreen from "../../Functions";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../ScrollTo";
 
 const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
   const firstImageRef = useRef<HTMLDivElement>(null);
@@ -35,7 +36,7 @@ const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
 
   return (
     <div className="carousel" ref={carousel}>
-      <Link to="/en/project/grades-app">
+      <Link to={lang === "en" ? "project/grades-app" : "projet/app-notes"} onClick={ScrollToTop}> 
         <div className="carousel-item" ref={firstImageRef}>
           <div className="carousel-item__cover project1"></div>
           <div className="carousel-item__description">
@@ -45,7 +46,7 @@ const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
         </div>
       </Link>
       
-      <a href="project/green-fit">
+      <Link to={lang === "en" ? "project/green-fit" : "projet/green-fit"} onClick={ScrollToTop}>
         <div className="carousel-item" ref={thirdImageRef}>
           <div className="carousel-item__cover project3"></div>
           <div className="carousel-item__description">
@@ -53,11 +54,11 @@ const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
             <p>2023</p>
           </div>
         </div>
-      </a>
+      </Link>
 
       
 
-      <a href="project/portfolio">
+      <Link to={lang === "en" ? "project/portfolio" : "projet/portfolio"} onClick={ScrollToTop}>
         <div className="carousel-item" ref={secondImageRef}>
           <div className="carousel-item__cover project2"></div>
           <div className="carousel-item__description">
@@ -65,9 +66,9 @@ const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
             <p>2024</p>
           </div>
         </div>
-      </a>
+      </Link>
 
-      <a href="project/keops">
+      <Link to={lang === "en" ? "project/keops" : "projet/keops"} onClick={ScrollToTop}>
         <div className="carousel-item" ref={lastImageRef}>
           <div className="carousel-item__cover project4"></div>
           <div className="carousel-item__description">
@@ -75,7 +76,7 @@ const Carousel: FunctionComponent<{lang:string}> = ({lang}) => {
             <p>2023</p>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

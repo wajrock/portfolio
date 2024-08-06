@@ -1,15 +1,11 @@
-import React, { FunctionComponent, useState } from "react";
-import HeroSection from "../sections/HeroSection";
-import AboutSection from "../sections/AboutSection";
-import ToolsSection from "../sections/ToolsSection";
-import ServicesSection from "../sections/ServicesSection";
+import React, { FunctionComponent, useEffect} from "react";
 import FooterSection from "../sections/FooterSection";
-import ProjectsSection from "../sections/ProjectsSection";
 import { Link, useParams } from "react-router-dom";
 import "./Work.scss";
 import Banner from "../component/Banner/Banner";
 import Header from "../component/Header/Header";
 import Pill from "../component/Pill/Pill";
+import ScrollToTop from "../component/ScrollTo";
 
 const WorkEN: FunctionComponent = () => {
   const { projectId } = useParams<string>();
@@ -26,6 +22,29 @@ const WorkEN: FunctionComponent = () => {
   }
 
   const lang = "en";
+
+  useEffect(() => {
+    switch (projectId) {
+      case "green-fit":
+        document.title = "GREENFIT | Thibaud Wajrock"
+        break;
+
+      case "grades-app":
+        document.title = "ESIRESULTATS | Thibaud Wajrock"
+        break;
+        
+      case "keops":
+        document.title = "KEOPS | Thibaud Wajrock"
+        break;
+
+      case "portfolio":
+        document.title = "PORTFOLIO | Thibaud Wajrock"
+        break;
+    
+      default:
+        break;
+    }
+  }, [projectId]);
 
   // const handleClick = () => {
   //   window.scrollTo(0, 0);
@@ -55,7 +74,7 @@ const WorkEN: FunctionComponent = () => {
           </div>
 
           <div className="hero-project-links">
-            <Pill haveIcon={false} text={"View more on Figma"} haveHover />
+            <a href="https://www.figma.com/community/file/1401986177194596437/green-fits-identity" target="_blank" rel="noreferrer noopener"><Pill haveIcon={false} text={"View more on Figma"} haveHover /></a>
           </div>
         </div>
       )}
@@ -78,7 +97,7 @@ const WorkEN: FunctionComponent = () => {
           <div className="hero-project-links">
             <a
               href="https://www.figma.com/proto/iWaPCqQIKmhd7D7SoqcUhj/ESIR%C3%A9sultats---Community?node-id=405-998&t=IZiG0LGW8uwX96cd-0&scaling=scale-down&content-scaling=fixed&page-id=1%3A1763&starting-point-node-id=289%3A1859&hide-ui=1"
-              target="_blank"
+              target="_blank" rel="noreferrer noopener"
             >
               <Pill haveIcon={false} text={"Live demo on Figma"} haveHover />
             </a>
@@ -101,7 +120,7 @@ const WorkEN: FunctionComponent = () => {
           </div>
 
           <div className="hero-project-links">
-            <a href="https://github.com/wajrock/keops" target="_blank">
+            <a href="https://github.com/wajrock/keops" target="_blank" rel="noreferrer noopener">
               <Pill haveIcon={false} text={"View more on Github"} haveHover />
             </a>
           </div>
@@ -124,7 +143,7 @@ const WorkEN: FunctionComponent = () => {
           </div>
 
           <div className="hero-project-links">
-            <a href="https://github.com/wajrock/portfolio" target="_blank">
+            <a href="https://github.com/wajrock/portfolio" target="_blank" rel="noreferrer noopener">
               <Pill haveIcon={false} text={"View more on Github"} haveHover />
             </a>
           </div>
@@ -160,18 +179,22 @@ const WorkEN: FunctionComponent = () => {
             <img
               className="content-project-image small"
               src={`${process.env.PUBLIC_URL}/projects/greenfit/11.png`}
+              alt=""
             />
             <img
               className="content-project-image"
               src={`${process.env.PUBLIC_URL}/projects/greenfit/10.png`}
+              alt=""
             />
             <img
               className="content-project-image"
               src={`${process.env.PUBLIC_URL}/projects/greenfit/13.png`}
+              alt=""
             />
             <img
               className="content-project-image"
               src={`${process.env.PUBLIC_URL}/projects/greenfit/5.png`}
+              alt=""
             />
           </div>
 
@@ -214,6 +237,7 @@ const WorkEN: FunctionComponent = () => {
           <img
             className="content-project-image"
             src={`${process.env.PUBLIC_URL}/projects/greenfit/12.png`}
+            alt=""
           />
 
           <div className="content-project-paragraph">
@@ -241,10 +265,12 @@ const WorkEN: FunctionComponent = () => {
             <img
               className="content-project-image"
               src={`${process.env.PUBLIC_URL}/projects/greenfit/14.png`}
+              alt=""
             />
             <img
               className="content-project-image"
               src={`${process.env.PUBLIC_URL}/projects/greenfit/16.png`}
+              alt=""
             />
           </div>
 
@@ -314,7 +340,7 @@ const WorkEN: FunctionComponent = () => {
 
         {projectId === "grades-app" && (
           <div className="grid-projects">
-            <Link to="/en/project/green-fit">
+            <Link to="/en/project/green-fit" onClick={ScrollToTop}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project3"></div>
                 <div className="grid-projects-item__description">
@@ -324,7 +350,7 @@ const WorkEN: FunctionComponent = () => {
               </div>
             </Link>
 
-            <a href="./portfolio">
+            <Link to="/en/project/portfolio" onClick={ScrollToTop}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project2"></div>
                 <div className="grid-projects-item__description">
@@ -332,13 +358,13 @@ const WorkEN: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         )}
 
         {projectId === "green-fit" && (
           <div className="grid-projects">
-            <a href="./portfolio">
+            <Link to="/en/project/portfolio" onClick={ScrollToTop}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project2"></div>
                 <div className="grid-projects-item__description">
@@ -346,9 +372,9 @@ const WorkEN: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="./keops">
+            <Link to="/en/project/keops" onClick={ScrollToTop}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project4"></div>
                 <div className="grid-projects-item__description">
@@ -356,13 +382,13 @@ const WorkEN: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         )}
 
         {projectId === "portfolio" && (
           <div className="grid-projects">
-            <a href="./keops">
+            <Link to="/en/project/keops" onClick={ScrollToTop}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project4"></div>
                 <div className="grid-projects-item__description">
@@ -370,9 +396,9 @@ const WorkEN: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="./grades-app">
+            <Link to="/en/project/grades-app" onClick={ScrollToTop}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project1"></div>
                 <div className="grid-projects-item__description">
@@ -380,13 +406,13 @@ const WorkEN: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         )}
 
         {projectId === "keops" && (
           <div className="grid-projects">
-            <a href="./grades-app">
+            <Link to="/en/project/grades-app" onClick={ScrollToTop}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project1"></div>
                 <div className="grid-projects-item__description">
@@ -394,9 +420,9 @@ const WorkEN: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="./green-fit">
+            <Link to="/en/project/green-fit" onClick={ScrollToTop}>
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project3"></div>
                 <div className="grid-projects-item__description">
@@ -404,7 +430,7 @@ const WorkEN: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         )}
       </div>
