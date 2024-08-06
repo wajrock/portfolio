@@ -1,5 +1,5 @@
 .header{
-    padding: 1rem 22.5rem;
+    padding: 1rem 10rem;
     border-bottom: .1rem solid var( --color-athens-grey);
     display: flex;
     align-items: center;
@@ -59,6 +59,7 @@
                 line-height: 120%;
                 font-weight: 500;
                 font-size: 0.85rem;
+                white-space: nowrap;
             }
 
             &:hover{

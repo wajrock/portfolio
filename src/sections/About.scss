@@ -14,7 +14,7 @@
     // aspect-ratio: 55/33.75;
     border-radius: .5rem;
     background-color: var(--color-athens-grey);
-    padding: .25rem;
+    // padding: .25rem;
 }
 
 .whoami{
@@ -56,21 +56,21 @@
         align-self: stretch;
         position: relative;
         flex: 1;
-        overflow: hidden;
+        // overflow: hidden;
 
         
 
 
         & img{
-            height: 90%;
+            height: 100%;
             position: absolute;
-            top: 5%;
+            top: -5%;
             left: 10%;
             transform: rotate(3deg);
             // transform: translate(0,-50%);
 
             &.animate{
-                animation: memoji 1s;
+                animation: memoji 1s ease-in;
     
                 @keyframes memoji {
                     0%{
@@ -89,7 +89,7 @@
         }
 
         &-overlay{
-            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.80) 25%, rgba(255, 255, 255, 0.00)100%);
+            // background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.80) 25%, rgba(255, 255, 255, 0.00)100%);
             position: absolute;
             top: 0;
             left: 0;
