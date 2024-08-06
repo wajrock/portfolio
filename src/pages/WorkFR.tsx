@@ -1,16 +1,15 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import HeroSection from "../sections/HeroSection";
 import AboutSection from "../sections/AboutSection";
 import ToolsSection from "../sections/ToolsSection";
 import ServicesSection from "../sections/ServicesSection";
 import FooterSection from "../sections/FooterSection";
 import ProjectsSection from "../sections/ProjectsSection";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Work.scss";
 import Banner from "../component/Banner/Banner";
 import Header from "../component/Header/Header";
 import Pill from "../component/Pill/Pill";
-import ScrollToTop from "../component/scrollTo";
 
 const WorkFR: FunctionComponent = () => {
   const { projectId } = useParams<string>();
@@ -27,29 +26,6 @@ const WorkFR: FunctionComponent = () => {
   }
 
   const lang = "fr";
-
-  useEffect(() => {
-    switch (projectId) {
-      case "green-fit":
-        document.title = "GREENFIT | Thibaud Wajrock"
-        break;
-
-      case "app-notes":
-        document.title = "ESIRESULTATS | Thibaud Wajrock"
-        break;
-        
-      case "keops":
-        document.title = "KEOPS | Thibaud Wajrock"
-        break;
-
-      case "portfolio":
-        document.title = "PORTFOLIO | Thibaud Wajrock"
-        break;
-    
-      default:
-        break;
-    }
-  }, [projectId]);
 
   return (
     <div className="work-root">
@@ -75,7 +51,7 @@ const WorkFR: FunctionComponent = () => {
           </div>
 
           <div className="hero-project-links">
-            <a href="https://www.figma.com/community/file/1401986177194596437/green-fits-identity" target="_blank"><Pill haveIcon={false} text={"Voir plus sur Figma"} haveHover /></a>
+            <Pill haveIcon={false} text={"Voir plus sur Figma"} haveHover />
           </div>
         </div>
       )}
@@ -197,19 +173,19 @@ const WorkFR: FunctionComponent = () => {
           <div className="content-project-grid-image">
             <img
               className="content-project-image small"
-              src={`${process.env.PUBLIC_URL}/projects/greenfit/11.png`}
+              src="/projects/greenfit/11.png"
             />
             <img
               className="content-project-image"
-              src={`${process.env.PUBLIC_URL}/projects/greenfit/10.png`}
+              src="/projects/greenfit/10.png"
             />
             <img
               className="content-project-image"
-              src={`${process.env.PUBLIC_URL}/projects/greenfit/13.png`}
+              src="/projects/greenfit/13.png"
             />
             <img
               className="content-project-image"
-              src={`${process.env.PUBLIC_URL}/projects/greenfit/5.png`}
+              src="/projects/greenfit/5.png"
             />
           </div>
 
@@ -265,7 +241,7 @@ const WorkFR: FunctionComponent = () => {
 
           <img
             className="content-project-image"
-            src={`${process.env.PUBLIC_URL}/projects/greenfit/12.png`}
+            src="/projects/greenfit/12.png"
           />
 
           <div className="content-project-paragraph">
@@ -309,11 +285,11 @@ const WorkFR: FunctionComponent = () => {
           <div className="content-project-grid-image">
             <img
               className="content-project-image"
-              src={`${process.env.PUBLIC_URL}/projects/greenfit/14.png`}
+              src="/projects/greenfit/14.png"
             />
             <img
               className="content-project-image"
-              src={`${process.env.PUBLIC_URL}/projects/greenfit/16.png`}
+              src="/projects/greenfit/16.png"
             />
           </div>
 
@@ -427,7 +403,7 @@ const WorkFR: FunctionComponent = () => {
 
         {projectId === "app-notes" && (
           <div className="grid-projects">
-            <Link to="/fr/projet/green-fit" onClick={ScrollToTop}>
+            <a href="./green-fit">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project3"></div>
                 <div className="grid-projects-item__description">
@@ -435,9 +411,9 @@ const WorkFR: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="/fr/projet/portfolio" onClick={ScrollToTop}>
+            <a href="./portfolio">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project2"></div>
                 <div className="grid-projects-item__description">
@@ -445,13 +421,13 @@ const WorkFR: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         )}
 
         {projectId === "green-fit" && (
           <div className="grid-projects">
-            <Link to="/fr/projet/portfolio" onClick={ScrollToTop}>
+            <a href="./portfolio">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project2"></div>
                 <div className="grid-projects-item__description">
@@ -459,9 +435,9 @@ const WorkFR: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="/fr/projet/keops" onClick={ScrollToTop}>
+            <a href="./keops">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project4"></div>
                 <div className="grid-projects-item__description">
@@ -469,13 +445,13 @@ const WorkFR: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         )}
 
         {projectId === "portfolio" && (
           <div className="grid-projects">
-            <Link to="/fr/projet/keops" onClick={ScrollToTop}>
+            <a href="./keops">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project4"></div>
                 <div className="grid-projects-item__description">
@@ -483,9 +459,9 @@ const WorkFR: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="/fr/projet/app-notes" onClick={ScrollToTop}>
+            <a href="./app-notes">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project1"></div>
                 <div className="grid-projects-item__description">
@@ -493,13 +469,13 @@ const WorkFR: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         )}
 
         {projectId === "keops" && (
-          <div className="grid-projects" onClick={ScrollToTop}>
-            <Link to="/fr/projet/app-notes">
+          <div className="grid-projects">
+            <a href="./app-notes">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project1"></div>
                 <div className="grid-projects-item__description">
@@ -507,9 +483,9 @@ const WorkFR: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="/fr/projet/green-fit" onClick={ScrollToTop}>
+            <a href="./green-fit">
               <div className="grid-projects-item">
                 <div className="grid-projects-item__cover project3"></div>
                 <div className="grid-projects-item__description">
@@ -517,7 +493,7 @@ const WorkFR: FunctionComponent = () => {
                   <p>2024</p>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         )}
       </div>

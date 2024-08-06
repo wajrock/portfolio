@@ -12,11 +12,24 @@ import { scroller } from 'react-scroll';
 
 function App() {
 
+  function ScrollToTop() {
+    const { pathname } = useLocation();
   
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto" // Défilement instantané
+      });
+    }, [pathname]);
+  
+    return null;
+  }
   
   
   return (
     <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Navigate to="/en/" replace />} />
           <Route path="/home" element={<Navigate to="/en/" replace />} />

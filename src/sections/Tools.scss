@@ -150,10 +150,6 @@
         gap: 0.6rem;
     
         &-item{
-            &.animate{
-                animation: fadeInUp 2s;
-            }
-            
             &-texts{
                 &-description{
                     width: 100%;
