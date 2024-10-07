@@ -1,13 +1,15 @@
-import React, { FunctionComponent, RefObject } from "react";
+import React from "react";
 import "./MainButton.scss";
+import { useLanguage } from "src/LanguageContext";
 
-const MainButton: FunctionComponent<{myref:RefObject<HTMLDivElement>,lang:string}> = ({myref,lang}) => {
+const MainButton = () => {
+  const {currentLanguage} = useLanguage();
   return (
-    <a href="mailto:thibaud.wajrock@icloud.com"><div className="main-button"  ref={myref}>
+    <a href="mailto:thibaud.wajrock@icloud.com"><div className="main-button">
         <div className="left-circle"></div>
         <div className="main-button-texts">
-          <p className="main-button-texts__first">{lang === "en" ? ("Contact me") : ("Contactez moi")}</p>
-          <p className="main-button-texts__second">{lang === "en" ? ("By e-mail") : ("Par e-mail")}</p>
+          <p className="main-button-texts__first">{currentLanguage === "en" ? ("Contact me") : ("Contactez moi")}</p>
+          <p className="main-button-texts__second">{currentLanguage === "en" ? ("By e-mail") : ("Par e-mail")}</p>
         </div>
         <div className="right-circle">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">

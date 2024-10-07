@@ -1,0 +1,53 @@
+.language-popup-wrap{
+    background-color: white;
+    border-radius: 10rem;
+    display: flex;
+    gap: .25rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    &-item{
+        border-radius: 10rem;
+        display: flex;
+        gap: .25rem;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        color: var(--color-persian-blue);
+        padding: .75rem 1rem;
+        width: 100%;
+        
+
+        & svg {
+            height: 1rem;
+        }
+
+        & h3{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        &:hover{
+            background-color: var(--color-athens-grey);
+            color: var(--color-persian-blue);
+        }
+
+        &.current{
+            background-color: var(--color-athens-grey);
+            color: var(--color-persian-blue);
+
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .language-popup-wrap{
+        background-color: white;
+        border-radius: 10rem;
+        display: flex;
+        gap: .25rem;
+        top: 120%;
+        left: 0;
+    }
+}

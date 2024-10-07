@@ -1,32 +1,29 @@
-import React, { useEffect } from 'react';
-import './App.css';
-import { HashRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import HomeEN from './pages/HomeEN';
-import HomeFR from './pages/HomeFR';
-import Work from './pages/WorkEN';
-import WorkEN from './pages/WorkEN';
-import WorkFR from './pages/WorkFR';
-import { scroller } from 'react-scroll';
-
-
+import React from "react";
+import "./App.css";
+import "./fonts/font.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import { LanguageProvider } from "./LanguageContext";
 
 function App() {
 
-  
-  
-  
   return (
-    <Router>
-        <Routes>
-          <Route path="/" element={<Navigate to="/en/" replace />} />
-          <Route path="/home" element={<Navigate to="/en/" replace />} />
-          <Route path="/acceuil" element={<Navigate to="/fr/" replace />} />
-          <Route path="/en/" element={<HomeEN />} />
-          <Route path="/fr/" element={<HomeFR />} />
-          <Route path="/en/project/:projectId" element={<WorkEN />} />
-          <Route path="/fr/projet/:projectId" element={<WorkFR />} />
-        </Routes>
-    </Router>
+    <LanguageProvider>
+      
+      <Router>
+            <Routes>
+              <Route path="/" element={<Home/>} />
+              <Route path="/project/:projectId" element={<Work />} />
+              <Route path="/projet/:projectId" element={<Work />} />
+            </Routes>
+          </Router>
+    </LanguageProvider>
+   
   );
 }
 

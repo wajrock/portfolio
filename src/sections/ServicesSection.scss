@@ -1,0 +1,212 @@
+.tools-section{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 11rem 0;
+    background: var(--color-linear-alabaster-athens-gray);
+
+    &-texts{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 0 var(--default-padding);
+
+        &-description{
+            color: var(--color-ship-gray);
+            font-size: 0.9375rem;
+            font-weight: 400;
+            line-height: 1.6875rem; /* 180% */
+            letter-spacing: -0.00938rem;
+            width: 55ch;
+        }
+        
+    }
+}
+
+.tools-grid{
+    display: flex;
+    gap: 0.6rem;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding-right: var(--default-padding);
+
+    &-item{
+        flex: 1 0 min(22rem,80vw);
+        display: flex;
+        flex-direction: column;
+        
+        background-color: white;
+        
+        border-radius: 1rem;
+        border: .1rem solid transparent;
+        transition: all .4s;
+        aspect-ratio: 4/5;
+        background-color: white;
+        overflow: hidden;
+        scroll-snap-align: center;
+
+
+        &:first-child{
+            margin-left: var(--default-padding);
+        }
+
+        &:last-child{
+            // margin-right: 10rem;
+            padding-right: 10rem;
+        }
+
+
+        &:hover{
+            border: .1rem solid var(--only-1-framer-website-dusty-gray, #969696);
+
+            &.website{
+                cursor:
+                url("~/src/cursors/cursor-website.svg") 16 16,
+                auto;
+            }
+
+            &.pwa{
+                cursor:
+                url("~/src/cursors/cursor-pwa.svg") 16 16,
+                auto;
+            }
+
+            &.backend{
+                cursor:
+                url("~/src/cursors/cursor-backend.svg") 16 16,
+                auto;
+            }
+
+            &.branding{
+                cursor:
+                url("~/src/cursors/cursor-branding.svg") 16 16,
+                auto;
+            }
+
+            &.desktop{
+                cursor:
+                url("~/src/cursors/cursor-desktop.svg") 16 16,
+                auto;
+            }
+
+            &.notion{
+                cursor:
+                url("~/src/cursors/cursor-tasks.svg") 16 16,
+                auto;
+            }
+        }
+
+        & .headerService{
+            padding: 2.25rem 2.25rem 1.5rem 2.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            &-tools{
+                display: flex;
+                gap: 1.5rem;
+    
+                & svg {
+                    height: 2.5rem;
+                    aspect-ratio: 1/1;
+                    color: rgba(40, 40, 40, 1);
+                }
+            }
+    
+            &-texts{
+                display: flex;
+                flex-direction: column;
+                gap: .25rem;
+    
+                &-title{
+                    color: var(--only-1-framer-website-black, #000);
+                    font-size: 1rem;
+                    font-weight: 700;
+                    line-height: 1.6rem; /* 160% */
+                    letter-spacing: -0.05rem;
+                    font-family: "DM Sans";
+                }
+    
+                &-description{
+                    color: var(--only-1-framer-website-jumbo, #71717A);
+                    font-size: 0.9375rem;
+                    width: 15rem;
+                    font-weight: 400;
+                    line-height: 1.6875rem; /* 180% */
+                    letter-spacing: -0.00938rem;
+                }
+            }
+        }
+
+        &-illustration{
+            height: 100%;
+            position: relative;
+
+          & img {
+            position: absolute;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            object-fit: cover;
+            object-position: top left;
+            transition: all .4s;
+            top: 0;
+            
+            }
+        }
+        
+
+      
+
+        &.website img, &.backend img, &.branding img, &.notion img, &.desktop img{
+            height: 25rem;
+            aspect-ratio: 16/9;
+            top: 0;
+            left: 5rem;
+        }
+
+        &.pwa img{
+            width: 25rem;
+            aspect-ratio: 9/16;
+            top: 0;
+            left: 5rem;
+            border-radius: 4rem;
+        }
+
+        &:hover img{
+            left: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .tools-section{
+        padding: 8rem 0;
+        align-items: start;
+    
+        &-texts{
+            align-items: start;
+            text-align: start;
+            padding: 0 2rem;
+    
+            &-title{
+                width: 100%;
+                text-align: left;
+            }
+    
+            &-description{
+                width: 100%;
+            }
+            
+        }
+    }
+    
+    .tools-grid{
+        width: 100%;
+        gap: 1rem;
+    }
+}

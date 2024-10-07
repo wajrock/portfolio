@@ -1,138 +1,48 @@
-.carousel{
+.carousel {
     display: flex;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0;
     overflow-x: scroll;
     width: 100%;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Hide scrollbars */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scroll-behavior: smooth;
-  transition: all .2s;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    transition: all 0.2s;
+    z-index: 2;
 
-    & .project1, & .project2, & .project3, & .project4{
-        background-position: center;
-        background-size: cover;
-    }
-   
 
-    
-
-    &-item{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: .88rem;
-        scroll-snap-align: center;
-        visibility: hidden;
-
-        &.animate{
-            animation: fadeIn 2s;
-            visibility: visible;
+    & .project-card-wrap {
+        &-cover{
+            width: 40vw;
         }
-
-        &__cover{
-            height: 25rem;
-            aspect-ratio: 37/25;
-            border-radius: .5rem;
-            box-shadow: 0px 0.796px 0.717px -0.437px rgba(0, 0, 0, 0.03), 0px 2.415px 2.173px -0.875px rgba(0, 0, 0, 0.03), 0px 6.383px 5.744px -1.312px rgba(0, 0, 0, 0.04), 0px 20px 18px -1.75px rgba(0, 0, 0, 0.05);
+        &.first-child{
+            padding-left: var(--default-padding);
         }
-
-        &__description{
-            display: flex;
-            gap: .75rem;
-            opacity: 0;
-            transition: opacity .3s;
-
-            & p:first-child{
-                color: black;
-                font-size: 0.875rem;
-                font-weight: 500;
-                line-height: 1.125rem; /* 128.571% */
-            }
-
-            & p:last-child{
-                color: var(--only-1-framer-website-santas-gray, #A1A1AA);
-                font-size: 0.875rem;
-                font-weight: 500;
-                line-height: 1.125rem; /* 128.571% */
-            }
-        }
-
-        
-    }
-}
-
-
-.carousel-item:hover{
-    cursor: pointer;
-    .carousel-item__description{
-        opacity: 1;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .carousel{
-        gap: 4rem;
-
-        &-item{
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            gap: .88rem;
-            scroll-snap-align: start;
-            visibility: hidden;
-    
-            &.animate{
-                animation: fadeIn 2s;
-                visibility: visible;
-            }
-    
-            &__cover{
-                height: 15rem;
-                aspect-ratio: 37/25;
-                border-radius: .5rem;
-                box-shadow: 0px 0.796px 0.717px -0.437px rgba(0, 0, 0, 0.03), 0px 2.415px 2.173px -0.875px rgba(0, 0, 0, 0.03), 0px 6.383px 5.744px -1.312px rgba(0, 0, 0, 0.04), 0px 20px 18px -1.75px rgba(0, 0, 0, 0.05);
-            }
-    
-            &__description{
-                display: flex;
-                gap: .75rem;
-                opacity: 0;
-                transition: opacity .3s;
-    
-                & p:first-child{
-                    color: black;
-                    font-size: 0.875rem;
-                    font-weight: 500;
-                    line-height: 1.125rem; /* 128.571% */
-                }
-    
-                & p:last-child{
-                    color: var(--only-1-framer-website-santas-gray, #A1A1AA);
-                    font-size: 0.875rem;
-                    font-weight: 500;
-                    line-height: 1.125rem; /* 128.571% */
-                }
-            }
-    
-            
+        &.last-child{
+            padding-right: var(--default-padding);
         }
     }
 }
 
-.project1{
-    background-image: url('project1.jpg');
+@media screen and (max-width: 1023px) {
+    .carousel {
+        gap: .5rem;
+        & .project-card-wrap {
+
+            &-cover{
+                width: 80vw;
+                min-width: 20rem;
+                max-width: 35rem;
+            }
+            &.first-child{
+                padding-left: 2rem;
+            }
+            &.last-child{
+                padding-right: 2rem;
+            }
+        }
+    }
 }
 
-.project2{
-    background-image: url('project2.jpg');
-}
 
-.project3{
-    background-image: url('project3.jpg');
-}
-
-.project4{
-    background-image: url('project4.jpg');
-}

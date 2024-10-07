@@ -1,129 +1,94 @@
-.projects-section{
+.projects-section {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 5rem;
     padding: 11rem 0;
 
-    &-title{
+    &-title {
         display: flex;
         flex-direction: column;
-        text-align: center;
         color: var(--color-jumbo);
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 2.25rem; /* 128.571% */
-        letter-spacing: -0.035rem;
-        visibility: hidden;
-
-        &.animate{
-            animation: fadeInUp 2s;
-            visibility: visible;
-        }
+        line-height: 2.5rem;
+        width: 100%;
+        padding: 0 var(--default-padding);
+        animation: fadeInUp .4s ease-in-out;
 
         & span {
-            color: #06150C;
-            font-size: 1.75rem;
+            color: #06150c;
+            font-size: 2rem;
         }
     }
 }
 
-.grid-projects{
+.grid-projects {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    padding: 0 var(--default-padding);
     gap: 2rem;
-    // width: 100%;
-
-    & .project1, & .project2, & .project3, & .project4{
-        background-position: center;
-        background-size: cover;
-    }
-    & .project1{
-        background-image: url('../component/Carousel/project1.jpg');
-    }
-
-    & .project2{
-        background-image: url('../component/Carousel/project2.jpg');
-    }
-
-    & .project3{
-        background-image: url('../component/Carousel/project3.jpg');
-    }
-
-    & .project4{
-        background-image: url('../component/Carousel/project4.jpg');
-    }
-
+    overflow: hidden;
+    animation: fadeInUp .4s ease-in-out;
     
-
-    &-item{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: .88rem;
-        scroll-snap-align: center;
-        visibility: hidden;
-
-        &.animate{
-            animation: fadeInUp 2s;
-            visibility: visible;
-        }
-
-        &__cover{
-            height: 15rem;
-            aspect-ratio: 37/25;
-            border-radius: .5rem;
-            transition: all .2s;
-            
-        }
-
-        &__description{
-            display: flex;
-            gap: .75rem;
-            transition: opacity .3s;
-
-            & p:first-child{
-                color: black;
-                font-size: 0.875rem;
-                font-weight: 500;
-                line-height: 1.125rem; /* 128.571% */
-            }
-
-            & p:last-child{
-                color: var(--only-1-framer-website-santas-gray, #A1A1AA);
-                font-size: 0.875rem;
-                font-weight: 500;
-                line-height: 1.125rem; /* 128.571% */
-            }
-        }
-
-        
+    & div{
+        overflow: hidden;
     }
-}
 
-.grid-projects-item:hover{
-    cursor: pointer;
-    & .grid-projects-item__cover{
-        box-shadow: 0px 0.796px 0.717px -0.437px rgba(0, 0, 0, 0.03), 0px 2.415px 2.173px -0.875px rgba(0, 0, 0, 0.03), 0px 6.383px 5.744px -1.312px rgba(0, 0, 0, 0.04), 0px 20px 18px -1.75px rgba(0, 0, 0, 0.05);
-    }
-}
+    & .project-card-wrap{
+        overflow: hidden;
+        width: 100%;
 
-@media screen and (max-width: 767px) {
-    .projects-section{
-        align-items: start;
-        padding: 8rem 1rem;
-    
-        &-title{
-            text-align: start;
+        &-cover{
             width: 100%;
         }
     }
+}
 
-    .grid-projects{
+.grid-projects-item:hover {
+    cursor:
+        url("~/src/cursors/cursor-project.svg") 16 16,
+        auto;
+
+}
+
+@media screen and (max-width: 900px) {
+    .projects-section {
+        align-items: start;
+        padding: 8rem 2rem;
+
+        &-title {
+            text-align: start;
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    .grid-projects {
         display: grid;
         grid-template-columns: 1fr;
+        grid-auto-flow: unset;
+        padding: unset;
+        gap: 3rem;
+
+        .project-card-wrap{
+            width: 100%;
+
+            &-cover{
+                width: 100%;
+            }
+
+            
+        &.first-child{
+            padding-left: 0;
+        }
+
+        &.last-child{
+            padding-right: 0;
+        }
+        }
     }
 }

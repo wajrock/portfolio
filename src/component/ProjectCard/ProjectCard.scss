@@ -1,0 +1,60 @@
+.project-card-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.88rem;
+    scroll-snap-align: center;
+
+    &:hover{
+        cursor: url('~/src/cursors/cursor-project.svg') 16 16, auto;
+    
+    }
+
+    &-cover {
+        aspect-ratio: 6/4;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        & img {
+            height: 100%;
+        }
+    }
+
+    & .description {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        &-tags{
+            display: flex;
+            gap: .5rem;
+            width: 100%;
+            flex-wrap: wrap;
+
+            &-item{
+                padding: 0.6rem 1rem;
+                border-radius: 100rem;
+                font-size: 0.8rem;
+                font-weight: 600;
+
+                background-color: rgba(0,0,0, .04);
+                white-space: nowrap;
+                color: #06150C;
+            }
+        }
+
+        & p:first-child {
+            color: black;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.125rem; /* 128.571% */
+        }
+
+        & p:last-child {
+            color: var(--only-1-framer-website-santas-gray, #a1a1aa);
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.125rem; /* 128.571% */
+        }
+    }
+}

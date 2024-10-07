@@ -2,8 +2,10 @@
   "compilerOptions": {
     "jsx": "react-jsx", // ou "react" si vous utilisez une version plus ancienne de React
     "module": "commonjs",
-    "target": "es6",
+    "target": "es2021",
+    "lib": ["es2021", "dom"],
     "strict": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

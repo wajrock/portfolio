@@ -8,7 +8,6 @@
     white-space: nowrap;
     gap: .5rem;
     transition: all .4s;
-    visibility: hidden;
 
     &.tag{
         background-color: var(--color-athens-grey);
@@ -26,14 +25,8 @@
          }
     }
 
-    &.animate{
-        visibility: visible;
-        animation: fadeInUp 2s;
-    }
-
     &.hover:hover{
         background-color: var(--color-main-color);
-        cursor: pointer;
         border-color: var(--color-main-color);
 
         & p {

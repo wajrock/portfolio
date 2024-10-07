@@ -49,10 +49,11 @@
 
             &-title{
                 color: var(--only-1-framer-website-white, #FFF);
-                font-size: 1rem;
+                font-size: 1.25rem;
                 font-weight: 500;
                 line-height: 1.6rem; /* 160% */
                 letter-spacing: -0.02rem;
+                font-family: 'Acorn';
             }
 
             &-description{
@@ -62,6 +63,7 @@
                 line-height: 1.6875rem; /* 180% */
                 letter-spacing: -0.00938rem;
                 width: 20rem;
+                opacity: .8;
             }
         }
 
@@ -112,6 +114,7 @@
                 line-height: 1.575rem; /* 180% */
                 letter-spacing: -0.00875rem;
                 transition: all .2s;
+                cursor: url('~/src/cursors/cursor-project.svg') 0 0, auto;
             }
 
             & a:hover{

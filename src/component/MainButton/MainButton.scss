@@ -63,17 +63,9 @@
     }
 }
 
-.main-button:hover{
-    cursor: pointer;
-    .right-circle{
-        &-hover{
-            background-color: black;
-            // transform: translateX(-120%);
-        }
-    }
-}
 
 .main-button:hover{
+    cursor: url('~/src/cursors/cursor-default.svg') 0 0, auto;
     .right-circle{
         &-hover{
             background-color: #23613E;

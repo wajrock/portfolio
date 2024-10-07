@@ -1,51 +1,39 @@
 body{
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.fixed{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
-
 .hero-section{
-    padding: 11rem 0rem 2rem 0rem;
+    padding: 8rem 0rem 2rem 0rem;
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 7rem;
-    border-bottom: .1rem solid var( --color-athens-grey);
+    gap: 6rem;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .content{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 2.5rem;
-
-    & .pill{
-        animation: fadeInUp;
-        animation-duration: 1s;
-    }
+    z-index: 2;
+    padding: 0 var(--default-padding);
 
     & a{
         color: currentColor;
     }
 
+    & .pill{
+        width: fit-content;
+    }
+
     & .main-button{
-        visibility: hidden;
         stroke: black;
-        &.animate{
-            visibility: visible;
-            animation: fadeInUp;
-            animation-duration: 2s;
-        }
+        width: fit-content;
     }
 
     & .main-button:hover{
@@ -64,37 +52,48 @@ body{
         text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 1.25rem;
-        
-        visibility: hidden;
+    
 
-        &.animate{
-            visibility: visible;
-            animation: fadeInUp;
-            animation-duration: 2s;
+        & .title{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            & h2 {
+                font-size: 3rem;
+                font-weight: 600;
+                text-align: left;
+                font-style: normal;
+                line-height: 120%; /* 136.842% */
+                letter-spacing: -0.05rem;
+                color: var(--color-persian-blue);
+            }
+
+            & h1{
+                font-size: 4rem;
+                font-weight: 700;
+                text-align: left;
+                font-style: normal;
+                line-height: 1; /* 136.842% */
+                letter-spacing: -0.05rem;
+                font-family: 'Syne';
+                color: var(--color-main-color);
+                
+            }
         }
 
-        & h1{
-            font-size: 2.375rem;
-            font-weight: 500;
-            font-family: Inter;
-            text-align: center;
-            width: 38rem;
-            font-style: normal;
-            line-height: 3.25rem; /* 136.842% */
-            letter-spacing: -0.0475rem;
-        }
+      
     
         & p {
             color: var(--only-1-framer-website-ship-gray, #3F3F46);
-            text-align: center;
-            width: 26.93613rem;
-            font-size: 0.9375rem;
+            text-align: left;
+            width: 100%;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 400;
             line-height: 1.6875rem; /* 180% */
             letter-spacing: -0.00938rem;
+            max-width: 60ch;
         }
     }
 
@@ -103,16 +102,13 @@ body{
 
 .carousel-item{
     width: 100%;
-    animation: fadeInRight;
-    animation-duration: 1s;
 }
 
-@media screen and (max-width: 767px) {
-    .hero-section{
-        padding: 8rem 1rem 2rem 1rem;
-    }
+@media screen and (max-width: 1023px) {
+
     .content{
         align-items: start;
+        padding: 0 2rem;
     
         & .texts{
             text-align: start;
@@ -121,18 +117,23 @@ body{
             align-items: start;
             gap: 1.25rem;
             
-            visibility: hidden;
-    
-            &.animate{
-                visibility: visible;
-                animation: fadeInUp;
-                animation-duration: 2s;
+
+
+            & .title{
+                gap: .5rem;
+                & h1, & h2{
+                    text-align: start;
+                    width: 100%;
+                }
+
+                & h2{
+                    font-size: 2rem;
+                }
+
+                
             }
     
-            & h1{
-                text-align: start;
-                width: 100%;
-            }
+            
         
             & p {
                 width: 100%;

@@ -1,0 +1,192 @@
+{
+    "en": [
+        {
+            "id": "the-players-journal",
+            "title-page": "The Players Journal | Projects",
+            "name": "The Players Journal",
+            "title-project": "A Modern Gaming Articles Platform",
+            "tags": [
+                "Website",
+                "API",
+                "React",
+                "PHP"
+            ],
+            "links": [
+                {
+                    "type":"github",
+                    "link":"https://campus-departures.wajrock.me./"
+                },
+                {
+                    "type":"website",
+                    "link":"https://the-players-journal.wajrock.me./"
+                }
+            ],
+            "image": "the-players-journal.png",
+            "description":[
+"In order to stand out and showcase my projects and various skills, I embarked on creating my portfolio using React. This personal project aims to present my work in a professional and engaging manner while reflecting my vision for design and the development of information systems and interfaces.",
+"I designed this portfolio with a modern and minimalist interface, aiming to provide a smooth and intuitive user experience. Every aspect of the design has been crafted to highlight my achievements and capabilities clearly and aesthetically.",
+"By using React, I was able to leverage its features to create a dynamic and responsive interface that adapts seamlessly to different devices.This project has allowed me to solidify my front-end development and interface design skills, while also providing a platform to showcase my projects and demonstrate my ability to design and implement innovative digital solutions."
+            ]
+        },
+        {
+            "id": "campus-departures",
+            "title-page": "Campus Departures | Projects",
+            "name": "Campus Departures",
+            "title-project": "A Public transport departures dashboard",
+            "tags": [
+                "Website",
+                "API",
+                "React"
+            ],
+            "links": [
+                {
+                    "type":"github",
+                    "link":"https://campus-departures.wajrock.me./"
+                },
+                {
+                    "type":"website",
+                    "link":"https://campus-departures.wajrock.me./"
+                }
+            ],
+            "image": "campus-departures.jpg",
+            "description":[
+                "In order to stand out and showcase my projects and various skills, I embarked on creating my portfolio using React. This personal project aims to present my work in a professional and engaging manner while reflecting my vision for design and the development of information systems and interfaces.",
+                "I designed this portfolio with a modern and minimalist interface, aiming to provide a smooth and intuitive user experience. Every aspect of the design has been crafted to highlight my achievements and capabilities clearly and aesthetically.",
+                "By using React, I was able to leverage its features to create a dynamic and responsive interface that adapts seamlessly to different devices.This project has allowed me to solidify my front-end development and interface design skills, while also providing a platform to showcase my projects and demonstrate my ability to design and implement innovative digital solutions."
+                            ]
+        },
+        {
+            "id":"portfolio",
+            "title-page": "React Portfolio | Projects",
+            "name": "React Portfolio",
+            "title-project": "A React modern portfolio for developper and designer",
+            "tags": [
+                "Website",
+                "React"
+            ],
+            "links": [
+                {
+                    "type":"github",
+                    "link":"https://wajrock.github.io/"
+                },
+                {
+                    "type":"website",
+                    "link":"https://wajrock.me"
+                }
+            ],
+            "image": "portfolio.jpg",
+            "description": [
+                "In order to stand out and showcase my projects and various skills, I embarked on creating my portfolio using React. This personal project aims to present my work in a professional and engaging manner while reflecting my vision for design and the development of information systems and interfaces.",
+                "I designed this portfolio with a modern and minimalist interface, aiming to provide a smooth and intuitive user experience. Every aspect of the design has been crafted to highlight my achievements and capabilities clearly and aesthetically.",
+                "By using React, I was able to leverage its features to create a dynamic and responsive interface that adapts seamlessly to different devices.This project has allowed me to solidify my front-end development and interface design skills, while also providing a platform to showcase my projects and demonstrate my ability to design and implement innovative digital solutions."
+                            ]
+        },
+        {
+            "id": "keops",
+            "title-page": "Keops | Projects",
+            "name": "Keops",
+            "title-project": "A 2D Python quests game.",
+            "tags": [
+                "Desktop",
+                "Python"
+            ],
+            "links": [
+                {
+                    "type":"github",
+                    "link":"https://wajrock.github.io/"
+                }
+            ],
+            "image": "keops.jpg",
+            "description": ["As part of our university project, we designed an innovative product and developed a complete brand identity around this idea. Discover GreenFit, a company specializing in vehicle retrofitting. Our mission is to blend modern technology with sustainability to make vehicles more eco-friendly. This project aims to create a strong and coherent visual identity that reflects GreenFit's values and ambitions."]
+        }
+    ],
+    "fr": [
+        {
+            "id":"the-players-journal",
+            "title-page": "The Players Journal | Projets",
+            "name": "The Players Journal",
+            "title-project": "Une plateforme moderne d'articles sur les jeux vidéo",
+            "tags": [
+                "Site web",
+                "API",
+                "React",
+                "PHP"
+            ],
+            "links": [
+                {
+                    "type":"github",
+                    "link":"https://campus-departures.wajrock.me./"
+                },
+                {
+                    "type":"website",
+                    "link":"https://the-players-journal.wajrock.me./"
+                }
+            ],
+            "image": "the-players-journal.png",
+            "description":["As part of our university project, we designed an innovative product and developed a complete brand identity around this idea. Discover GreenFit, a company specializing in vehicle retrofitting. Our mission is to blend modern technology with sustainability to make vehicles more eco-friendly. This project aims to create a strong and coherent visual identity that reflects GreenFit's values and ambitions."]
+        },
+        {
+            "id": "campus-departures",
+            "title-page": "Campus Departures | Projets",
+            "name": "Campus Departures",
+            "title-project": "Un dashboard des départs des transports publics",
+            "tags": [
+                "Site web",
+                "API",
+                "React"
+            ],
+            "links": [
+                {
+                    "type":"github",
+                    "link":"https://campus-departures.wajrock.me./"
+                },
+                {
+                    "type":"website",
+                    "link":"https://campus-departures.wajrock.me./"
+                }
+            ],
+            "image": "campus-departures.jpg",
+            "description":["As part of our university project, we designed an innovative product and developed a complete brand identity around this idea. Discover GreenFit, a company specializing in vehicle retrofitting. Our mission is to blend modern technology with sustainability to make vehicles more eco-friendly. This project aims to create a strong and coherent visual identity that reflects GreenFit's values and ambitions."]
+        },
+        {
+            "id": "portfolio",
+            "title-page": "React Portfolio | Projets",
+            "name": "React Portfolio",
+            "title-project": "Un portfolio moderne en React pour développeur et designer",
+            "tags": [
+                "Site web",
+                "React"
+            ],
+            "links": [
+                {
+                    "type":"github",
+                    "link":"https://wajrock.github.io/"
+                },
+                {
+                    "type":"website",
+                    "link":"https://wajrock.me"
+                }
+            ],
+            "image": "portfolio.jpg",
+            "description": ["As part of our university project, we designed an innovative product and developed a complete brand identity around this idea. Discover GreenFit, a company specializing in vehicle retrofitting. Our mission is to blend modern technology with sustainability to make vehicles more eco-friendly. This project aims to create a strong and coherent visual identity that reflects GreenFit's values and ambitions."]
+        },
+        {
+            "id": "keops",
+            "title-page": "Keops | Projets",
+            "name": "Keops",
+            "title-project": "Un jeu de quêtes 2D en Python.",
+            "tags": [
+                "Application",
+                "Python"
+            ],
+            "links": [
+                {
+                    "type":"github",
+                    "link":"https://wajrock.github.io/"
+                }
+            ],
+            "image": "keops.jpg",
+            "description": ["As part of our university project, we designed an innovative product and developed a complete brand identity around this idea. Discover GreenFit, a company specializing in vehicle retrofitting. Our mission is to blend modern technology with sustainability to make vehicles more eco-friendly. This project aims to create a strong and coherent visual identity that reflects GreenFit's values and ambitions."]
+        }
+    ]
+}

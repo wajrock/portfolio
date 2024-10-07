@@ -1,64 +1,80 @@
-import React, { FunctionComponent, useEffect, useRef, useState } from "react";
+import React, { FunctionComponent } from "react";
 import "./Hero.scss";
-import Banner from "../component/Banner/Banner";
-import Header from "../component/Header/Header";
 import Pill from "../component/Pill/Pill";
 import MainButton from "../component/MainButton/MainButton";
 import Carousel from "../component/Carousel/Carousel";
+import { useLanguage } from "src/LanguageContext";
+import { motion } from "framer-motion";
 
-const HeroSection: FunctionComponent<{ id: string; lang: string }> = ({
-  id,
-  lang,
-}) => {
-  const pillRef = useRef<HTMLDivElement>(null);
-  const textsRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    pillRef.current?.classList.add("animate");
-
-    setTimeout(() => {
-      textsRef.current?.classList.add("animate");
-    }, 300);
-
-    setTimeout(() => {
-      buttonRef.current?.classList.add("animate");
-    }, 700);
-  }, []);
+const HeroSection: FunctionComponent<{ id: string }> = ({ id }) => {
+  const { currentLanguage } = useLanguage();
 
   return (
     <div className="hero-section" id={id}>
-      <div className="fixed">
-        <Banner lang={lang} />
-        <Header lang={lang} />
-      </div>
-
       <div className="content">
-        <Pill
-          haveIcon
-          text={lang === "en" ? ("Available for work") : ("Disponible")}
-          haveHover={false}
-          myref={pillRef}
-        />
-        <div ref={textsRef} className="texts">
-          <h1>{lang === "en" ? ("I design and code solutions for you and your brand.") : ("Je design et code des solutions pour vous et votre marque.")}</h1>
-          
-          
-          {lang === "en" ? (<p>
-            Currently, in Engineering School specializing in information
-            systems, I can design your idea and bring it to life.
-          </p>)
+        <motion.div
+          initial={{ opacity: 0, translateY: "50%" }}
+          animate={{ opacity: 1, translateY: "0" }}
+          transition={{ ease: "anticipate", duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <Pill
+            haveIcon
+            text={
+              currentLanguage === "en"
+                ? "Looking for internship"
+                : "Recherche d'un stage"
+            }
+            haveHover={false}
+          />
+        </motion.div>
 
-          : (<p>
-            Actuellement en école d'ingénieur spécialisé en systèmes d'information, je peux concevoir votre idée et la concrétiser.
-          </p>)}
+        <div className="texts">
+          <div className="title">
+            <motion.h2
+              initial={{ opacity: 0, translateY: "50%" }}
+              animate={{ opacity: 1, translateY: "0" }}
+              transition={{ ease: "anticipate", duration: 1, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              Thibaud Wajrock
+            </motion.h2>
+            <motion.h1
+              initial={{ opacity: 0, translateY: "50%" }}
+              animate={{ opacity: 1, translateY: "0" }}
+              transition={{ ease: "anticipate", duration: 1, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              {currentLanguage === "en"
+                ? "Full-Stack Engineer Student"
+                : "Etudiant Ingénieur Full-Stack"}
+            </motion.h1>
+          </div>
 
+          <motion.p
+            className="p"
+            initial={{ opacity: 0, translateY: "50%" }}
+            animate={{ opacity: 1, translateY: "0" }}
+            transition={{ ease: "anticipate", duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            {currentLanguage === "en"
+              ? " I'm an Engineering student specializing in Information Systems, looking for an 8-week internship in web development during June/July or August/September. I'm ready to apply my skills in designing and developing functional solutions."
+              : "Étudiant en École d'Ingénieur, spécialisé en Systèmes d'Information, je cherche un stage de 8 semaines en développement web, disponible en juin/juillet ou août/septembre. Prêt à mettre mes compétences en conception et développement au service de votre équipe."}
+          </motion.p>
         </div>
 
-        <MainButton myref={buttonRef} lang={lang}/>
+        <motion.div
+          initial={{ opacity: 0, translateY: "50%" }}
+          animate={{ opacity: 1, translateY: "0" }}
+          transition={{ ease: "anticipate", duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <MainButton />
+        </motion.div>
       </div>
 
-      <Carousel lang={lang}/>
+      <Carousel />
     </div>
   );
 };

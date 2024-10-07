@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
 :root{
+  --default-padding: 12vw;
   --color-jumbo: #71717A;
   --color-iron: #E4E4E7;
   --color-alabster: #FAFAFA;
@@ -10,10 +12,42 @@
   --color-linear-alabaster-athens-gray: linear-gradient(180deg, #FAFAFA 0%, #F4F4F5 100%);
   --color-mine-shaft: #282828;
   --color-main-color:#195C34;
+  --aurora: repeating-linear-gradient(
+    100deg,
+    var(--blue-500) 10%,
+    var(--indigo-300) 15%,
+    var(--blue-300) 20%,
+    var(--violet-200) 25%,
+    var(--blue-400) 30%
+  );
+  --white-gradient: repeating-linear-gradient(
+    100deg,
+    var(--white) 0%,
+    var(--white) 7%,
+    var(--transparent) 10%,
+    var(--transparent) 12%,
+    var(--white) 16%
+  );
+  --dark-gradient: repeating-linear-gradient(
+    100deg,
+    var(--black) 0%,
+    var(--black) 7%,
+    var(--transparent) 10%,
+    var(--transparent) 12%,
+    var(--black) 16%
+  );
 }
+
+@media screen and (max-width: 900px) {
+  :root{
+    --default-padding: 2rem;
+  }
+}
+
+
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
@@ -21,6 +55,27 @@ body {
 
 html,body,#root{
   /* scroll-behavior: smooth; */
+  width: 100%;
+  overflow-x: hidden;
+  
+  
+}
+
+*:not(html,body) {
+  -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+  scrollbar-width: none; /* Pour Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Masque la scrollbar */
+  }
+}
+
+img{
+  -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 code {
@@ -34,4 +89,8 @@ code {
 
 a{
   text-decoration: none;
+}
+
+#root{
+  overflow-y: scroll;
 }
