@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.32d1afd7.css",
-    "main.js": "/static/js/main.7adde62a.js",
+    "main.css": "/static/css/main.2a5b89d4.css",
+    "main.js": "/static/js/main.b9bc8ad4.js",
     "static/js/453.acca0757.chunk.js": "/static/js/453.acca0757.chunk.js",
     "static/media/Acorn-ExtraLight.eot": "/static/media/Acorn-ExtraLight.6ed3ac11e9bf1d8d25d7.eot",
     "static/media/Acorn-ExtraLight.ttf": "/static/media/Acorn-ExtraLight.d1e460645457ae5fd093.ttf",
@@ -41,12 +41,12 @@
     "static/media/cursor-desktop.svg": "/static/media/cursor-desktop.c55eb293bebaa6edf091.svg",
     "static/media/cursor-tasks.svg": "/static/media/cursor-tasks.66549892d3b648ffc572.svg",
     "static/media/cursor-pwa.svg": "/static/media/cursor-pwa.59f134472d6bdbce1458.svg",
-    "main.32d1afd7.css.map": "/static/css/main.32d1afd7.css.map",
-    "main.7adde62a.js.map": "/static/js/main.7adde62a.js.map",
+    "main.2a5b89d4.css.map": "/static/css/main.2a5b89d4.css.map",
+    "main.b9bc8ad4.js.map": "/static/js/main.b9bc8ad4.js.map",
     "453.acca0757.chunk.js.map": "/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32d1afd7.css",
-    "static/js/main.7adde62a.js"
+    "static/css/main.2a5b89d4.css",
+    "static/js/main.b9bc8ad4.js"
   ]
 }
