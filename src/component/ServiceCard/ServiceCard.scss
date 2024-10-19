@@ -1,0 +1,168 @@
+.tools-grid-item{
+    flex: 1 0 min(22rem,80vw);
+    display: flex;
+    flex-direction: column;
+    
+    background-color: white;
+    
+    border-radius: 1rem;
+    border: .1rem solid transparent;
+    transition: all .4s;
+    height: 27rem;
+    overflow: hidden;
+    scroll-snap-align: center;
+
+
+    &:first-child{
+        margin-left: var(--default-padding);
+    }
+
+    &:hover{
+        border: .1rem solid var(--only-1-framer-website-dusty-gray, #969696);
+
+        &.website{
+            cursor:
+            url("~/src/cursors/cursor-website.svg") 16 16,
+            auto;
+        }
+
+        &.backend{
+            cursor:
+            url("~/src/cursors/cursor-backend.svg") 16 16,
+            auto;
+        }
+
+        &.branding{
+            cursor:
+            url("~/src/cursors/cursor-branding.svg") 16 16,
+            auto;
+        }
+
+        &.desktop{
+            cursor:
+            url("~/src/cursors/cursor-desktop.svg") 16 16,
+            auto;
+        }
+
+        &.notion{
+            cursor:
+            url("~/src/cursors/cursor-tasks.svg") 16 16,
+            auto;
+        }
+    }
+
+    & .headerService{
+        padding: 2.25rem 2.25rem 2.25rem 2.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        width: 100%;
+
+        &-icons{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            &-tools{
+                display: flex;
+                gap: 1.5rem;
+    
+                & svg {
+                    height: 2.5rem;
+                    aspect-ratio: 1/1;
+                    color: rgba(40, 40, 40, 1);
+                }
+            }
+
+            &-progress{
+                aspect-ratio: 1/1;
+                height: 100%;
+
+                &-circle{
+                  
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 100rem;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & span{
+                        font-weight: 900;
+                        font-size: .85rem;
+                        z-index: 2;
+                        color: var(--color-main-color);
+                    }
+
+                    &::after{
+                        content: '';
+                        z-index: 1;
+                        position: absolute;
+                        line-height: 1;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 80%;
+                        aspect-ratio: 1/1;
+                        background-color: white;
+                        border-radius: 100rem;
+                    }
+                }
+            }
+        }
+        
+
+        &-texts{
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+
+            &-title{
+                color: var(--only-1-framer-website-black, #000);
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 1.6rem; /* 160% */
+                letter-spacing: -0.05rem;
+                font-family: "DM Sans";
+            }
+
+            &-description{
+                color: var(--only-1-framer-website-jumbo, #71717A);
+                font-size: 0.9rem;
+                width: 100%;
+                font-weight: 400;
+                line-height: 120%;
+            }
+        }
+    }
+
+    &-illustration{
+        height: 100%;
+        position: relative;
+
+      & img {
+        position: absolute;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        object-fit: cover;
+        object-position: top left;
+        transition: all .4s;
+        top: 0;
+        
+        }
+    }
+    
+
+  
+
+    &.website img, &.backend img, &.branding img, &.notion img, &.desktop img{
+        height: 25rem;
+        aspect-ratio: 16/9;
+        top: 0;
+        left: 5rem;
+    }
+
+    &:hover img{
+        left: 2.5rem;
+    }
+}

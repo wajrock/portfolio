@@ -1,39 +1,39 @@
 .work-page-wrap{
     width: 100%;
-    padding-top: 8rem;
+    padding-top:8rem;
     gap: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    --padding-workpage: 20vw;
 }
 
-
-.content-project{
+.project-details{
     display: flex;
-    gap: 3rem;
-    width: 100%;
     flex-direction: column;
-    padding: 0 20vw;
-
-    .hero-project{
+    align-items: start;
+    width: 100%;
+    gap: 3rem;
+    &-hero{
         display: flex;
         flex-direction: column;
         align-items: start;
         gap: 1.5rem;
         width: 100%;
-
+        padding: 0 var(--padding-workpage);
+    
         &-tags{
             display: flex;
             gap: .6rem;
             flex-wrap: wrap;
         }
-
+    
         &-texts{
             display: flex;
             flex-direction: column;
             align-items: start;
             gap: .75rem;
-
+    
             &-name{
                 color: var(--color-jumbo);
                 text-align: center;
@@ -41,7 +41,7 @@
                 font-weight: 400;
                 line-height: 2.125rem; /* 200% */
             }
-
+    
             &-title{
                 color: var(--only-1-framer-website-black, #000);
                 font-size: 2.5rem;
@@ -52,83 +52,101 @@
                 font-family: 'Syne';
             }
         }
-
+    
         &-links{
             display: flex;
-            gap: 1rem;
+            gap: .6rem;
             &-item{
                 flex: 1 0 auto;
+                &:hover{
+                    cursor: url('~/src/cursors/cursor-project.svg') 16 16, auto;
+                
+                }
             }
         }
     }
-
-    &-cover{
+    
+    &-images{
         width: 100%;
-        aspect-ratio: 50/33;
-        border-radius: 1rem;
         background-position: center;
         background-size: cover;
-        overflow: hidden;
-
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        gap: .5rem;
+        padding: 0 var(--padding-workpage);
+    
         & img{
-            height: 100%;
+            aspect-ratio: 50/33;
+            scroll-snap-align: center;
+            object-fit: cover;
+            border-radius: .5rem;
+            width: 80vw;
+            max-width: 35rem;
+        }
+    
+    }
+    
+    
+    &-content{
+        display: flex;
+        gap: 3rem;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 var(--padding-workpage);
+    
+        &-paragraph{
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+
+            & img{
+                width: 100%;
+                border-radius: .5rem;
+                margin: 1rem 0;
+            }
+
+            & p{
+                color: var(--color-ship-gray);
+                font-weight: 400;
+                line-height: 2rem; /* 200% */
+                letter-spacing: -0.02rem;
+    
+                &.list{
+                    margin: 1rem 0 1rem 5%;
+                }
+                
+                
+            };
+        }
+    
+        &-image{
+            border-radius: .75rem;
             width: 100%;
             object-fit: cover;
-        }
+            overflow: hidden;
 
-    }
-
-    &-paragraph{
-        display: flex;
-        flex-direction: column;
-        gap: .75rem;
-        & p{
-            color: var(--color-ship-gray);
-            font-weight: 400;
-            line-height: 2rem; /* 200% */
-            letter-spacing: -0.02rem;
-
-            &.list{
-                margin: 1rem 0 1rem 5%;
+            & img{
+                width: 100%;
             }
-            
-            
-        };
-    }
-
-    &-grid-image{
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(2,1fr);
-        gap: 1rem;
-
-        & img:first-child, & img:last-child{
-            grid-column: 1 / 3;
-        }
-    }
-
-    &-image{
-        border-radius: .75rem;
-        width: 100%;
-        object-fit: cover;
-
-        &.small{
-            aspect-ratio: 50/20;
         }
     }
 }
+
 
 .other-projects{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
+    
 
     &-title{
         font-weight: 500;
         line-height: 1.6rem; /* 160% */
         letter-spacing: -0.02rem;
-        padding: 0 var(--default-padding);
+        text-align: start;
+        padding: 0 var(--padding-workpage);
     }
 
     &-grid{
@@ -136,20 +154,14 @@
         gap: 1rem;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
+        padding: 0 var(--padding-workpage);
+        width: 100%;
 
         & .project-card-wrap{
-            scroll-snap-align: center;
             &-cover{
-                width: 100%;
-                width: 30rem;
-            }
-
-            &.first-child{
-                padding-left: var(--default-padding);
-            }
-
-            &.last-child{
-                padding-right: var(--default-padding);
+                width: 75vw;
+                max-width: 30rem;
+                
             }
         }
     }
@@ -159,29 +171,21 @@
 
 
 @media screen and (max-width: 900px) {
-    .work-page{
-        padding: 8rem 0;
+    .work-page-wrap{
+        padding-top: 8rem;
         align-items: start;
         gap: 4rem;
+        --padding-workpage: 2rem;
     }
 
-    
-
-    .content-project{
-        display: flex;
-        gap: 3rem;
-        width: 100%;
-        flex-direction: column;
-        padding: 0 2rem;
-
-        .hero-project{
+    .project-details{
+        &-hero{
             align-items: start;
             gap: 2rem;
             width: 100%;
         
             &-tags{
                 display: flex;
-    
                 gap: .6rem;
             }
         
@@ -194,19 +198,16 @@
                     width: 100%;
                 }
             }
-        }
-    }
-
-    .other-projects{
-        &-grid{
-            & .project-card-wrap{
         
-                &-cover{
-                    width: 80vw;
+            &-links{
+                display: flex;
+                gap: .6rem;
+                &-item{
+                    flex: 1 0 auto;
                 }
             }
         }
-    
-       
+
     }
+
 }

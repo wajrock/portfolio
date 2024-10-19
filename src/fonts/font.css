@@ -1,11 +1,6 @@
 @font-face {
     font-family: 'Acorn';
-    src: url('Acorn-Light.eot');
-    src: local('Acorn Light'), local('Acorn-Light'),
-        url('Acorn-Light.eot?#iefix') format('embedded-opentype'),
-        url('Acorn-Light.woff2') format('woff2'),
-        url('Acorn-Light.woff') format('woff'),
-        url('Acorn-Light.ttf') format('truetype');
+    src: url('Acorn-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -13,12 +8,7 @@
 
 @font-face {
     font-family: 'Acorn';
-    src: url('Acorn-ExtraLight.eot');
-    src: local('Acorn ExtraLight'), local('Acorn-ExtraLight'),
-        url('Acorn-ExtraLight.eot?#iefix') format('embedded-opentype'),
-        url('Acorn-ExtraLight.woff2') format('woff2'),
-        url('Acorn-ExtraLight.woff') format('woff'),
-        url('Acorn-ExtraLight.ttf') format('truetype');
+    src: url('Acorn-ExtraLight.woff2') format('woff2');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -26,12 +16,7 @@
 
 @font-face {
     font-family: 'Acorn';
-    src: url('Acorn-Bold.eot');
-    src: local('Acorn Bold'), local('Acorn-Bold'),
-        url('Acorn-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Acorn-Bold.woff2') format('woff2'),
-        url('Acorn-Bold.woff') format('woff'),
-        url('Acorn-Bold.ttf') format('truetype');
+    src: url('Acorn-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -39,12 +24,7 @@
 
 @font-face {
     font-family: 'Acorn';
-    src: url('Acorn-Medium.eot');
-    src: local('Acorn Medium'), local('Acorn-Medium'),
-        url('Acorn-Medium.eot?#iefix') format('embedded-opentype'),
-        url('Acorn-Medium.woff2') format('woff2'),
-        url('Acorn-Medium.woff') format('woff'),
-        url('Acorn-Medium.ttf') format('truetype');
+    src: url('Acorn-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -52,12 +32,7 @@
 
 @font-face {
     font-family: 'Acorn';
-    src: url('Acorn-Thin.eot');
-    src: local('Acorn Thin'), local('Acorn-Thin'),
-        url('Acorn-Thin.eot?#iefix') format('embedded-opentype'),
-        url('Acorn-Thin.woff2') format('woff2'),
-        url('Acorn-Thin.woff') format('woff'),
-        url('Acorn-Thin.ttf') format('truetype');
+    src: url('Acorn-Thin.woff2') format('woff2');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -65,12 +40,7 @@
 
 @font-face {
     font-family: 'Acorn';
-    src: url('Acorn-Regular.eot');
-    src: local('Acorn Regular'), local('Acorn-Regular'),
-        url('Acorn-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Acorn-Regular.woff2') format('woff2'),
-        url('Acorn-Regular.woff') format('woff'),
-        url('Acorn-Regular.ttf') format('truetype');
+    src: url('Acorn-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -78,14 +48,8 @@
 
 @font-face {
     font-family: 'Acorn';
-    src: url('Acorn-SemiBold.eot');
-    src: local('Acorn SemiBold'), local('Acorn-SemiBold'),
-        url('Acorn-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('Acorn-SemiBold.woff2') format('woff2'),
-        url('Acorn-SemiBold.woff') format('woff'),
-        url('Acorn-SemiBold.ttf') format('truetype');
+    src: url('Acorn-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
-

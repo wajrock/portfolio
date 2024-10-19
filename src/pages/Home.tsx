@@ -15,6 +15,13 @@ const Home: FunctionComponent = () => {
   },[location.state])
 
   useEffect(()=>{
+    if (location.hash){
+      const tag = location.hash.split('#')[1]!;
+      document.getElementById(tag)?.scrollIntoView()
+    }
+  },[location])
+
+  useEffect(()=>{
     document.title = "Thibaud Wajrock"
   },[])
   

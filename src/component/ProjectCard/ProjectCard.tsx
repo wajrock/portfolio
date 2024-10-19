@@ -5,7 +5,6 @@ import "./ProjectCard.scss"
 
 interface ProjectType {
   id: string;
-  image: string;
   "title-project": string;
   tags: string[];
 }
@@ -26,7 +25,7 @@ const ProjectCard: FunctionComponent<{
     >
       <div className={`project-card-wrap-cover`}>
         <img
-          src={`${process.env.PUBLIC_URL}/projects/${project.image}`}
+          src={`${process.env.PUBLIC_URL}/projects/${project.id}/cover.webp`}
           alt=""
         />
       </div>

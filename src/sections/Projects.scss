@@ -5,22 +5,42 @@
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    padding: 11rem 0;
+    padding: 11rem var(--default-padding);
 
-    &-title {
+    &-texts{
         display: flex;
         flex-direction: column;
-        color: var(--color-jumbo);
-        line-height: 2.5rem;
+        align-items: start;
+        text-align: left;
+        gap: .75rem;
         width: 100%;
-        padding: 0 var(--default-padding);
-        animation: fadeInUp .4s ease-in-out;
 
-        & span {
-            color: #06150c;
-            font-size: 2rem;
+        &-title {
+            display: flex;
+            flex-direction: column;
+            color: var(--color-jumbo);
+            line-height: 2.5rem;
+            width: 100%;
+    
+            & span {
+                color: #06150c;
+                font-size: 2rem;
+            }
         }
+
+        &-description{
+            color: var(--color-ship-gray);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: -0.00938rem;
+            max-width: 55ch;
+            width: 100%;
+        }
+        
     }
+
+    
 }
 
 .grid-projects {
@@ -29,7 +49,6 @@
     width: 100%;
     min-width: 0;
     min-height: 0;
-    padding: 0 var(--default-padding);
     gap: 2rem;
     overflow: hidden;
     animation: fadeInUp .4s ease-in-out;
@@ -58,7 +77,6 @@
 @media screen and (max-width: 900px) {
     .projects-section {
         align-items: start;
-        padding: 8rem 2rem;
 
         &-title {
             text-align: start;

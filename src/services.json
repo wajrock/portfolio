@@ -1,0 +1,52 @@
+[
+    {
+        "id": "website",
+        "title": "HTML & SASS & REACT",
+        "description": 
+        {
+            "en":"Building dynamic, responsive websites.",
+            "fr":"Création de sites web modernes et dynamiques."
+        },
+        "progress-value": 90
+    },
+    {
+        "id": "backend",
+        "title": "MySQL & PHP",
+        "description": 
+        {
+            "en":"Databases and backend development.",
+            "fr":"Bases de données et développement backend."
+        },
+        "progress-value": 80
+    },
+    {
+        "id": "branding",
+        "title": "Figma",
+        "description": 
+        {
+            "en":"UI/UX prototyping and design.",
+            "fr":"Design et prototypage UI/UX."
+        },
+        "progress-value": 85
+    },
+    {
+        "id": "desktop",
+        "title": "Python",
+        "description": 
+        {
+            "en":"Desktop application conception.",
+            "fr":"Conception d'applications de bureau."
+        },
+        "progress-value": 60
+    },
+    {
+        "id": "notion",
+        "title": "Notion",
+        "description": 
+        {
+            "en":"Project and task management.",
+            "fr":"Organisation de projet et de tâches."
+        },
+        "progress-value": 95
+    }
+]

@@ -4,48 +4,55 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "src/LanguageContext";
 import { motion } from "framer-motion";
 
-const AboutSection: FunctionComponent<{ id: string}> = ({
-  id
-}) => {
-  const firstAccordion = useRef<HTMLDivElement>(null);
-  const secondAccordion = useRef<HTMLDivElement>(null);
+const AboutSection: FunctionComponent<{ id: string }> = ({ id }) => {
 
-  const firstChevron = useRef<SVGSVGElement>(null);
-  const secondChevron = useRef<SVGSVGElement>(null);
-
-  const {currentLanguage} = useLanguage();
-
-  const toggleAccordion = (
-    refContent: React.RefObject<HTMLDivElement>,
-    refChevron: React.RefObject<SVGSVGElement>
-  ) => {
-    if (refChevron.current) {
-      refChevron.current.style.transform === "rotate(180deg)"
-        ? (refChevron.current.style.transform = "rotate(0deg)")
-        : (refChevron.current.style.transform = "rotate(180deg)");
+  const [linkOver,setLinkHover] = useState(
+    {
+      "linkedin":false,
+      "github":false,
+      "figma":false
     }
+  )
+  const { currentLanguage } = useLanguage();
 
-    if (refContent.current) {
-      const accordionContent = refContent.current;
-      console.log(accordionContent.scrollHeight);
-
-      if (accordionContent.style.height) {
-        accordionContent.style.height = "";
-      } else {
-        accordionContent.style.height = accordionContent.scrollHeight + "px";
-      }
-    }
-  };
 
   return (
     <div className="about-wrap" id={id}>
-      <h1 className="about-wrap-title section-title">
-        {currentLanguage === "en" ? "Know more About Me ✌" : "En savoir plus sur moi ✌"}
-      </h1>
-      <div className="about-wrap-content">
-      <motion.aside initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ ease: "anticipate", duration:1 }} viewport={{once:true}} className="about-wrap-content-left leftContent">
-      {currentLanguage === "en" ? (
-            <div className="leftContent-texts">
+    
+      <div 
+        className="about-wrap-content">
+        <motion.header 
+
+        initial={{ opacity: 0,translateY:'2rem' }}
+        whileInView={{ opacity: 1,translateY:'0' }}
+        transition={{ ease: "anticipate", duration: 1 }}
+        viewport={{ once: true }}
+        
+        className="about-wrap-content-header headerAboutContent">
+          <img
+            src={`${process.env.PUBLIC_URL}/profile.jpeg`}
+            alt=""
+            className="headerAboutContent-picture"
+          />
+            <h1  className="headerAboutContent-title section-title">
+              {currentLanguage === "en"
+                ? "Know more"
+                : "En savoir"}
+            <span>
+              {currentLanguage === "en" ? "About Me ✌" : "Plus sur moi ✌"}
+            </span>
+            </h1>
+        </motion.header>
+
+        <motion.main
+         initial={{ opacity: 0,translateY:'2rem' }}
+         whileInView={{ opacity: 1,translateY:'0' }}
+         transition={{ ease: "anticipate", duration: 1 }}
+         viewport={{ once: true }}
+          className="about-wrap-content-main mainAboutContent"
+        >
+          {currentLanguage === "en" ? (
+            <div className="mainAboutContent-texts">
               <p>
                 Hello, my name is Thibaud Wajrock. I am a student in Information
                 Systems Engineering, passionate about creating solutions that
@@ -70,7 +77,7 @@ const AboutSection: FunctionComponent<{ id: string}> = ({
               </p>
             </div>
           ) : (
-            <div className="leftContent-texts">
+            <div className="mainAboutContent-texts">
               <p>
                 Bonjour, je m'appelle Thibaud Wajrock. Je suis étudiant en
                 ingénierie des systèmes d’informations, passionné par la
@@ -98,15 +105,27 @@ const AboutSection: FunctionComponent<{ id: string}> = ({
             </div>
           )}
 
-          <div className="leftContent-networks">
+          <div className="mainAboutContent-networks">
             <Link
               to={"https://linkedin.com/in/wajrock"}
               target="_blank"
-              className="leftContent-networks-item"
+              className="mainAboutContent-networks-item linkedin"
+              onMouseEnter={()=>{
+                setLinkHover(prev=>
+                  ({...prev,
+                    "linkedin":true
+                  }))
+              }}
+              onMouseLeave={()=>{
+                setLinkHover(prev=>
+                  ({...prev,
+                    "linkedin":false
+                  }))
+              }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path
-                  fill="#0076b2"
+                  fill={linkOver.linkedin ? "white" : "#0076b2"}
                   d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4M7.65 13.979H5.706V7.723H7.65zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973m8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699z"
                 />
               </svg>
@@ -116,11 +135,23 @@ const AboutSection: FunctionComponent<{ id: string}> = ({
             <Link
               to={"https://github/@wajrock"}
               target="_blank"
-              className="leftContent-networks-item"
+              className="mainAboutContent-networks-item github"
+              onMouseEnter={()=>{
+                setLinkHover(prev=>
+                  ({...prev,
+                    "github":true
+                  }))
+              }}
+              onMouseLeave={()=>{
+                setLinkHover(prev=>
+                  ({...prev,
+                    "github":false
+                  }))
+              }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
-                  fill="#00000"
+                  fill={linkOver.github ? "white" : "#00000"}
                   d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"
                 />
               </svg>
@@ -130,7 +161,20 @@ const AboutSection: FunctionComponent<{ id: string}> = ({
             <Link
               to={"https://figma.com/@wajrock"}
               target="_blank"
-              className="leftContent-networks-item"
+              className="mainAboutContent-networks-item figma"
+              onMouseEnter={()=>{
+                setLinkHover(prev=>
+                  ({...prev,
+                    "figma":true
+                  }))
+              }}
+              onMouseLeave={()=>{
+                setLinkHover(prev=>
+                  ({...prev,
+                    "figma":false
+                  }))
+              }}
+              
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -139,41 +183,32 @@ const AboutSection: FunctionComponent<{ id: string}> = ({
               >
                 <path
                   d="M11.6675 2H8.3335C7.4494 2 6.60151 2.35121 5.97636 2.97636C5.35121 3.60151 5 4.4494 5 5.3335C5 6.2176 5.35121 7.06549 5.97636 7.69064C6.60151 8.31579 7.4494 8.667 8.3335 8.667H11.6675V2Z"
-                  fill="#F24E1E"
+                  fill={linkOver.figma ? "none" : "#F24E1E"}
                 />
                 <path
                   d="M11.667 8.667H8.333C7.44903 8.667 6.60127 9.01815 5.97621 9.64321C5.35115 10.2683 5 11.116 5 12C5 12.884 5.35115 13.7317 5.97621 14.3568C6.60127 14.9818 7.44903 15.333 8.333 15.333H11.667V8.667Z"
-                  fill="#A259FF"
+                  fill={linkOver.figma ? "none" : "#A259FF"}
                 />
                 <path
                   d="M18.333 12C18.333 12.8841 17.9818 13.732 17.3567 14.3571C16.7315 14.9823 15.8836 15.3335 14.9995 15.3335C14.1154 15.3335 13.2675 14.9823 12.6424 14.3571C12.0172 13.732 11.666 12.8841 11.666 12C11.666 11.1159 12.0172 10.268 12.6424 9.64286C13.2675 9.01771 14.1154 8.6665 14.9995 8.6665C15.8836 8.6665 16.7315 9.01771 17.3567 9.64286C17.9818 10.268 18.333 11.1159 18.333 12Z"
-                  fill="#1ABCFE"
+           
+                  fill={linkOver.figma ? "none" : "#1ABCFE"}
                 />
                 <path
                   d="M8.33395 15.334H11.668V18.667C11.6678 19.3261 11.4721 19.9704 11.1058 20.5183C10.7395 21.0663 10.219 21.4933 9.60998 21.7455C9.00099 21.9976 8.33092 22.0635 7.68447 21.9349C7.03803 21.8063 6.44424 21.4889 5.97817 21.0228C5.5121 20.5567 5.19468 19.9629 5.06605 19.3165C4.93741 18.67 5.00333 18 5.25547 17.391C5.50762 16.782 5.93466 16.2614 6.48262 15.8951C7.03057 15.5288 7.67483 15.3342 8.33395 15.334Z"
-                  fill="#0ACF83"
+             
+                  fill={linkOver.figma ? "none" : "#0ACF83"}
                 />
                 <path
                   d="M11.666 2H14.999C15.8831 2 16.731 2.35121 17.3562 2.97636C17.9813 3.60151 18.3325 4.4494 18.3325 5.3335C18.3325 6.2176 17.9813 7.06549 17.3562 7.69064C16.731 8.31579 15.8831 8.667 14.999 8.667H11.666V2Z"
-                  fill="#FF7262"
+                
+                  fill={linkOver.figma ? "none" : "#FF7262"}
                 />
               </svg>
               <p>Figma</p>
             </Link>
           </div>
-        </motion.aside>
-      <aside className="about-wrap-content-right rightContent">
-          <motion.img
-              src={`${process.env.PUBLIC_URL}/profile.jpeg`}
-              alt=""
-              className="rightContent-picture"
-              initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ ease: "anticipate", duration:1,delay:.25 }} viewport={{once:true}}
-            />
-         
-        </aside>
-       
-
-       
+        </motion.main>
       </div>
 
       {/* <section className="about-wrap-discover">
