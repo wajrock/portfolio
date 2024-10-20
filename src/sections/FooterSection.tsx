@@ -33,9 +33,7 @@ const FooterSection: FunctionComponent<{ id: string}> = ({
       </div>
 
       <div className="footer-section-content">
-        <p className="footer-section-content-copyright">
-          © ️2024 - Thibaud Wajrock
-        </p>
+        
         <div className="footer-section-content-links">
           <div className="footer-section-content-links-pages">
             <HashLink smooth to={"#about"}>
@@ -63,6 +61,10 @@ const FooterSection: FunctionComponent<{ id: string}> = ({
             </a>
           </div>
         </div>
+
+        <p className="footer-section-content-copyright">
+          © ️2024 - Thibaud Wajrock
+        </p>
       </div>
     </div>
   );

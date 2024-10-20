@@ -50,8 +50,9 @@ const Header = () => {
       </div>
 
       <div className="header__right">
+      <Button />
         <LanguageSwitcher />
-        <Button />
+        
         <div className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? (
             <svg width="24" height="24" viewBox="0 0 24 24">

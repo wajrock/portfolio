@@ -1,7 +1,7 @@
 .work-page-wrap{
     width: 100%;
     padding-top:8rem;
-    gap: 8rem;
+    gap: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,49 +88,7 @@
     }
     
     
-    &-content{
-        display: flex;
-        gap: 3rem;
-        width: 100%;
-        flex-direction: column;
-        padding: 0 var(--padding-workpage);
     
-        &-paragraph{
-            display: flex;
-            flex-direction: column;
-            gap: .75rem;
-
-            & img{
-                width: 100%;
-                border-radius: .5rem;
-                margin: 1rem 0;
-            }
-
-            & p{
-                color: var(--color-ship-gray);
-                font-weight: 400;
-                line-height: 2rem; /* 200% */
-                letter-spacing: -0.02rem;
-    
-                &.list{
-                    margin: 1rem 0 1rem 5%;
-                }
-                
-                
-            };
-        }
-    
-        &-image{
-            border-radius: .75rem;
-            width: 100%;
-            object-fit: cover;
-            overflow: hidden;
-
-            & img{
-                width: 100%;
-            }
-        }
-    }
 }
 
 

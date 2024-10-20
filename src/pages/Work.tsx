@@ -8,6 +8,8 @@ import { useLanguage } from "src/LanguageContext";
 import projectsList from "../texts.json";
 import ProjectCard from "src/component/ProjectCard/ProjectCard";
 import { motion } from "framer-motion";
+import DescriptionProjectEN from "src/component/DescriptionProject/DescriptionProjectEN";
+import DescriptionProjectFR from "src/component/DescriptionProject/DescriptionProjectFR";
 
 const Work: FunctionComponent = () => {
   const { projectId } = useParams<string>();
@@ -116,19 +118,8 @@ const Work: FunctionComponent = () => {
         ))}
       
       </motion.section>
-      <section className="project-details-content">
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ ease: "anticipate", duration: 1 }}
-                viewport={{ once: true }}
-                className="project-details-content-paragraph"
-              >
-                {projectData?.description.map((paragraph) => (
-                  <p>{paragraph}</p>
-                ))}
-              </motion.div>
-      </section>
+
+      {currentLanguage === "en" ? <DescriptionProjectEN idProject={projectData?.id!}/> : <DescriptionProjectFR idProject={projectData?.id!}/>}
 
       </main>
 

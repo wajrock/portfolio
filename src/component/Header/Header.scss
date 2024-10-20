@@ -74,23 +74,29 @@
 
 .language-switcher-wrap {
     display: flex;
-    gap: 0.25rem;
+    gap: .5rem;
     position: relative;
-    padding: 0.75rem 1rem;
-    border-radius: 10rem;
     height: 100%;
     align-items: center;
     justify-content: center;
+    padding: .75rem;
+
+    &-item{
+        height: 1.5rem;
+        opacity: .3;
+
+        &.active,&:hover{
+            opacity: 1;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    }
 
     & svg {
-        height: 1rem;
+        height: 100%;
+
+       
     }
 
-
-    & p {
-        font-weight: 600;
-        font-size: 0.9rem;
-    }
 }
 
 .phone-menu{
@@ -146,6 +152,7 @@
 
         &.language-popup-open{
             padding-bottom: 5rem;
+            background-color: green;
         }
 
         @keyframes entrance {
@@ -171,19 +178,16 @@
 
         &-actions {
             display: flex;
+            align-items: center;
             flex-wrap: wrap;
-            gap: .5rem;
+            gap: .75rem;
 
             & .language-switcher-wrap{
-                flex: 1;
-                background-color: var(--color-athens-grey);
-
-                &.active{
-                    background-color: transparent;
-                }
+                padding: 0;
             }
 
             & .button-wrap{
+                flex: 1;
                 color: white;
             }
         }

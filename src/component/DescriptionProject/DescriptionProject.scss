@@ -1,0 +1,29 @@
+.description-project-wrap{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem var(--padding-workpage);
+
+    & .section-item{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & h2{
+            color: var(--color-persian-blue);
+            font-family: Syne;
+        }
+
+        & p, & li{
+                color: var(--color-ship-gray);
+                font-weight: 400;
+                line-height: 2rem; /* 200% */
+                letter-spacing: -0.02rem;
+            };
+        }
+
+        & ul{
+            list-style-position: inside;
+        }
+}
