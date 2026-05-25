@@ -67,4 +67,22 @@
   .reference {
     gap: 1rem;
   }
+
+  .author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &-name {
+      font-size: 1.125rem;
+    }
+
+    &-infos {
+      font-size: 0.9rem;
+    }
+  }
+
+  .reference-text p {
+    font-size: 0.9rem;
+  }
 }

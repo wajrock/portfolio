@@ -18,6 +18,12 @@ export enum LANGUAGE {
   DOCKER = 'docker',
   FIGMA = 'figma',
   JIRA = 'jira',
+  PYTHON = 'python',
+  JAVA = 'java',
+  NESTJS = 'nestjs',
+  MYSQL = 'mysql',
+  PHP = 'php',
+  GIT = 'git',
 }
 
 export enum CAROUSEL_SECTION {

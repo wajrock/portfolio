@@ -14,6 +14,8 @@
   --color-10: rgba(2, 6, 23, 0.075);
 
   --border-color: rgba(31, 76, 52, 0.2);
+
+  --section-padding: 8rem;
 }
 
 * {
@@ -40,15 +42,15 @@ a {
 }
 
 .section {
-  padding: 13rem 0;
+  padding: var(--section-padding) 0;
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
+  gap: 4rem;
 
   &-title {
     color: var(--color-90);
     font-family: 'Space Grotesk';
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
@@ -56,8 +58,11 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+  :root {
+    --section-padding: 6rem;
+  }
+
   .section {
     gap: 3rem;
-    padding: 10rem 0;
   }
 }

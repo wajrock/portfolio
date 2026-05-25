@@ -1,0 +1,68 @@
+.stack-list {
+  display: grid;
+  gap: 3rem 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.stack-group {
+  display: flex;
+  flex-direction: column;
+
+  & .title {
+    color: var(--accent-color);
+    display: flex;
+    gap: 0.625rem;
+    & svg {
+      height: 1.5rem;
+    }
+
+    & h3 {
+      font-family: 'Space Grotesk';
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 110%;
+    }
+  }
+
+  & .description {
+    color: var(--color-80);
+    font-family: 'Plus Jakarta Sans';
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 0.5rem;
+  }
+
+  & .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+}
+
+.grid-item {
+  display: flex;
+  padding: 0.625rem 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0.1rem solid var(--border-color);
+  border-radius: var(--full-radius);
+
+  & svg {
+    height: 1.125rem;
+  }
+
+  & span {
+    color: var(--accent-color);
+    font-family: 'Plus Jakarta Sans';
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .stack-list {
+    grid-template-columns: 1fr;
+  }
+}
