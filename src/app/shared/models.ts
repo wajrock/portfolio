@@ -19,3 +19,8 @@ export enum LANGUAGE {
   FIGMA = 'figma',
   JIRA = 'jira',
 }
+
+export enum CAROUSEL_SECTION {
+  PROJECTS = 'projects',
+  REFERENCES = 'references',
+}

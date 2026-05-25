@@ -1,6 +1,6 @@
 import {Component, input} from '@angular/core';
-import {Project} from '../../../models';
-import {LanguageIconComponent} from '../../language-icon/language-icon.component';
+import {LanguageIconComponent} from '../language-icon/language-icon.component';
+import {Project} from '../../models';
 
 @Component({
   selector: 'app-project-card',
@@ -9,5 +9,6 @@ import {LanguageIconComponent} from '../../language-icon/language-icon.component
   styleUrl: './project-card.component.scss',
 })
 export class ProjectCardComponent {
+  // INPUTS
   projectInfos = input.required<Project>();
 }

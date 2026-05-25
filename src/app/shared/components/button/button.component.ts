@@ -8,8 +8,11 @@ import {Component, input, output} from '@angular/core';
   styleUrl: './button.component.scss',
 })
 export class ButtonComponent {
+  // INPUTS
   link = input<string | null>(null);
   btnStyles = input<string[]>([]);
   disabledButton = input<boolean>(false);
+
+  // OUTPUTS
   action = output<void>();
 }

@@ -1,0 +1,70 @@
+.reference {
+  border: 0.1rem solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  --size: min(85vw, 50rem);
+  min-width: var(--size);
+  width: var(--size);
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    row-gap: 1rem;
+  }
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &-name {
+    color: var(--color-90);
+    font-family: 'Space Grotesk';
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 110%;
+  }
+
+  &-infos {
+    color: var(--color-60);
+    font-family: 'Plus Jakarta Sans';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+}
+
+.company-logo svg {
+  height: 2.25rem;
+}
+
+.reference-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  & p {
+    color: var(--color-80);
+    font-family: 'Plus Jakarta Sans';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .company-logo svg {
+    height: 2.5rem;
+  }
+  .reference {
+    gap: 1rem;
+  }
+}

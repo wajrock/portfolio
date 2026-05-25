@@ -2,6 +2,7 @@
 
 :root {
   --content-full-width: min(calc(100% - 1.5rem * 2), 1072px);
+  --carousel-padding: max(1.5rem, calc((100% - 1072px) / 2));
 
   --full-radius: 100rem;
 
@@ -36,4 +37,27 @@ body {
 a {
   text-decoration: none;
   appearance: none;
+}
+
+.section {
+  padding: 13rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+
+  &-title {
+    color: var(--color-90);
+    font-family: 'Space Grotesk';
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    gap: 3rem;
+    padding: 10rem 0;
+  }
 }

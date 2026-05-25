@@ -16,6 +16,9 @@ import {
   styleUrl: './language-icon.component.scss',
 })
 export class LanguageIconComponent {
+  // CONSTANTS
   readonly LANGUAGE = LANGUAGE;
+
+  // INPUTS
   languageIcon = input.required<LANGUAGE>();
 }

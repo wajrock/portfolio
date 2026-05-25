@@ -64,5 +64,13 @@
       </div>
     </div>
   </div>
-  <app-projects-section #projectsSection></app-projects-section>
+  <app-carousel
+    [carouselItemCount]="projectsList.length"
+    [carouselSection]="CAROUSEL_SECTION.PROJECTS"
+    #projectsSection
+  >
+    @for (project of projectsList; track project.name) {
+      <app-project-card [projectInfos]="project"></app-project-card>
+    }
+  </app-carousel>
 </div>
