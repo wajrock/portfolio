@@ -1,0 +1,25 @@
+<ng-template #projectedContent>
+  <ng-content></ng-content>
+</ng-template>
+@if (link() !== null) {
+  <a
+    [href]="link()"
+    rel="noopener noreferrer"
+    role="button"
+    target="_blank"
+    class="button"
+    [ngClass]="btnStyles()"
+  >
+    <ng-container *ngTemplateOutlet="projectedContent"></ng-container>
+  </a>
+} @else {
+  <button
+    (click)="action.emit()"
+    type="button"
+    class="button"
+    [ngClass]="btnStyles()"
+    [disabled]="disabledButton()"
+  >
+    <ng-container *ngTemplateOutlet="projectedContent"></ng-container>
+  </button>
+}

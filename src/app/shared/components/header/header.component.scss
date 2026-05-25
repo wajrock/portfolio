@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.name,
+.name-mobile {
+  color: var(--color-90);
+  font-family: 'Space Grotesk';
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.name-mobile {
+  display: none;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.lang {
+  color: rgba(2, 6, 23, 0.5);
+  font-family: 'Plus Jakarta Sans';
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  &.active {
+    color: rgba(2, 6, 23, 0.9);
+    font-weight: 700;
+  }
+}
+
+.cta-resume {
+  height: 2.5rem;
+  --color-button: var(--accent-color);
+  --border-color: var(--accent-color);
+
+  @media (hover: hover) {
+    &:hover {
+      --color-button: rgba(255, 255, 255, 0.9);
+      --background-color: var(--accent-color);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .name {
+    display: none;
+  }
+  .name-mobile {
+    display: block;
+  }
+
+  .cta-resume::ng-deep span {
+    display: none;
+  }
+}

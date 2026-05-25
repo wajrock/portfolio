@@ -1,0 +1,93 @@
+.card {
+  --width: min(80vw, 22rem);
+  width: var(--width);
+  height: calc(var(--width) * 7 / 5);
+  border-radius: 1rem;
+
+  display: block;
+  border: 0.05rem solid rgba(31, 76, 52, 0.25);
+  position: relative;
+  overflow: hidden;
+
+  &:hover .illustration {
+    transform: scale(1.025);
+    transition: all 0.8s ease;
+  }
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Space Grotesk';
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 120%;
+  margin: 2.25rem 2.25rem 0 2.25rem;
+}
+
+.stack {
+  height: 2.75rem;
+  display: flex;
+  margin: 1.25rem 2.25rem 0 2.25rem;
+
+  & .language + .language {
+    margin-left: -0.5rem;
+  }
+}
+
+.language {
+  width: 2.75rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--full-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-icon {
+  height: fit-content;
+  padding: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  --icon-color: rgba(255, 255, 255, 0.8);
+  &::ng-deep svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.illustration {
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#harmonic-migration-angular .illustration img {
+  position: absolute;
+  top: 0;
+  left: 2.25rem;
+  height: 60%;
+}
+
+#sopra-steria-eco-conception .illustration img {
+  position: absolute;
+  top: 0;
+  left: 2.25rem;
+  height: 60%;
+}
+
+#application-watchlist .illustration img {
+  position: absolute;
+  top: 0;
+  left: (50%);
+  width: 60%;
+  transform: translateX(-50%);
+}
+
+#dashboard-transports .illustration img {
+  position: absolute;
+  top: 0;
+  left: 2.25rem;
+  height: 65%;
+}

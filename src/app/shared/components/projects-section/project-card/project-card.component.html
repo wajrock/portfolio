@@ -1,0 +1,21 @@
+@let projectInfos = this.projectInfos();
+<a
+  [href]="`/projects/${projectInfos.name}`"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="card"
+  [id]="projectInfos.name"
+  [style]="{backgroundColor: projectInfos.bgColor}"
+>
+  <h2 class="description">{{ projectInfos.description }}</h2>
+  <div class="stack">
+    @for (language of projectInfos.stack; track $index) {
+      <div class="language" [style]="{backgroundColor: projectInfos.bgColor}">
+        <app-language-icon class="language-icon" [languageIcon]="language"></app-language-icon>
+      </div>
+    }
+  </div>
+  <div class="illustration">
+    <img [src]="`/project-illustrations/${projectInfos.name}.webp`" alt="" />
+  </div>
+</a>

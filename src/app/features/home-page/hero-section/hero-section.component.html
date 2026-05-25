@@ -1,0 +1,68 @@
+<div class="hero">
+  <app-header></app-header>
+  <div class="hero-content full-width">
+    <div class="pp"></div>
+    <div class="details">
+      <div class="pill">
+        <div class="pill-pulse"></div>
+        <div class="pill-text">Disponible à partir de Septembre</div>
+      </div>
+      <h1 class="title">
+        Je suis <span>Thibaud Wajrock</span>, Ingénieur logiciel en fin d’études.
+      </h1>
+      <p class="description">
+        Futur ingénieur en systèmes d’information, je pousse chaque détail, de l'optimisation du
+        code à la micro-interaction, pour concevoir des produits à la fois fluides, intuitifs et
+        rigoureux.
+      </p>
+      <div class="links">
+        <app-button class="cta-resume" (action)="navigateToProjects()" [btnStyles]="['cta']">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M10.0013 4.1665V15.8332M4.16797 9.99984L10.0013 15.8332L15.8346 9.99984"
+              stroke="currentColor"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Voir mes projets</span>
+        </app-button>
+
+        <app-button
+          class="link"
+          [link]="'https://linkedin.com/in/wajrock'"
+          [btnStyles]="['border']"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none">
+            <path
+              d="M24.75 0H4.58333C2.05203 0 0 2.05203 0 4.58333V24.75C0 27.2813 2.05203 29.3333 4.58333 29.3333H24.75C27.2813 29.3333 29.3333 27.2813 29.3333 24.75V4.58333C29.3333 2.05203 27.2813 0 24.75 0Z"
+              fill="#2867B2"
+            />
+            <path
+              d="M10.632 22.0002H7.51536V12.1918H10.632V22.0002ZM9.0737 10.8168C8.06537 10.8168 7.33203 10.0835 7.33203 9.07516C7.33203 8.06683 8.15703 7.3335 9.0737 7.3335C10.082 7.3335 10.8154 8.06683 10.8154 9.07516C10.8154 10.0835 10.082 10.8168 9.0737 10.8168ZM21.9987 22.0002H18.882V16.6835C18.882 15.1252 18.2404 14.6668 17.3237 14.6668C16.407 14.6668 15.4904 15.4002 15.4904 16.7752V22.0002H12.3737V12.1918H15.307V13.5668C15.582 12.9252 16.682 11.9168 18.2404 11.9168C19.982 11.9168 21.8154 12.9252 21.8154 15.9502V22.0002H21.9987Z"
+              fill="white"
+            />
+          </svg>
+        </app-button>
+
+        <app-button
+          class="link"
+          [link]="'mailto:thibaud.wajrock@icloud.com'"
+          [btnStyles]="['border']"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none">
+            <path
+              d="M20.1654 6.4165L11.9429 11.6415C11.6599 11.8188 11.3327 11.9128 10.9987 11.9128C10.6647 11.9128 10.3375 11.8188 10.0545 11.6415L1.83203 6.4165M3.66536 3.6665H18.332C19.3446 3.6665 20.1654 4.48732 20.1654 5.49984V16.4998C20.1654 17.5124 19.3446 18.3332 18.332 18.3332H3.66536C2.65284 18.3332 1.83203 17.5124 1.83203 16.4998V5.49984C1.83203 4.48732 2.65284 3.6665 3.66536 3.6665Z"
+              stroke="#0F172A"
+              stroke-width="1.83333"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </app-button>
+      </div>
+    </div>
+  </div>
+  <app-projects-section #projectsSection></app-projects-section>
+</div>

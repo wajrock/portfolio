@@ -1,0 +1,30 @@
+[
+  {
+    "name": "harmonic-migration-angular",
+    "description": "Migration d’architecture AngularJS vers Angular 21+ chez Harmonic.",
+    "stack": ["angular", "typescript", "sass", "jira"],
+    "bgColor": "#031E31",
+    "illustrationLink": ""
+  },
+  {
+    "name": "sopra-steria-eco-conception",
+    "description": "Audit & optimisation de l’empreinte numérique d’un projet Sopra Steria.",
+    "stack": ["angular", "docker"],
+    "bgColor": "#065F46",
+    "illustrationLink": ""
+  },
+  {
+    "name": "application-watchlist",
+    "description": "Conception d’une Progressive Web App de watchlist partagée.",
+    "stack": ["angular", "typescript", "sass", "figma"],
+    "bgColor": "#38101E",
+    "illustrationLink": ""
+  },
+  {
+    "name": "dashboard-transports",
+    "description": "Interface des transports publiques destinée aux universités.",
+    "stack": ["angular", "typescript", "sass", "figma"],
+    "bgColor": "#172554",
+    "illustrationLink": ""
+  }
+]
