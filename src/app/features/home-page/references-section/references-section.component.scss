@@ -8,6 +8,7 @@
   --size: min(85vw, 50rem);
   min-width: var(--size);
   width: var(--size);
+  scroll-snap-align: start;
 
   &-header {
     display: flex;

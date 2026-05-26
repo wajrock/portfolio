@@ -42,7 +42,7 @@
 
 .grid-item {
   display: flex;
-  padding: 0.625rem 1rem;
+  padding: 0.5rem 1rem;
   align-items: center;
   gap: 0.5rem;
   border: 0.1rem solid var(--border-color);
@@ -64,5 +64,6 @@
 @media screen and (max-width: 767px) {
   .stack-list {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }

@@ -1,13 +1,11 @@
 .card {
-  --width: min(80vw, 22rem);
-  width: var(--width);
-  height: calc(var(--width) * 7 / 5);
-  border-radius: 1rem;
-
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 0.05rem solid rgba(31, 76, 52, 0.25);
-  position: relative;
+  border-radius: 1rem;
   overflow: hidden;
+  padding: 3rem 2rem 0 2rem;
 
   &:hover .illustration {
     transform: scale(1.025);
@@ -15,79 +13,95 @@
   }
 }
 
+.project-type {
+  border-radius: var(--full-radius);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--project-accent-color);
+  font-family: 'Plus Jakarta Sans';
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
 .description {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--project-accent-color);
   font-family: 'Space Grotesk';
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 500;
   line-height: 120%;
-  margin: 2.25rem 2.25rem 0 2.25rem;
+  margin: 0.875rem 0 1.125rem 0;
+  text-align: center;
 }
 
 .stack {
-  height: 2.75rem;
   display: flex;
-  margin: 1.25rem 2.25rem 0 2.25rem;
-
-  & .language + .language {
-    margin-left: -0.5rem;
-  }
+  gap: 0.25rem;
 }
 
 .language {
-  width: 2.75rem;
-  border: 0.1rem solid rgba(255, 255, 255, 0.6);
+  --width: 2.5rem;
+  width: var(--width);
+  height: var(--width);
+  border: 0.1rem solid var(--project-accent-color);
   border-radius: var(--full-radius);
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.8;
 }
 
 .language-icon {
   height: fit-content;
   padding: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  --icon-color: rgba(255, 255, 255, 0.8);
-  &::ng-deep svg {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
+  width: fit-content;
+  height: 50%;
+  --icon-color: var(--project-accent-color);
 }
 
 .illustration {
-  margin-top: 3rem;
-  overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 2.25;
+  margin-top: 2rem;
+
+  & img {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
 }
 
 #harmonic-migration-angular .illustration img {
-  position: absolute;
-  top: 0;
-  left: 2.25rem;
-  height: 60%;
+  width: 120%;
 }
 
-#sopra-steria-eco-conception .illustration img {
-  position: absolute;
-  top: 0;
-  left: 2.25rem;
-  height: 60%;
+#blog-jeux-videos .illustration img {
+  width: 125%;
 }
 
 #application-watchlist .illustration img {
-  position: absolute;
-  top: 0;
-  left: (50%);
-  width: 60%;
+  left: 50%;
+  width: 40%;
   transform: translateX(-50%);
 }
 
-#dashboard-transports .illustration img {
-  position: absolute;
-  top: 0;
-  left: 2.25rem;
-  height: 65%;
+#sopra-steria-eco-conception .illustration img {
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 767px) {
+  .description {
+    font-size: 1.25rem;
+  }
+
+  .language {
+    --width: 2.125rem;
+  }
+
+  .illustration {
+    aspect-ratio: 2;
+  }
 }

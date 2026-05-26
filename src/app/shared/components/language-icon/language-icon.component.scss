@@ -1,4 +1,6 @@
 svg {
   color: var(--icon-color, var(--si-icon-color)) !important;
   fill: var(--icon-color, var(--si-icon-color)) !important;
+  height: 100%;
+  width: 100%;
 }

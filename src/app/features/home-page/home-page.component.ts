@@ -2,10 +2,16 @@ import {Component} from '@angular/core';
 import {HeroSectionComponent} from './hero-section/hero-section.component';
 import {ReferencesSectionComponent} from './references-section/references-section.component';
 import {StackSectionComponent} from './stack-section/stack-section.component';
+import {ContactSectionComponent} from './contact-section/contact-section.component';
 
 @Component({
   selector: 'app-home-page',
-  imports: [HeroSectionComponent, ReferencesSectionComponent, StackSectionComponent],
+  imports: [
+    HeroSectionComponent,
+    ReferencesSectionComponent,
+    StackSectionComponent,
+    ContactSectionComponent,
+  ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
 })

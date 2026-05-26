@@ -1,12 +1,14 @@
 @let projectInfos = this.projectInfos();
 <a
   [href]="`/projects/${projectInfos.name}`"
+  [style.--project-accent-color]="projectInfos.accentColor"
   target="_blank"
   rel="noopener noreferrer"
   class="card"
   [id]="projectInfos.name"
   [style]="{backgroundColor: projectInfos.bgColor}"
 >
+  <div class="project-type">{{ projectInfos.projectType }}</div>
   <h2 class="description">{{ projectInfos.description }}</h2>
   <div class="stack">
     @for (language of projectInfos.stack; track $index) {

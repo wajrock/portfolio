@@ -110,6 +110,12 @@
   --background-color: var(--bg-color);
 }
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
 @media screen and (min-width: 1024px) {
   .hero {
     padding-top: 4rem;
@@ -132,5 +138,10 @@
 
   .description {
     font-size: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.25rem;
   }
 }

@@ -1,6 +1,6 @@
-<div class="hero">
+<div class="hero full-width">
   <app-header></app-header>
-  <div class="hero-content full-width">
+  <div class="hero-content">
     <div class="pp"></div>
     <div class="details">
       <div class="pill">
@@ -64,13 +64,11 @@
       </div>
     </div>
   </div>
-  <app-carousel
-    [carouselItemCount]="projectsList.length"
-    [carouselSection]="CAROUSEL_SECTION.PROJECTS"
-    #projectsSection
-  >
-    @for (project of projectsList; track project.name) {
-      <app-project-card [projectInfos]="project"></app-project-card>
-    }
-  </app-carousel>
+  <div class="projects" #projectsSection>
+    <div class="projects-grid">
+      @for (project of projectsList; track project.name) {
+        <app-project-card [projectInfos]="project"></app-project-card>
+      }
+    </div>
+  </div>
 </div>
