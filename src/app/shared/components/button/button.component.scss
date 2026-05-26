@@ -16,10 +16,11 @@ button {
   width: var(--width-button, fit-content);
   height: 100%;
   font-family: 'Plus Jakarta Sans';
-  font-size: 0.875rem;
+  font-size: var(--size-text, 0.875rem);
   font-weight: 600;
   background-color: var(--background-color, none);
   color: var(--color-button, none);
+  white-space: nowrap;
 
   &:not(:disabled):hover {
     transition: all 0.4s;

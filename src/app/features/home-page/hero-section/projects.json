@@ -3,6 +3,7 @@
     "name": "harmonic-migration-angular",
     "projectType": "Migration",
     "description": "Migration d’architecture AngularJS vers Angular 21+ chez Harmonic.",
+    "tags": ["angular", "Tests", "CI/CD"],
     "stack": ["angular", "typescript", "sass", "jira"],
     "bgColor": "#031E31",
     "accentColor": "#EEEEEE"
@@ -11,22 +12,25 @@
     "name": "blog-jeux-videos",
     "projectType": "Blog Full-Stack",
     "description": "Conception d'une platerforme communautaire d'articles de jeux vidéos",
+    "tags": ["react", "API REST", "MySQL"],
     "stack": ["angular", "typescript", "sass", "figma"],
     "bgColor": "#1C093A",
     "accentColor": "#FFFAEB"
   },
   {
     "name": "sopra-steria-eco-conception",
-    "projectType": "Eco-conception",
+    "projectType": "Audit",
     "description": "Audit & optimisation de l’empreinte numérique d’un projet Sopra Steria.",
+    "tags": ["Eco-conception", "CI/CD"],
     "stack": ["angular", "docker"],
     "bgColor": "#07221A",
     "accentColor": "#EDF5F3"
   },
   {
     "name": "application-watchlist",
-    "projectType": "Progressive Web App",
+    "projectType": "Application",
     "description": "Conception d’une Progressive Web App de watchlist partagée.",
+    "tags": ["Progressive Web App", "Firebase"],
     "stack": ["angular", "typescript", "sass", "figma"],
     "bgColor": "#38101E",
     "accentColor": "#F0E0E5"

@@ -1,19 +1,19 @@
 .stack-list {
   display: grid;
-  gap: 3rem 2.5rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
 .stack-group {
   display: flex;
   flex-direction: column;
+  border: 0.1rem solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
 
   & .title {
     color: var(--accent-color);
     display: flex;
     gap: 0.625rem;
-    & svg {
-      height: 1.5rem;
-    }
 
     & h3 {
       font-family: 'Space Grotesk';

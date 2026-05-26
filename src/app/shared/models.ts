@@ -7,6 +7,7 @@ export interface Project {
   name: string;
   projectType: string;
   description: string;
+  tags: string[];
   stack: LANGUAGE[];
   bgColor: string;
   accentColor: string;

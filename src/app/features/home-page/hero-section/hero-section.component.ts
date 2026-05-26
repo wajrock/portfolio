@@ -25,9 +25,6 @@ export class HeroSectionComponent {
 
     if (!projectsSection) return;
 
-    const elementPosition = projectsSection.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.scrollY - 80;
-
-    window.scrollTo({top: offsetPosition, behavior: 'smooth'});
+    projectsSection.scrollIntoView({behavior: 'smooth'});
   }
 }

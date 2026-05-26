@@ -34,29 +34,31 @@
   text-align: center;
 }
 
-.stack {
+.tags {
   display: flex;
-  gap: 0.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  opacity: 0.6;
 }
 
-.language {
-  --width: 2.5rem;
-  width: var(--width);
-  height: var(--width);
+.tag {
   border: 0.1rem solid var(--project-accent-color);
+  color: var(--project-accent-color);
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 500;
   border-radius: var(--full-radius);
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.8;
-}
+  white-space: nowrap;
+  height: 2.25rem;
 
-.language-icon {
-  height: fit-content;
-  padding: 0;
-  width: fit-content;
-  height: 50%;
-  --icon-color: var(--project-accent-color);
+  & span {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
 }
 
 .illustration {

@@ -10,10 +10,10 @@
 >
   <div class="project-type">{{ projectInfos.projectType }}</div>
   <h2 class="description">{{ projectInfos.description }}</h2>
-  <div class="stack">
-    @for (language of projectInfos.stack; track $index) {
-      <div class="language" [style]="{backgroundColor: projectInfos.bgColor}">
-        <app-language-icon class="language-icon" [languageIcon]="language"></app-language-icon>
+  <div class="tags">
+    @for (tag of projectInfos.tags; track $index) {
+      <div class="tag" [style]="{backgroundColor: projectInfos.bgColor}">
+        <span>{{ tag }}</span>
       </div>
     }
   </div>
