@@ -1,6 +1,26 @@
 <main class="references section">
-  <h2 class="section-title full-width">Ils ont travaillé avec moi</h2>
-  <app-carousel [carouselItemCount]="2" [carouselSection]="CAROUSEL_SECTION.REFERENCES">
+  <div class="section-title">
+    <h2>Ils ont travaillé avec moi</h2>
+  </div>
+  <div class="references-picker">
+    <app-button
+      class="references-picker-item"
+      (action)="activeReference.set(REFERENCE_VIEW.HARMONIC)"
+      [btnStyles]="['border']"
+      [class.active]="activeReference() === REFERENCE_VIEW.HARMONIC"
+    >
+      <span>Harmonic</span>
+    </app-button>
+    <app-button
+      class="references-picker-item"
+      (action)="activeReference.set(REFERENCE_VIEW.LEROYMERLIN)"
+      [btnStyles]="['border']"
+      [class.active]="activeReference() === REFERENCE_VIEW.LEROYMERLIN"
+    >
+      <span>Leroy Merlin</span>
+    </app-button>
+  </div>
+  @if (activeReference() === REFERENCE_VIEW.HARMONIC) {
     <div class="reference">
       <div class="reference-header">
         <div class="author">
@@ -86,6 +106,7 @@
         </p>
       </div>
     </div>
+  } @else if (activeReference() === REFERENCE_VIEW.LEROYMERLIN) {
     <div class="reference">
       <div class="reference-header">
         <div class="author">
@@ -164,5 +185,22 @@
         </p>
       </div>
     </div>
-  </app-carousel>
+  }
+  <app-button
+    class="linkedin-link"
+    [link]="'https://linkedin.com/in/wajrock'"
+    [btnStyles]="['border']"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none">
+      <path
+        d="M24.75 0H4.58333C2.05203 0 0 2.05203 0 4.58333V24.75C0 27.2813 2.05203 29.3333 4.58333 29.3333H24.75C27.2813 29.3333 29.3333 27.2813 29.3333 24.75V4.58333C29.3333 2.05203 27.2813 0 24.75 0Z"
+        fill="#2867B2"
+      />
+      <path
+        d="M10.632 22.0002H7.51536V12.1918H10.632V22.0002ZM9.0737 10.8168C8.06537 10.8168 7.33203 10.0835 7.33203 9.07516C7.33203 8.06683 8.15703 7.3335 9.0737 7.3335C10.082 7.3335 10.8154 8.06683 10.8154 9.07516C10.8154 10.0835 10.082 10.8168 9.0737 10.8168ZM21.9987 22.0002H18.882V16.6835C18.882 15.1252 18.2404 14.6668 17.3237 14.6668C16.407 14.6668 15.4904 15.4002 15.4904 16.7752V22.0002H12.3737V12.1918H15.307V13.5668C15.582 12.9252 16.682 11.9168 18.2404 11.9168C19.982 11.9168 21.8154 12.9252 21.8154 15.9502V22.0002H21.9987Z"
+        fill="white"
+      />
+    </svg>
+    <span>Voir sur Linkedin</span>
+  </app-button>
 </main>

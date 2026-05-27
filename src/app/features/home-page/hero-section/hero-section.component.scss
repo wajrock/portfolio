@@ -111,9 +111,7 @@
 }
 
 .projects {
-  background-color: #eceef1;
-  background-color: #0b24150c;
-  padding: 6rem 0;
+  padding: 2rem 0 6rem 0;
 }
 
 .projects-grid {
@@ -122,17 +120,30 @@
   gap: 1.25rem;
 }
 
-.projects-links {
+.other-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+
+  & h3 {
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    color: var(--color-80);
+  }
+}
+
+.other-projects-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
-  margin-top: 2rem;
   --size-text: 0.875rem;
   --size-svg: 1.125rem;
 }
 
-.projects-link {
-  height: 2.75rem;
+.other-projects-link {
+  height: 2.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -164,7 +175,12 @@
   }
 
   .projects-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.25rem;
+    max-width: 500px;
+  }
+
+  .other-projects {
+    margin-top: 2.5rem;
   }
 }

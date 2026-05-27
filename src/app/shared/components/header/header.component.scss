@@ -42,5 +42,6 @@
 
   .cta-resume::ng-deep span {
     display: none !important;
+    --size-svg: 1rem;
   }
 }

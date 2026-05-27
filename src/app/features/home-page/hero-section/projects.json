@@ -23,7 +23,7 @@
     "description": "Audit & optimisation de l’empreinte numérique d’un projet Sopra Steria.",
     "tags": ["Eco-conception", "CI/CD"],
     "stack": ["angular", "docker"],
-    "bgColor": "#07221A",
+    "bgColor": "#0D3326",
     "accentColor": "#EDF5F3"
   },
   {

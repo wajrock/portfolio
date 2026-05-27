@@ -60,33 +60,42 @@
 }
 
 .footer {
-  margin-top: 8rem;
+  margin-top: 6rem;
   display: flex;
   justify-content: space-between;
+  padding: 0 2rem;
 
-  & .link,
-  & .copyright {
-    color: rgba(255, 255, 255, 0.6);
+  &-link,
+  &-copyright {
     font-family: 'Plus Jakarta Sans';
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 110%;
   }
-}
 
-.links {
-  display: flex;
-  gap: 1rem;
+  &-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &-link {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  &-copyright {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 @media (hover: hover) {
   .email-btn:hover {
     --background-color: rgba(255, 255, 255, 1);
     --color-button: var(--accent-color);
+    transition: all 0.8s;
   }
 
-  .link:hover {
-    color: rgba(255, 255, 255, 0.8);
+  .footer-link:hover {
+    color: rgba(255, 255, 255, 1);
     transition: all 0.4s;
   }
 }
@@ -103,12 +112,13 @@
   .email-btn {
     margin-top: 2rem;
   }
+
   .footer {
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 
-    & .copyright {
-      margin-top: 2rem;
+    &-copyright {
+      margin-top: 3rem;
     }
   }
 }

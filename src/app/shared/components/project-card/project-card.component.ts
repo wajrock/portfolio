@@ -1,10 +1,9 @@
 import {Component, input} from '@angular/core';
-import {LanguageIconComponent} from '../language-icon/language-icon.component';
 import {Project} from '../../models';
 
 @Component({
   selector: 'app-project-card',
-  imports: [LanguageIconComponent],
+  imports: [],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss',
 })

@@ -15,7 +15,7 @@
 
   --border-color: rgba(31, 76, 52, 0.2);
 
-  --section-padding: 8rem;
+  --section-padding: 10rem;
 }
 
 * {
@@ -45,15 +45,16 @@ a {
   padding: var(--section-padding) 0;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 4rem;
 
-  &-title {
+  &-title h2 {
     color: var(--color-90);
     font-family: 'Space Grotesk';
     font-size: 2rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+    letter-spacing: -0.075rem;
   }
 }
 
@@ -63,6 +64,10 @@ a {
   }
 
   .section {
-    gap: 2rem;
+    gap: 3rem;
+
+    &-title h2 {
+      max-width: 80%;
+    }
   }
 }
