@@ -1,28 +1,26 @@
 .stack {
   background-color: #f3f4f6;
-  align-items: center;
-  --stack-section-width: min(calc(100% - 1.5rem * 2), 700px);
 }
 
-.section-title {
-  text-align: center;
-}
-
-.stack-content {
-  width: var(--stack-section-width);
-  display: flex;
-  justify-content: center;
-}
 .stack-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 4rem;
 }
 
 .stack-group {
   display: flex;
   flex-direction: column;
 
+  & .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    width: 90%;
+  }
+}
+
+.stack-header {
   & .title {
     color: var(--accent-color);
     display: flex;
@@ -42,27 +40,22 @@
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 140%;
-    margin-top: 0.5rem;
-  }
-
-  & .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.25rem;
+    margin: 0.5rem 0 1rem 0;
   }
 }
 
 .grid-item {
   display: flex;
-  padding: 0.5rem 1rem;
   align-items: center;
   gap: 0.5rem;
-  border: 0.1rem solid var(--border-color);
+  border: 0.1rem solid rgba(0, 0, 0, 0.125);
   border-radius: var(--full-radius);
+  background-color: var(--bg-color);
+  height: 2.5rem;
+  padding: 0 0.875rem;
 
   & svg {
-    height: 1.125rem;
+    height: 1.15rem;
   }
 
   & span {
@@ -75,16 +68,8 @@
 }
 
 @media screen and (max-width: 767px) {
-  .section-title {
-    text-align: start;
-  }
-
-  .stack-content {
-    justify-content: start;
-  }
-
   .stack-list {
-    align-items: start;
+    grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 }

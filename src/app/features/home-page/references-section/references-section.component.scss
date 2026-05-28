@@ -1,43 +1,18 @@
 .references {
-  --references-section-width: min(calc(100% - 1.5rem * 2), 700px);
-  align-items: center;
   background-color: #f3f4f6;
-  gap: 0;
+  gap: 3rem;
 }
 
-.section-title {
-  text-align: center;
-  width: var(--references-section-width);
-  margin-inline: auto;
-}
-
-.references-picker {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  margin-top: 6rem;
-  height: 2.5rem;
-  width: var(--references-section-width);
-  margin-inline: auto;
-  max-width: 275px;
-
-  &-item {
-    width: 100%;
-    --width-button: 100%;
-
-    &.active {
-      --border-color: var(--color-90);
-    }
-  }
+.references-list {
+  display: flex;
+  gap: 4rem;
 }
 
 .reference {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: var(--references-section-width);
-  margin-inline: auto;
-  margin: 4rem 0 2rem 0;
+  margin-top: 3rem;
 
   &-header {
     display: flex;
@@ -92,18 +67,9 @@
 
 .linkedin-link {
   height: 2.75rem;
-  width: var(--references-section-width);
-  margin-inline: auto;
 }
 
 @media screen and (max-width: 767px) {
-  .references {
-    align-items: start;
-  }
-  .section-title {
-    text-align: start;
-  }
-
   .company-logo svg {
     height: 2.5rem;
   }

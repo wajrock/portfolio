@@ -1,26 +1,9 @@
 <main class="references section">
-  <div class="section-title">
+  <div class="section-title full-width">
     <h2>Ils ont travaillé avec moi</h2>
   </div>
-  <div class="references-picker">
-    <app-button
-      class="references-picker-item"
-      (action)="activeReference.set(REFERENCE_VIEW.HARMONIC)"
-      [btnStyles]="['border']"
-      [class.active]="activeReference() === REFERENCE_VIEW.HARMONIC"
-    >
-      <span>Harmonic</span>
-    </app-button>
-    <app-button
-      class="references-picker-item"
-      (action)="activeReference.set(REFERENCE_VIEW.LEROYMERLIN)"
-      [btnStyles]="['border']"
-      [class.active]="activeReference() === REFERENCE_VIEW.LEROYMERLIN"
-    >
-      <span>Leroy Merlin</span>
-    </app-button>
-  </div>
-  @if (activeReference() === REFERENCE_VIEW.HARMONIC) {
+
+  <div class="references-list full-width">
     <div class="reference">
       <div class="reference-header">
         <div class="author">
@@ -106,7 +89,6 @@
         </p>
       </div>
     </div>
-  } @else if (activeReference() === REFERENCE_VIEW.LEROYMERLIN) {
     <div class="reference">
       <div class="reference-header">
         <div class="author">
@@ -185,9 +167,9 @@
         </p>
       </div>
     </div>
-  }
+  </div>
   <app-button
-    class="linkedin-link"
+    class="linkedin-link full-width"
     [link]="'https://linkedin.com/in/wajrock'"
     [btnStyles]="['border']"
   >
