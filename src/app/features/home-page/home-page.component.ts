@@ -4,6 +4,7 @@ import {ReferencesSectionComponent} from './references-section/references-sectio
 import {StackSectionComponent} from './stack-section/stack-section.component';
 import {ContactSectionComponent} from './contact-section/contact-section.component';
 import {JourneySectionComponent} from './journey-section/journey-section.component';
+import {HeaderComponent} from '../../shared/components/header/header.component';
 
 @Component({
   selector: 'app-home-page',
@@ -13,6 +14,7 @@ import {JourneySectionComponent} from './journey-section/journey-section.compone
     StackSectionComponent,
     ContactSectionComponent,
     JourneySectionComponent,
+    HeaderComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',

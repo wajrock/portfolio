@@ -1,6 +1,90 @@
-<div class="journey section">
+<main class="journey section">
   <div class="section-title full-width">
     <h2>Mon parcours</h2>
   </div>
-  <div class="journey-content"></div>
-</div>
+  <div class="journey-picker full-width">
+    <app-button
+      class="journey-picker-item"
+      (action)="journeyTypeFilter.set(JOURNEY_TYPE.EXPERIENCE)"
+      [btnStyles]="['border']"
+      [class.active]="journeyTypeFilter() === JOURNEY_TYPE.EXPERIENCE"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="none">
+        <path
+          d="M10.1948 0.450312C10.0539 0.175312 9.76858 0 9.4592 0C9.14983 0 8.86451 0.175312 8.72358 0.450312L6.19358 5.40719L0.697014 6.28031C0.391076 6.32844 0.136701 6.545 0.0404515 6.84063C-0.0557985 7.13625 0.0232641 7.45937 0.239827 7.67938L4.17233 11.6153L3.30608 17.1119C3.25795 17.4178 3.38514 17.7272 3.63608 17.9094C3.88701 18.0916 4.21701 18.1191 4.49545 17.9781L9.4592 15.455L14.4195 17.9781C14.6945 18.1191 15.028 18.0916 15.2789 17.9094C15.5298 17.7272 15.657 17.4212 15.6089 17.1119L14.7392 11.6153L18.6717 7.67938C18.8917 7.45937 18.9673 7.13625 18.8711 6.84063C18.7748 6.545 18.5239 6.32844 18.2145 6.28031L12.7214 5.40719L10.1948 0.450312Z"
+          fill="currentColor"
+        />
+      </svg>
+      <span>Expériences</span>
+    </app-button>
+    <app-button
+      class="journey-picker-item"
+      (action)="journeyTypeFilter.set(JOURNEY_TYPE.FORMATION)"
+      [btnStyles]="['border']"
+      [class.active]="journeyTypeFilter() === JOURNEY_TYPE.FORMATION"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="none">
+        <path
+          d="M1.65 5.63062L8.84125 8.59031C9.17813 8.72781 9.53563 8.8 9.9 8.8C10.2644 8.8 10.6219 8.72781 10.9587 8.59031L19.2913 5.15969C19.6006 5.0325 19.8 4.73344 19.8 4.4C19.8 4.06656 19.6006 3.7675 19.2913 3.64031L10.9587 0.209687C10.6219 0.0721874 10.2644 0 9.9 0C9.53563 0 9.17813 0.0721874 8.84125 0.209687L0.50875 3.64031C0.199375 3.7675 0 4.06656 0 4.4V14.575C0 15.0322 0.367813 15.4 0.825 15.4C1.28219 15.4 1.65 15.0322 1.65 14.575V5.63062ZM3.3 8.09531V12.1C3.3 13.9219 6.25625 15.4 9.9 15.4C13.5438 15.4 16.5 13.9219 16.5 12.1V8.09188L11.5878 10.1166C11.0516 10.3366 10.4809 10.45 9.9 10.45C9.31906 10.45 8.74844 10.3366 8.21219 10.1166L3.3 8.09188V8.09531Z"
+          fill="currentColor"
+        />
+      </svg>
+      <span>Formation</span>
+    </app-button>
+    <app-button
+      class="journey-picker-item"
+      (action)="journeyTypeFilter.set(JOURNEY_TYPE.OTHER)"
+      [btnStyles]="['border']"
+      [class.active]="journeyTypeFilter() === JOURNEY_TYPE.OTHER"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" fill="none">
+        <path
+          d="M8.45453 0.211406C7.99391 -0.0704688 7.41297 -0.0704688 6.95234 0.211406C6.11359 0.723594 5.59453 0.861094 4.61141 0.840469C4.07172 0.826719 3.56984 1.11891 3.30859 1.59328C2.83766 2.45609 2.45609 2.83766 1.59328 3.30859C1.11891 3.56641 0.830156 4.07172 0.840469 4.61141C0.864531 5.59453 0.723594 6.11359 0.211406 6.95234C-0.0704688 7.41297 -0.0704688 7.99391 0.211406 8.45453C0.723594 9.29328 0.861094 9.81234 0.840469 10.7955C0.826719 11.3352 1.11891 11.837 1.59328 12.0983C2.35297 12.5142 2.73797 12.858 3.14359 13.5248L1.46953 16.8627C1.26672 17.2717 1.43172 17.7667 1.83734 17.9695L4.79359 19.4477C5.18891 19.6436 5.67016 19.4958 5.88328 19.1108L7.69828 15.8417L9.51328 19.1108C9.72641 19.4958 10.2077 19.647 10.603 19.4477L13.5592 17.9695C13.9683 17.7667 14.1333 17.2717 13.927 16.8627L12.2564 13.5214C12.6586 12.8545 13.047 12.5108 13.8067 12.0948C14.2811 11.837 14.5698 11.3317 14.5595 10.792C14.5355 9.80891 14.6764 9.28984 15.1886 8.45109C15.4705 7.99047 15.4705 7.40953 15.1886 6.94891C14.6764 6.11016 14.5389 5.59109 14.5595 4.60797C14.5733 4.06828 14.2811 3.56641 13.8067 3.30516C12.9439 2.83422 12.5623 2.45266 12.0914 1.58984C11.8336 1.11547 11.3283 0.826719 10.7886 0.837031C9.80547 0.861094 9.28641 0.720156 8.44766 0.207969L8.45453 0.211406ZM7.70172 4.40172C9.52359 4.40172 11.0017 5.87984 11.0017 7.70172C11.0017 9.52359 9.52359 11.0017 7.70172 11.0017C5.87984 11.0017 4.40172 9.52359 4.40172 7.70172C4.40172 5.87984 5.87984 4.40172 7.70172 4.40172Z"
+          fill="currentColor"
+        />
+      </svg>
+      <span>Certificats & Distinction</span>
+    </app-button>
+  </div>
+  <div class="journey-group full-width">
+    @for (journey of journeyList; track journey.title) {
+      @if (journeyTypeFilter() === journey.type) {
+        <div class="journey-item">
+          <div class="date">{{ journey.date }}</div>
+          <div class="title">{{ journey.title }}</div>
+          <div class="description">
+            {{ journey.description }}
+          </div>
+          @if (journey.link) {
+            <a [href]="journey.link" target="_blank" rel="noopener noreferrer" class="link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M14.1654 14.1663V5.83301H5.83203M14.1654 5.83301L5.83203 14.1663"
+                  stroke="currentColor"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              En savoir plus
+            </a>
+          }
+        </div>
+      }
+    }
+  </div>
+  <div class="resume full-width">
+    <app-button [link]="'/cv-wajrock.pdf'" [btnStyles]="['cta']">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+        <path
+          d="M11.6654 1.6665V6.6665H16.6654M13.332 10.8332H6.66536M13.332 14.1665H6.66536M8.33203 7.49984H6.66536M12.082 1.6665H4.9987C4.55667 1.6665 4.13275 1.8421 3.82019 2.15466C3.50763 2.46722 3.33203 2.89114 3.33203 3.33317V16.6665C3.33203 17.1085 3.50763 17.5325 3.82019 17.845C4.13275 18.1576 4.55667 18.3332 4.9987 18.3332H14.9987C15.4407 18.3332 15.8646 18.1576 16.1772 17.845C16.4898 17.5325 16.6654 17.1085 16.6654 16.6665V6.24984L12.082 1.6665Z"
+          stroke="currentColor"
+          stroke-width="1.66667"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span>Voir mon CV</span>
+    </app-button>
+  </div>
+</main>

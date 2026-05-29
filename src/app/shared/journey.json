@@ -1,0 +1,44 @@
+[
+  {
+    "type": "experience",
+    "date": "Mars - Aout 2026",
+    "title": "Stage fin d'études Ingénieur Logiciel chez Harmonic",
+    "description": "Migration d'une application de monitoring d'AngularJS vers Angular. L'objectif ici était de moderniser l'interface utilisateur tout en repensant l'architecture pour améliorer les performances, la scalabilité et la maintenabilité du produit.",
+    "link": "/projects/harmonic-migration-angular"
+  },
+  {
+    "type": "experience",
+    "date": "Octobre 2025 - Fevrier 2026",
+    "title": "Projet Industriel pour Sopra Steria",
+    "description": "Audit technique et optimisation du code d'un outil interne à l'entreprise avec l'objectif de maximiser son score d'éco-conception. Grâce à une analyse de performance approfondie de l'existant et à des optimisations ciblées, l'empreinte environnementale du logiciel a pu être concrétement réduite.",
+    "link": "/projects/sopra-steria-eco-conception"
+  },
+  {
+    "type": "formation",
+    "date": "2023 - 2026",
+    "title": "Diplôme d'Ingénieurs Informatique (Systèmes d'Informations)",
+    "description": "Avec un cursus alliant ingénierie logicielle avancée et gestion de projet, cette formation m'a permis d'acquérir une vision globale du cycle de vie d'un produit numérique et de développer de solides compétences humaines en travail d'équipe.",
+    "link": "https://esir.univ-rennes.fr/spe-informatique-option-systemes-dinformation-si"
+  },
+  {
+    "type": "formation",
+    "date": "2021 - 2023",
+    "title": "Cycle Universitaire Préparatoire aux Grandes Ecoles",
+    "description": "Ces deux années de formation scientifique m'ont permis d'acquérir une méthodologie stricte pour analyser, décortiquer et résoudre des problèmes logiques complexes avec rigueur.",
+    "link": "https://esir.univ-rennes.fr/cycle-prepa-esir"
+  },
+  {
+    "type": "other",
+    "date": "2025",
+    "title": "TOEIC - Score 910/990",
+    "description": "Validation d'un niveau d'anglais technique et professionnel fluide. Une compétence me permettant de collaborer efficacement dans des environnements internationaux et techniques et également de suivre les conventions de code.",
+    "link": ""
+  },
+  {
+    "type": "other",
+    "date": "2019",
+    "title": "Lauréat d'un concours de plaidoiries pour les droits de l'homme",
+    "description": "Cette expérience a été pour moi l'ocassion d'approndir ma capacité à développer un raisonnement hautement structuré, à maîtriser la prise de parole en public et à affiner ma capacité de conviction face à un auditoire exigeant.",
+    "link": ""
+  }
+]

@@ -1,0 +1,26 @@
+.project {
+  padding-top: 5rem;
+  height: 125rem;
+}
+
+.title {
+  color: var(--color-90);
+  font-family: 'Space Grotesk';
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.05rem;
+  max-width: 50rem;
+}
+
+.cover {
+  margin-top: 4rem;
+  width: 100%;
+  aspect-ratio: 4;
+  border-radius: 1rem;
+}
+
+.stack {
+  text-transform: capitalize;
+}

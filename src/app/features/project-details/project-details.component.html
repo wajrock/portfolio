@@ -1,1 +1,8 @@
-<p>project-details works!</p>
+@let project = projects.find((p) => p.name === name());
+@if (project) {
+  <div class="project-page">
+    <app-header></app-header>
+    <app-project-section [projectInfos]="project"></app-project-section>
+    <app-contact-section></app-contact-section>
+  </div>
+}

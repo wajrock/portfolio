@@ -5,13 +5,22 @@ export enum SCROLL_DIRECTION {
 
 export interface Project {
   name: string;
+  context: string;
   projectType: string;
   description: string;
   tags: string[];
-  stack: LANGUAGE[];
+  stack: string[];
+  duration: string;
   bgColor: string;
   accentColor: string;
-  illustrationLink: string;
+}
+
+export interface Journey {
+  type: JOURNEY_TYPE;
+  date: string;
+  title: string;
+  description: string;
+  link: string;
 }
 
 export enum LANGUAGE {
@@ -32,4 +41,10 @@ export enum LANGUAGE {
 export enum CAROUSEL_SECTION {
   PROJECTS = 'projects',
   REFERENCES = 'references',
+}
+
+export enum JOURNEY_TYPE {
+  EXPERIENCE = 'experience',
+  FORMATION = 'formation',
+  OTHER = 'other',
 }

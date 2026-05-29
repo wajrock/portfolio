@@ -1,37 +1,45 @@
 [
   {
     "name": "harmonic-migration-angular",
+    "context": "Harmonic",
     "projectType": "Migration",
     "description": "Migration d’architecture AngularJS vers Angular 21+ chez Harmonic.",
-    "tags": ["angular", "Tests", "CI/CD"],
-    "stack": ["angular", "typescript", "sass", "jira"],
+    "tags": ["angular", "CI/CD", "scrum"],
+    "stack": ["Angular", "Scrum", "CI/CD"],
+    "duration": "6 mois",
     "bgColor": "#031E31",
     "accentColor": "#EEEEEE"
   },
   {
     "name": "blog-jeux-videos",
+    "context": "Projet perso",
     "projectType": "Blog Full-Stack",
     "description": "Conception d'une platerforme communautaire d'articles de jeux vidéos",
     "tags": ["react", "API REST", "MySQL"],
-    "stack": ["angular", "typescript", "sass", "figma"],
+    "stack": ["React", "API Rest", "MySQL"],
+    "duration": "3 mois",
     "bgColor": "#1C093A",
     "accentColor": "#FFFAEB"
   },
   {
     "name": "sopra-steria-eco-conception",
+    "context": "Sopra Steria",
     "projectType": "Audit",
     "description": "Audit & optimisation de l’empreinte numérique d’un projet Sopra Steria.",
     "tags": ["Eco-conception", "CI/CD"],
-    "stack": ["angular", "docker"],
+    "stack": ["Angular, GreenIT Analysis"],
+    "duration": "6 mois",
     "bgColor": "#0D3326",
     "accentColor": "#EDF5F3"
   },
   {
     "name": "application-watchlist",
+    "context": "Projet perso",
     "projectType": "Application",
     "description": "Conception d’une Progressive Web App de watchlist partagée.",
     "tags": ["Progressive Web App", "Firebase"],
-    "stack": ["angular", "typescript", "sass", "figma"],
+    "stack": ["Angular", "Firebase"],
+    "duration": "2 mois",
     "bgColor": "#38101E",
     "accentColor": "#F0E0E5"
   }

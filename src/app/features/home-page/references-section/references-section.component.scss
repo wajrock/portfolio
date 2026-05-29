@@ -1,18 +1,19 @@
 .references {
   background-color: #f3f4f6;
-  gap: 3rem;
+  gap: 0;
+  align-items: center;
 }
 
 .references-list {
   display: flex;
   gap: 4rem;
+  margin-top: var(--section-gap);
 }
 
 .reference {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-top: 3rem;
 
   &-header {
     display: flex;
@@ -67,14 +68,25 @@
 
 .linkedin-link {
   height: 2.75rem;
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 767px) {
   .company-logo svg {
     height: 2.5rem;
   }
+  .references-list {
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
   .reference {
     gap: 1rem;
+
+    &-header {
+      flex-direction: column-reverse;
+      align-items: start;
+    }
   }
 
   .author {

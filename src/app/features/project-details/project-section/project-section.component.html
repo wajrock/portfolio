@@ -1,0 +1,24 @@
+<main class="project full-width">
+  <header class="header">
+    <h1 class="title">{{ projectInfos().description }}</h1>
+    <div class="infos">
+      <p class="duration">
+        <span class="label">Contexte</span>
+        <span class="value">{{ projectInfos().context }}</span>
+      </p>
+
+      <p class="duration">
+        <span class="label">Durée</span>
+        <span class="value">{{ projectInfos().duration }}</span>
+      </p>
+
+      <p class="stack">
+        <span class="label">Stack Technique</span>
+        <span class="value">{{ projectInfos().stack | stackFormat }}</span>
+      </p>
+    </div>
+  </header>
+  <section class="cover" [style]="{backgroundColor: projectInfos().bgColor}">
+    <img [src]="`/project-illustrations/${projectInfos.name}.webp`" alt="" class="illustration" />
+  </section>
+</main>

@@ -4,24 +4,13 @@ import {
   SiGitIcon,
   SiJiraIcon,
   SiNestjsIcon,
-  SiPhpIcon,
   SiReactIcon,
-  SiSassIcon,
   SiTypescriptIcon,
 } from '@semantic-icons/simple-icons';
 
 @Component({
   selector: 'app-stack-section',
-  imports: [
-    SiTypescriptIcon,
-    SiSassIcon,
-    SiReactIcon,
-    SiNestjsIcon,
-    SiPhpIcon,
-    SiDockerIcon,
-    SiGitIcon,
-    SiJiraIcon,
-  ],
+  imports: [SiTypescriptIcon, SiReactIcon, SiNestjsIcon, SiDockerIcon, SiGitIcon, SiJiraIcon],
   templateUrl: './stack-section.component.html',
   styleUrl: './stack-section.component.scss',
 })

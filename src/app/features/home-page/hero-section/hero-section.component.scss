@@ -1,8 +1,8 @@
 .hero {
-  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 8rem;
+  padding-top: 8rem;
 }
 
 .hero-content {
@@ -58,7 +58,7 @@
   }
 
   .pill-text {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-family: 'Plus Jakarta Sans';
     font-weight: 600;
     color: rgba(2, 6, 23, 0.7);
@@ -146,15 +146,10 @@
   height: 2.5rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .hero {
-    padding-top: 4rem;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .hero {
     gap: 4rem;
+    padding-top: 4rem;
   }
 
   .hero-content {

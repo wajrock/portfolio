@@ -3,39 +3,43 @@
 }
 
 .stack-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2.5rem;
 }
 
 .stack-group {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
 
   & .grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    width: 90%;
+    gap: 0.5rem;
   }
 }
 
 .stack-header {
+  display: flex;
+  align-items: center;
+
   & .title {
-    color: var(--accent-color);
+    color: var(--color-80);
     display: flex;
     gap: 0.625rem;
 
     & h3 {
       font-family: 'Space Grotesk';
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-weight: 500;
       line-height: 110%;
     }
   }
 
   & .description {
-    color: var(--color-80);
+    color: var(--color-60);
     font-family: 'Plus Jakarta Sans';
     font-size: 0.875rem;
     font-weight: 500;
@@ -55,7 +59,7 @@
   padding: 0 0.875rem;
 
   & svg {
-    height: 1.15rem;
+    height: 1.25rem;
   }
 
   & span {
@@ -67,9 +71,21 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .stack-list {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+@media screen and (max-width: 884px) {
+  .stack {
+    padding: 6rem 0;
+  }
+  .stack-header {
+    width: 100%;
+    .title h3 {
+      font-size: 1.375rem;
+    }
+  }
+  .stack-group {
+    flex-direction: column;
+  }
+
+  .grid {
+    flex-wrap: wrap;
   }
 }
